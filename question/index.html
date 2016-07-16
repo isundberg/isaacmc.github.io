@@ -6,7 +6,9 @@ title: Questions
 	
 	<ol class="questions">
 		<li>First question</li>
-	  	{% for quest in site.questions %}
-			<li>{{ quest.content }}</li>
+		{% for question in site.static_files %}
+    			{% if question.path contains 'questions' %}
+				<li>{{ question.title }}</li>
+			{% endif %}
 		{% endfor %}
 	</ol>
