@@ -5,7 +5,7 @@ title: Questions
 	<h1>{{ page.title }}</h1>
 	<ol class="posts">
 
-	  {% for question in site.questions %}
-	    <li><a href="{{ question.url }}" title="{{ question.title }}">{{ question.title }}</a> - <span>{{ question.date | date_to_string }}</span></li>
+	  {% for quest in site.questions %}
+	    <li><a href="{{ quest.url }}" title="{{ quest.title }}">{{ quest.title }}</a> - <span>{{ quest.date | date_to_string }}</span></li>
 	  {% endfor %}
 	</ol>
