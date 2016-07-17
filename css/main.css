@@ -45,10 +45,10 @@ ul.posts li {
 #project {
     margin-left: 2em;
     border-radius: 25px;
-    background: blue;
-    padding: 20px;
+    background: lavender;
+    padding: 5px;
 }
 
 #project-title {
-    color: blue;
+    color: lavender;
 }
