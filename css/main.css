@@ -9,8 +9,9 @@ nav ul {
     margin: 10px;
     list-style: none;
     font-weight: bold;
-    position: absolute;
-    top: 0;
+    position:fixed;
+    top:0;
+    left:0;
     width: 100%;
     color: white;
     background: white;
