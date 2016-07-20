@@ -4,7 +4,7 @@ body {
 }
 
 nav ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Helvetica';
     padding: 5px;
     list-style: none;
     font-weight: bold;
@@ -17,7 +17,7 @@ nav ul {
 }
 
 footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Helvetica;
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -45,7 +45,7 @@ a:hover {
 
 h1 {
     font-size: 2em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Helvetica';
 }
 p {
     font-size: 1em;
