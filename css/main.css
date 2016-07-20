@@ -1,8 +1,3 @@
-body {
-    margin: 60px auto;
-    width: 70%;
-}
-
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -11,7 +6,6 @@ nav ul {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
     color: white;
     background: white;
 }
