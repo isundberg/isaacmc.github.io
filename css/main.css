@@ -10,7 +10,6 @@ nav ul {
     font-weight: bold;
     position:fixed;
     top:-17px;
-    margin: 10px;
     left:0;
     width: 100%;
     padding: 10px;
@@ -27,6 +26,7 @@ footer ul {
 nav ul li, footer ul li {
     display: inline;
     padding:5px;
+    margin: 10px;
     color: white;
 }
 
