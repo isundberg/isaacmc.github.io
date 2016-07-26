@@ -75,3 +75,7 @@ ul.posts li {
     background: lavender;
     padding: 5px;
 }
+
+#project-content {
+    margin-left: 2em;
+}
