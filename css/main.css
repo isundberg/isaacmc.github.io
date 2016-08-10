@@ -68,9 +68,9 @@ ul.posts li {
 #project {
     margin-left: 2em;
     border-radius: 5px;
-    border: 1px;
+    border: 2px;
     border-style: solid;
-    border-color: lightseagreen;
+    border-color: gray;
     background: lightgray;
     padding: 5px;
 }
