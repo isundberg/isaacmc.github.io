@@ -14,7 +14,7 @@ nav ul {
     left:0;
     width: 100%;
     padding: 10px;
-    background: honeydew;
+    background: powderblue;
 }
 
 footer ul {
@@ -68,7 +68,7 @@ ul.posts li {
 #project {
     margin-left: 2em;
     border-radius: 2px;
-    background: gainsboro;
+    background: honeydew;
     border: 1px;
     border-style: solid;
     border-color: lightseagreen;
