@@ -67,11 +67,11 @@ ul.posts li {
 
 #project {
     margin-left: 2em;
-    border-radius: 2px;
-    background: honeydew;
+    border-radius: 5px;
     border: 1px;
     border-style: solid;
     border-color: lightseagreen;
+    background: gray;
     padding: 5px;
 }
 
