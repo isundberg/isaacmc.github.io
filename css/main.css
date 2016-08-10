@@ -69,7 +69,7 @@ ul.posts li {
     margin-left: 2em;
     border-radius: 2px;
     background: gainsboro;
-    border: 3px;
+    border-style: solid;
     border-color: lightseagreen;
     padding: 5px;
 }
