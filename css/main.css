@@ -67,9 +67,9 @@ ul.posts li {
 
 #project {
     margin-left: 2em;
-    border-radius: 10px;
+    border-radius: 2px;
     background: gainsboro;
-    border: 1px;
+    border: 3px;
     border-color: lightseagreen;
     padding: 5px;
 }
