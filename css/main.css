@@ -6,7 +6,7 @@ body {
 
 nav ul {
     font-family:'Helvetica';
-    padding: 5px;
+    font-size: 1em;
     list-style: none;
     position:fixed;
     top:-17px;
@@ -42,6 +42,7 @@ h1 {
     font-size: 2em;
     font-family:'Helvetica';
 }
+
 p {
     font-size: 1em;
     line-height: 1.4em;
