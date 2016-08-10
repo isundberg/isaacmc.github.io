@@ -69,8 +69,11 @@ ul.posts li {
 #project {
     margin-left: 2em;
     border-radius: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
     box-shadow: 1px 1px 1px #888888;
-    background: lightgray;
+    background: gainsboro;
     padding: 5px;
 }
 
