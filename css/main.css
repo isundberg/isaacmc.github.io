@@ -52,12 +52,9 @@ nav ul {
     font-family:'Helvetica';
     font-size: 1em;
     list-style: none;
-    position:fixed;
-    top:-17px;
     left:0;
     width: 100%;
     padding: 10px;
-    background: black;
 }
 
 footer ul {
