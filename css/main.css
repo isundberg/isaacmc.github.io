@@ -15,45 +15,11 @@ body {
     padding: 0 2.954209748892% .275em;
 }
 
-.sidenav {
-    height: 100%;
-    width: 325px;
-    position: fixed;
-    z-index: 1;
-    top: 25px;
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding: 60px 5px; /* Place content 60px from the top */
-    font-size: .75em;
-    word-wrap: break-word;
-}
-
-#sidenavContent {
-	margin: 2em;
-    border-radius: 5px;
-    border: 1px;
-    border-style: solid;
-    border-color: lightgray;
-    box-shadow: 1px 1px 1px #888888;
-    background: gainsboro;
-    padding: 0px 5px 0px 15px;
-}
-
-#sideul {
-	margin-top: 1px;
-	margin-left: -25px;
-}
-
-#sidep {
-	margin-top: -10px;
-}
-
 nav ul {
     font-family:'Helvetica';
     font-size: 1em;
     list-style: none;
     left:0;
-    width: 100%;
     padding: 10px;
 }
 
