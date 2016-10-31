@@ -5,6 +5,16 @@ body {
     font-size: 1em;
 }
 
+#site-title {
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    font-family: Georgia, "Bitstream Charter", serif;
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    padding: 0 2.954209748892% .275em;
+}
+
 .sidenav {
     height: 100%;
     width: 325px;
