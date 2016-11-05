@@ -8,7 +8,7 @@ body {
 }
 
 #site-title {
-    border-bottom: 1px solid maroon;
+    border-bottom: 1px solid red;
     display: block;
     width: 50%;
     font-family: Georgia, "Bitstream Charter", serif;
