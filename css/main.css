@@ -40,17 +40,17 @@ nav ul {
     padding: 10px;
 }
 
-footer ul {
-    font-family:'Helvetica;
-    list-style: none;
-    font-weight: bold;
-}
-
 nav ul li, footer ul li {
     display: inline;
     padding: 5px;
     margin: 10px;
     color: white;
+}
+
+footer ul {
+    font-family:'Helvetica;
+    list-style: none;
+    font-weight: bold;
 }
 
 a {
@@ -59,12 +59,7 @@ a {
 }
 
 a:hover {
-    color: white;
-}
-
-h1 {
-    font-size: 2em;
-    font-family:'Helvetica';
+    color: maroon;
 }
 
 p {
@@ -78,32 +73,4 @@ footer {
     font-size: .8em;
     padding: 5px;
     margin-top: 20px;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-#project {
-    margin-left: 2em;
-    border-radius: 5px;
-    border: 1px;
-    border-style: solid;
-    border-color: lightgray;
-    box-shadow: 1px 1px 1px #888888;
-    background: gainsboro;
-    padding: 5px;
-}
-
-#project-content {
-    margin-left: 1em;
-}
-
-#title {
-    color: cornflowerblue;
 }
