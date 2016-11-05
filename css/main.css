@@ -29,7 +29,6 @@ body {
 }
 
 #site-quote {
-    border-bottom: 1px solid gray;
     text-transform: uppercase;
     font-size: 11px;
     color: gray;
@@ -38,6 +37,8 @@ body {
 #site-quote-author {
     font-size: 10px;
     color: black; 
+    border-bottom: 1px solid gray;
+    margin: 0px 20px;
 }
 
 nav ul {
