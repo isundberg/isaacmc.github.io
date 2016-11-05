@@ -19,6 +19,11 @@ body {
     color: maroon;
 }
 
+#site-quote {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
 #branding {
     margin: auto;
     width: 50%;
