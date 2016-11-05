@@ -8,9 +8,8 @@ body {
     margin: auto;
     width: 75%;
     position: absolute;
-    top: 40px; /* Header Height */
-    bottom: 20px; /* Footer Height */
-    padding: 10px;   
+    top: 0px; /* Header Height */
+    bottom: 0px; /* Footer Height */
     background-color: white;
 }
 
