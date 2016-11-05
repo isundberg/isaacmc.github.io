@@ -11,6 +11,7 @@ body {
     margin: auto;
     width: 50%;
     padding: 10px;
+    text-align: center;
 }
 
 #site-title {
@@ -21,7 +22,6 @@ body {
     font-size: 2.1rem;
     line-height: 1.15;
     padding: 10px;
-    text-align: center;
     color: maroon;
 }
 
