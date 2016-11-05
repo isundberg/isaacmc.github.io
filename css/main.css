@@ -10,7 +10,7 @@ body {
 
 #branding {
     margin: auto;
-    width: 50%;
+    width: 75%;
     padding: 10px;
     text-align: center;
 }
@@ -34,7 +34,7 @@ body {
 
 #site-quote-author {
     font-size: 10px;
-    color: black;   
+    color: black; 
 }
 
 nav ul {
