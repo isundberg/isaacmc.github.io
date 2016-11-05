@@ -32,6 +32,11 @@ body {
     color: gray;
 }
 
+#site-quote-author {
+    font-size: 10px;
+    color: black;   
+}
+
 nav ul {
     font-family:'Helvetica';
     font-size: 1em;
