@@ -58,6 +58,12 @@ nav ul li, footer ul li {
     color: white;
 }
 
+#container {
+    margin: auto;
+    width: 75%;
+    padding: 10px;  
+}
+
 footer ul {
     font-family:'Helvetica;
     list-style: none;
