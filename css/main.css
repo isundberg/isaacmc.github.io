@@ -10,7 +10,6 @@ body {
 #site-title {
     border-bottom: 1px solid gray;
     display: block;
-    width: 50%;
     font-family: Georgia, "Bitstream Charter", serif;
     font-size: 21px;
     font-size: 2.1rem;
@@ -18,6 +17,13 @@ body {
     padding: 10px;
     text-align: center;
     color: maroon;
+}
+
+#branding {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
 
 nav ul {
