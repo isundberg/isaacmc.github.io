@@ -7,6 +7,12 @@ body {
     padding: 10px;
 }
 
+#branding {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 #site-title {
     border-bottom: 1px solid gray;
     display: block;
@@ -23,13 +29,6 @@ body {
     text-transform: uppercase;
     font-size: 10px;
     color: gray;
-}
-
-#branding {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
 }
 
 nav ul {
