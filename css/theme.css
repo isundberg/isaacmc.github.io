@@ -11,6 +11,10 @@ a:hover {
     color: blue;
 }
 
+#sidebar {
+    color: red;   
+}
+
 .sidebar h1 {
     color: blue;
     font-size: 1.3em;
