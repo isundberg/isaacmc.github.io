@@ -3,16 +3,12 @@ body {
     padding-bottom: 60px;
 }
 
-.copyright {
-    color: green;
+a {
+    color: blue;
 }
 
-.footer {
-    text-align: center;
-}
-
-.footer a {
-    color: yellow;
+a:hover {
+    color: blue;
 }
 
 .sidebar h1 {
@@ -20,17 +16,9 @@ body {
     font-size: 1.3em;
 }
 
-.sidebar a {
-    color: blue;
-}
-
 .sidebar li {
     margin-top: 1em;
     line-height: 1em;
-}
-
-.sidebar a:hover {
-    color: blue;
 }
 
 .container-left {
