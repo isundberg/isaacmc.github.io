@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Isaac M. Craig</title>
-		<!-- link to main stylesheet -->
-    		<link href="{{ site.baseurl}}/index.css" rel="stylesheet" type="text/css">
-	</head>
+	
+<head>
+	<title>Isaac M. Craig</title>
+	<!-- link to main stylesheet -->
+	<link href="{{ site.baseurl}}/index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div id="title">
+		Isaac M. Craig
+	</div>
 		
-	<body>
-		<div id="title">
-			Isaac M. Craig
-		</div>
-		
-		<div id="header">
+	<div id="header">
 		<div id="email">icraig at brynmawr.edu</div>
 		<ul id="navbar">
             	<li><a href="{{ site.baseurl }}/">Home</a></li>
@@ -21,9 +23,9 @@
             	<li><a href="{{ site.baseurl }}/talks/index.html">Talks</a></li>
             	<li><a href="{{ site.baseurl }}/resources/resources.html">Resources</a></li>
         	</ul>
-    		</div>
+    	</div>
 
-		<div id="main">	
+	<div id="main">	
 		<div id="sidebar">
 		{% include sidebar.html %}
 		</div>
@@ -31,7 +33,6 @@
 		<div id="content">
        		{% include content.html %}
         	</div>
-		
        	</div>
 		
 
@@ -39,5 +40,5 @@
 		{% include footer.html %}
 	</div>
 		
-	</body>
+</body>
 </html>
