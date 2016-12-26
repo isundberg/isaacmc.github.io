@@ -1,0 +1,100 @@
+html {
+	height: 100%;
+}
+
+body {
+    padding: 30px 0px 0px 0px;
+    font-family: Helvetica, Arial, sans-serif;
+	margin: 10px 40px 10px 40px;
+    height: 100%;
+}
+
+#title {
+	margin: 0px 0px 10px 75px;
+	text-transform: uppercase;
+	font-weight: 100;
+	letter-spacing: 6px;
+	font-size: x-large;
+	color: RoyalBlue;
+}
+
+#header {
+    border-bottom: 1px solid lightgray;  
+    margin: 0px 60px; 
+}
+
+#email {
+	color: gray;
+	padding: 15px 0px 0px 0px;
+	float: right;
+	font-size: small;
+	font-style: italic;
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+	color: gray;
+	display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: small;
+    text-transform: uppercase;
+}
+
+a {
+	border-bottom: 2px solid transparent;
+}
+
+#navbar li a:hover {
+	color: black;
+	border-bottom: 2px solid lightgray;
+}
+
+#sidebar {
+	padding: 20px 0px 0px 0px;
+	position: absolute;
+	left: 75%;
+	font-size: small;
+}
+
+#sidebarItem {
+	border-left: 1px solid lightgray;
+	border-radius: 4px;
+	margin: 30px 0px;
+	padding: 0px 15px 15px 15px;
+	width: 200px;
+}
+
+#content {
+	padding: 30px 0px 0px 75px;
+}
+
+#footer {
+	position: absolute;
+  	bottom: 0;
+	left: 75px;
+	color: lightgray;
+}
+
+
+
+
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+a:hover {
+    color: RoyalBlue;
+}
