@@ -20,7 +20,8 @@ body {
 
 #header {
     border-bottom: 1px solid lightgray;  
-    margin: 0px 60px; 
+    margin: 0px 75px;
+    clear: left;
 }
 
 #navbar {
@@ -54,18 +55,16 @@ a {
 }
 
 #sidebar {
-	padding: 20px 0px 0px 0px;
-	position: absolute;
-	left: 75%;
 	font-size: small;
 }
 
 #sidebarItem {
 	border-left: 1px solid lightgray;
 	border-radius: 4px;
-	margin: 30px 0px;
+	margin: 10px 0px;
 	padding: 0px 15px 15px 15px;
 	width: 200px;
+	clear: left;
 }
 
 #sidebarHeader {
@@ -76,17 +75,27 @@ a {
 }
 
 #content {
-	padding: 35px 0px 0px 75px;
-	background: lightgray;
-	border: 1px solid gray;
-	border-radius: 4px;
-	width: 60%;
+	margin: 30px 0px 0px 60px;
+	padding: 15px 0px 15px 30px;
+	float: left;
+}
+
+#contentItem {
+	color: RoyalBlue;
+	padding: 10px 0px 0px 0px;
+	float: left;
+	clear: left;
+}
+
+#contentList {
+	float: left;
+	font-size: smaller;
+	list-style: none;
 }
 
 #footer {
-	position: absolute;
+	clear: left;
   	bottom: 0;
-	left: 75px;
 	color: lightgray;
 }
 
@@ -101,3 +110,4 @@ a {
 a:hover {
     color: RoyalBlue;
 }
+
