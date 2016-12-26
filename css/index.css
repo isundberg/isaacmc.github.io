@@ -10,7 +10,7 @@ body {
 }
 
 #title {
-	margin: 0px 0px 10px 75px;
+	margin: 10px 0px 10px 75px;
 	text-transform: uppercase;
 	font-weight: 100;
 	letter-spacing: 6px;
@@ -21,14 +21,6 @@ body {
 #header {
     border-bottom: 1px solid lightgray;  
     margin: 0px 60px; 
-}
-
-#email {
-	color: gray;
-	padding: 15px 0px 0px 0px;
-	float: right;
-	font-size: small;
-	font-style: italic;
 }
 
 #navbar {
@@ -76,8 +68,15 @@ a {
 	width: 200px;
 }
 
+#sidebarHeader {
+	color: gray;
+	padding: 10px 0px 10px 0px;
+	font-size: small;
+	text-transform: uppercase;
+}
+
 #content {
-	padding: 30px 0px 0px 75px;
+	padding: 35px 0px 0px 75px;
 }
 
 #footer {
