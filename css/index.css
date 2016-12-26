@@ -92,6 +92,7 @@ a {
 	float: left;
 	font-size: smaller;
 	list-style: none;
+	clear: left;
 }
 
 #footer {
