@@ -57,6 +57,8 @@ a {
 #sidebar {
 	padding: 20px 0px 0px 0px;
 	font-size: small;
+	text-align: justify;
+    text-justify: inter-word;
 }
 
 #sidebarItem {
@@ -64,7 +66,7 @@ a {
 	border-radius: 4px;
 	margin: 10px 0px;
 	padding: 0px 15px 15px 15px;
-	width: 200px;
+	width: 215px;
 	clear: left;
 }
 
@@ -92,7 +94,6 @@ a {
 	float: left;
 	font-size: smaller;
 	list-style: none;
-	clear: left;
 }
 
 #footer {
