@@ -98,6 +98,11 @@ a {
 	list-style: none;
 }
 
+#contentSpace {
+	float: left;
+	font-size: smaller;
+}
+
 #footer {
 	clear: left;
   	bottom: 0;
