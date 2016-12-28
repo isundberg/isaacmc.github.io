@@ -84,7 +84,8 @@ a {
 }
 
 #contentItem {
-	margin: -4px 0px 0px 0px;
+	margin: -4px 20px 0px 0px;
+	padding: 0px 0px;
 	text-align: right;
 	color: RoyalBlue;
 	float: left;
