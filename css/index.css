@@ -84,6 +84,7 @@ a {
 }
 
 #contentItem {
+	padding: -5px 0px 0px 0px;
 	color: RoyalBlue;
 	float: left;
 	clear: left;
