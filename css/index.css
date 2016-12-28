@@ -84,9 +84,6 @@ a {
 }
 
 #contentItem {
-	margin: -4px 20px 0px 0px;
-	padding: 0px 0px;
-	text-align: right;
 	color: RoyalBlue;
 	float: left;
 	clear: left;
@@ -94,12 +91,14 @@ a {
 
 #contentList {
 	float: left;
+	clear: left;
 	font-size: smaller;
 	list-style: none;
 }
 
 #contentSpace {
 	float: left;
+	clear: left;
 	font-size: smaller;
 }
 
