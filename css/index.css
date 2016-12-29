@@ -54,25 +54,6 @@ body {
 	border-bottom: 2px solid lightgray;
 }
 
-#blocks {
-	position: absolute;
-	top: -22px;
-}
-
-#block1 {
-	width: 70px;
-    	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
-}
-
-#block2 {
-	left: 85px;
-	width: 70px;
-    	border: 1px solid lightgray;
-}
-
-
 
 /* Sidebar Styles */
 
