@@ -55,10 +55,12 @@ body {
 }
 
 #block1 {
-	width: 20px;
+	position: absolute;
+	top: -22px;
+	width: 70px;
     	border: 1px solid lightgray;
-    	padding: 2px;
-    	margin: 2px;
+    	padding: 0px;
+    	margin: 0px;
 }
 
 
