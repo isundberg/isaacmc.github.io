@@ -55,9 +55,10 @@ body {
 }
 
 #block1 {
-	background: lightgray;	
 	width: 20px;
-	height: 2px;
+    	border: 1px solid lightgray;
+    	padding: 2px;
+    	margin: 2px;
 }
 
 
