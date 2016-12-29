@@ -19,11 +19,14 @@
 	{% include header.html %}
 
 	<div id="main" class="col-lg-16">
-		{% assign current = page.url | downcase | split: '/' %}
-		{% if current[1] == nil %} {% include posts.html %} {% endif %}
 		
 		<div id="content" class="col-sm-8">
-       		{{ content }}
+		{% assign current = page.url | downcase | split: '/' %}
+		{% if current[1] == nil %} 
+			{% include posts.html %}
+       		{% else %}
+			{{ content }}
+		{% endif %}
         	</div>
 		
 		<div id="sidebar" class="col-sm-2">
