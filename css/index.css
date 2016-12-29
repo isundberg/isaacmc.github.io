@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    padding: 30px 0px 0px 0px;
-    font-family: Helvetica, Arial, sans-serif;
+    	padding: 30px 0px 0px 0px;
+    	font-family: Helvetica, Arial, sans-serif;
 	margin: 10px 40px 10px 40px;
-    height: 100%;
+    	height: 100%;
 }
 
 #title {
@@ -19,9 +19,9 @@ body {
 }
 
 #header {
-    border-bottom: 1px solid lightgray;  
-    margin: 0px 75px;
-    clear: left;
+    	border-bottom: 1px solid lightgray;  
+    	margin: 0px 75px;
+    	clear: left;
 }
 
 #navbar {
@@ -38,11 +38,11 @@ body {
 #navbar li a {
 	color: gray;
 	display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: small;
-    text-transform: uppercase;
+    	text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+    	font-size: small;
+    	text-transform: uppercase;
 }
 
 a {
@@ -58,7 +58,7 @@ a {
 	padding: 20px 0px 0px 0px;
 	font-size: small;
 	text-align: justify;
-    text-justify: inter-word;
+    	text-justify: inter-word;
 }
 
 #sidebarItem {
@@ -98,14 +98,14 @@ a {
 #contentList {
 	float: left;
 	clear: left;
-	font-size: smaller;
+	font-size: small;
 	list-style: none;
 }
 
 #contentSpace {
 	float: left;
 	clear: left;
-	font-size: smaller;
+	font-size: small;
 }
 
 #footer {
