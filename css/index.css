@@ -50,8 +50,7 @@ body {
 }
 
 #navbar li a.active {
-	color: Black;
-	font-weight: bold;
+	color: RoyalBlue;
 	border-bottom: 2px solid lightgray;
 }
 
