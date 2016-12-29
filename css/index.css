@@ -136,6 +136,10 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
+.active {
+	color: red;	
+}
+
 a:hover {
     color: RoyalBlue;
 }
