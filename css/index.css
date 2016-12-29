@@ -92,14 +92,12 @@ a {
 #contentItem {
 	float: left;
 	clear: left;
-	color: lightgray;
 }
 
 #contentList {
 	float: left;
 	clear: left;
 	font-size: small;
-	list-style: none;
 }
 
 #contentSpace {
@@ -124,5 +122,9 @@ a {
 
 a:hover {
     color: RoyalBlue;
+}
+
+.listStyle {
+	color: RoyalBlue;	
 }
 
