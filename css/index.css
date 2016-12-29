@@ -24,6 +24,10 @@ body {
     	clear: left;
 }
 
+
+
+/* Navbar Styles */
+
 #navbar {
     list-style-type: none;
     margin: 0;
@@ -45,14 +49,20 @@ body {
     	text-transform: uppercase;
 }
 
-a {
-	border-bottom: 2px solid transparent;
-}
-
 #navbar li a:hover {
 	color: black;
 	border-bottom: 2px solid lightgray;
 }
+
+#block1 {
+	background: lightgray;	
+	width: 20px;
+	height: 2px;
+}
+
+
+
+/* Sidebar Styles */
 
 #sidebar {
 	padding: 20px 0px 0px 0px;
