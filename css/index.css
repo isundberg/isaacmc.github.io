@@ -49,8 +49,14 @@ body {
     	text-transform: uppercase;
 }
 
+#navbar li a.active {
+	color: Black;
+	font-weight: bold;
+	border-bottom: 2px solid lightgray;
+}
+
 #navbar li a:hover {
-	color: black;
+	color: RoyalBlue;
 	border-bottom: 2px solid lightgray;
 }
 
