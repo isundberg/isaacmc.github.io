@@ -96,7 +96,8 @@ a {
 #contentItem {
 	float: left;
 	clear: left;
-	color: RoyalBlue;
+	color: lightgray;
+	text-transform: uppercase;
 }
 
 #contentList {
