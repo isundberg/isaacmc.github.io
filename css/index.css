@@ -106,7 +106,7 @@ body {
 	float: left;
 	clear: left;
 	color: lightgray;
-	text-transform: uppercase;
+	font-style: italic;
 }
 
 #contentList {
