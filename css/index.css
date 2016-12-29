@@ -102,6 +102,7 @@ a {
 	float: left;
 	clear: left;
 	font-size: small;
+	list-style: none;
 }
 
 #contentSpace {
