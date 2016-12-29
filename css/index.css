@@ -54,9 +54,12 @@ body {
 	border-bottom: 2px solid lightgray;
 }
 
-#block1 {
+#blocks {
 	position: absolute;
 	top: -22px;
+}
+
+#block1 {
 	width: 70px;
     	border: 1px solid lightgray;
     	padding: 0px;
@@ -64,49 +67,9 @@ body {
 }
 
 #block2 {
-	position: absolute;
-	top: -22px;
 	left: 85px;
 	width: 70px;
     	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
-}
-
-#block3 {
-	position: absolute;
-	top: -22px;
-	width: 70px;
-    	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
-}
-
-#block4 {
-	position: absolute;
-	top: -22px;
-	width: 70px;
-    	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
-}
-
-#block5 {
-	position: absolute;
-	top: -22px;
-	width: 70px;
-    	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
-}
-
-#block6 {
-	position: absolute;
-	top: -22px;
-	width: 70px;
-    	border: 1px solid lightgray;
-    	padding: 0px;
-    	margin: 0px;
 }
 
 
