@@ -110,27 +110,6 @@ a {
 	font-size: small;
 }
 
-/* For lists in custom content list environment */
-#contentList3 {
-	list-style: none;
-}
-
-#contentList2 ul {
-    list-style: none;
-    padding:0;
-    margin:0;
-}
-
-#contentList2 li { 
-    padding-left: 1em; 
-    text-indent: -.7em;
-}
-
-#contentList2 li:before {
-    content: "• ";
-    color: RoyalBlue;
-}
-
 
 
 /* Footer styles */
