@@ -19,6 +19,9 @@
 	{% include header.html %}
 
 	<div id="main" class="col-lg-16">
+		{% assign current = page.url | downcase | split: '/' %}
+		{% if current[1]=='' %} {% include posts.html %} {% endif %}
+		
 		<div id="content" class="col-sm-8">
        		{{ content }}
         	</div>
