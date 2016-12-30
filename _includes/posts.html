@@ -1,9 +1,8 @@
 <div id="posts" class="col-sm-12">
-    <p>Test1</p>
+    <p>Test2</p>
     {% for post in site.posts %}
-        <h3>{{ post.title }} - {{ post.date }}</h3>
-        {{ post.content }}
+        <a href="{{ post.url }}">{{ post.title }}</a>
         <p>Test</p>
     {% endfor %}
-    <p>Test1</p>
+    <p>Test2</p>
 </div>
