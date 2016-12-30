@@ -1,5 +1,5 @@
 <div id="posts" class="col-sm-12">
-    {% for node in _posts %}
+    {% for node in site.posts %}
         <h3>{{ node.title }} - {{ node.date }}</h3>
         {{ node.content }}
     {% endfor %}
