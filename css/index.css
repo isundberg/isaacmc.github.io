@@ -127,7 +127,9 @@ body {
 #footer {
 	clear: left;
   	bottom: 0;
-	color: lightgray;
+	color: white;
+	border-bottom: 1px solid lightgray;  
+	margin: 0px 75px;
 }
 
 
