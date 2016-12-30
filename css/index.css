@@ -156,5 +156,6 @@ a:hover {
 #bullet {
 	color: RoyalBlue;
 	left: -5px;
+	font-weight: 300;
 }
 
