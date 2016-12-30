@@ -121,7 +121,7 @@ body {
 }
 
 #bullet {
-	font-style: none;
+	font-style: normal;
 	color: RoyalBlue;
 	font-weight: 300;
 	float: left;
