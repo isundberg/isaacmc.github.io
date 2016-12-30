@@ -1,3 +1,5 @@
 <div id="posts" class="col-sm-12">
-    <p>Posts</p>
+    {% for node in _posts %}
+        {% include node %}
+    {% endfor %}
 </div>
