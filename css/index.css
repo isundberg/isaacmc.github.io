@@ -103,7 +103,6 @@ body {
 
 #contentItem {
 	float: left;
-	clear: left;
 	color: gray;
 	font-style: italic;
 }
@@ -157,5 +156,6 @@ a:hover {
 	color: RoyalBlue;
 	left: -5px;
 	font-weight: 300;
+	float: left;
 }
 
