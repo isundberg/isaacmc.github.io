@@ -149,3 +149,12 @@ a:hover {
     color: RoyalBlue;
 }
 
+
+
+
+
+#bullet {
+	color: RoyalBlue;
+	left: -5px;
+}
+
