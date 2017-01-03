@@ -24,8 +24,6 @@
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
 			{% include posts.html %}
-		{% elsif current[1] == 'blog' %}
-			{% include blog.html %}
        		{% else %}
 			{{ content }}
 		{% endif %}
