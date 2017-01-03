@@ -1,3 +1,5 @@
 name: Isaac Craig
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+collections: 
+- blogposts
