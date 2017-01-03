@@ -19,8 +19,6 @@
 	<div id="header">
 	<ul id="navbar">
 	
-	{% assign current = page.url | downcase | split: '/' %}
-	
         <li><a href="{{ site.baseurl }}/" {% if current[1] == nil %}class="active"{% endif %}>Home</a></li>
         <li><a href="/about/index.html" {% if current[1] == 'about' %}class="active"{% endif %}>About</a></li>
         <li><a href="/teaching/index.html" {% if current[1] == 'teaching' %}class="active"{% endif %}>Teaching</a></li>
