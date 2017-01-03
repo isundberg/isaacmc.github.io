@@ -3,4 +3,10 @@ layout: default
 title: blog
 ---
 
-{% indlude blog.html %}
+{% for post in site.blogposts %}
+  <div id="contentBlock">    
+    <div id="contentItem">{{ post.title }}</div>
+    <div id="contentSpace">{{ post.content }}</div>
+  </div>
+{% endfor %}
+
