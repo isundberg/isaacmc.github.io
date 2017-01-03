@@ -1,5 +1,7 @@
 
-
-{% for node in site.journals %}
-  {% journal.content %}
+{% for post in site.journals %}
+  <div id="contentBlock">    
+      <div id="contentItem">{{ post.title }}</div>
+      <div id="contentSpace">{{ post.content }}</div>
+  </div>
 {% endfor %}
