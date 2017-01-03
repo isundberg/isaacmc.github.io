@@ -11,4 +11,18 @@ Test
   </div>
 {% endfor %}
 
+{% for post in entries/ %}
+  <div id="contentBlock">    
+    <div id="contentItem">{{ post.title }}</div>
+    <div id="contentSpace">{{ post.content }}</div>
+  </div>
+{% endfor %}
+
+{% for post in /entries/ %}
+  <div id="contentBlock">    
+    <div id="contentItem">{{ post.title }}</div>
+    <div id="contentSpace">{{ post.content }}</div>
+  </div>
+{% endfor %}
+
 Test
