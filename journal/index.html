@@ -21,19 +21,19 @@
 	<div id="main" class="col-lg-16">
 		
 		<div id="content" class="col-sm-8"> 
-      {% for post in site.journals %}
-        <div id="contentBlock">    
-          <div id="contentItem">{{ post.title }}</div>
-          <div id="contentSpace">{{ post.content }}</div>
-        </div>
-      {% endfor %}
-    </div>
+      		{% for post in site.journal.journals %}
+        		<div id="contentBlock">    
+          			<div id="contentItem">{{ post.title }}</div>
+          			<div id="contentSpace">{{ post.content }}</div>
+        		</div>
+      		{% endfor %}
+    		</div>
 		
 		<div id="sidebar" class="col-sm-2">
 		{% include sidebar.html %}
 		</div>
     
-  </div>
+  	</div>
 	
 	<div id="footer" class="col-sm-16">
 		{% include footer.html %}
