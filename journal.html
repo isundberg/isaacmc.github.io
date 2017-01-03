@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Isaac M. Craig</title>
+	<!-- link to main stylesheet -->
+	<script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    	<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    	<link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="{{ site.baseurl }}/css/index.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="tortoise.png">
+</head>
+
+<body>
+	<div id="title" class="col-lg-4">
+		Isaac M. Craig
+	</div>
+	
+	{% include header.html %}
+
+	<div id="main" class="col-lg-16">
+		
+		<div id="content" class="col-sm-8"> 
+      		{% for post in site.journal.journals %}
+        		<div id="contentBlock">    
+          			<div id="contentItem">{{ post.title }}</div>
+          			<div id="contentSpace">{{ post.content }}</div>
+        		</div>
+      		{% endfor %}
+    		</div>
+		
+		<div id="sidebar" class="col-sm-2">
+		{% include sidebar.html %}
+		</div>
+    
+  	</div>
+	
+	<div id="footer" class="col-sm-16">
+		{% include footer.html %}
+	</div>
+	
+</body>
+</html>
