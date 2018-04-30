@@ -26,7 +26,8 @@ body {
 }
 
 #isaacimg {
-	height: 400;	
+	height: 400;
+	width: 10%;
 }
 #isaac {
     	border: 2px solid RoyalBlue;	
