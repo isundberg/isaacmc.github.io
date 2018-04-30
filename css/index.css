@@ -110,7 +110,7 @@ body {
 #contentItem {
 	float: left;
 	font-style: italic;
-	color: gray;
+	color: RoyalBlue;
 }
 
 #contentList {
@@ -140,7 +140,7 @@ body {
 /* Universal styles */
 
 a {
-	color: lightgray;
+	color: gray;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 }
