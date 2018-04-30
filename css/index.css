@@ -35,24 +35,24 @@ body {
 /* Navbar Styles */
 
 #navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 #navbar li {
-    float: left;
+	float: left;
 }
 
 #navbar li a {
 	color: gray;
 	display: block;
-    	text-align: center;
-    	padding: 14px 16px;
-    	text-decoration: none;
-    	font-size: small;
-    	text-transform: uppercase;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: small;
+	text-transform: uppercase;
 }
 
 #navbar li a.active {
@@ -110,6 +110,7 @@ body {
 #contentItem {
 	float: left;
 	font-style: italic;
+	font-size: large;
 	color: RoyalBlue;
 }
 
