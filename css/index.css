@@ -25,11 +25,8 @@ body {
     	clear: left;
 }
 
-#isaacimg {
-	height: 400;
-	width: 10%;
-}
 #isaac {
+	height: 400;
     	border: 2px solid RoyalBlue;	
 }
 
