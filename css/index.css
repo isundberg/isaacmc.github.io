@@ -28,8 +28,8 @@ body {
 #isaac {
 	width: 30%;
     	border: 2px solid lightgray;	
-    	border-radius: 0px;
-	padding: 0px;
+    	border-radius: 4px;
+	padding: 2px;
 }
 
 
