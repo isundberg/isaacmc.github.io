@@ -23,7 +23,7 @@
 		<div id="content" class="col-sm-8">
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
-			{% include posts.html %}
+			{% include home.html %}
        		{% else %}
 			{{ content }}
 		{% endif %}
