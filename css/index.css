@@ -25,6 +25,11 @@ body {
     	clear: left;
 }
 
+#isaac {
+	height: 200px;
+    	border: 1px solid purple;	
+}
+
 
 
 /* Navbar Styles */
