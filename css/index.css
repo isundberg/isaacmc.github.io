@@ -111,7 +111,7 @@ body {
 
 #contentItem {
 	float: left;
-	text-transformation: uppercase;
+	text-transform: uppercase;
 }
 
 #contentList {
