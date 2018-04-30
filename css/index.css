@@ -110,6 +110,7 @@ body {
 #contentItem {
 	float: left;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 #contentList {
