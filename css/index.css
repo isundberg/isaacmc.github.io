@@ -32,6 +32,13 @@ body {
 	padding: 2px;
 }
 
+#isaac:hover {
+	width: 30%;
+    	border: 2px solid RoyalBlue;	
+    	border-radius: 4px;
+	padding: 2px;	
+}
+
 
 
 /* Navbar Styles */
