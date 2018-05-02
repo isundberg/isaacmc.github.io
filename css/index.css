@@ -118,7 +118,7 @@ body {
 
 #contentItem {
 	float: left;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 #contentList {
