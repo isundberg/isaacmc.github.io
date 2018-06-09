@@ -121,11 +121,11 @@ body {
 	clear: left;
 	font-size: small;
 	list-style: none;
-	padding: 0px 0px 0px 15px;
+	padding: 0px 0px 10px 15px;
 }
 
 #contentListItem {
-	padding: 0px 0px 0px 35px;	
+	padding: 0px 0px 0px 15px;	
 }
 
 #contentSpace {
