@@ -70,7 +70,7 @@ body {
 
 #navbar li a.active {
 	color: RoyalBlue;
-	border-bottom: 2px solid lightgray;
+	border-bottom: 2px solid RoyalBlue;
 }
 
 #navbar li a:hover {
@@ -82,9 +82,9 @@ body {
 /* Banner Styles */
 
 #banner {
-	background-color: lightgray;
+	background-color: Azure;
 	width: 100%;
-	border: 1px solid gray;
+	border: 1px solid lightgray;
 	border-style: solid;
 	border-width: .25px 0px .25px 0px;
 	width: 100%;
