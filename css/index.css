@@ -83,7 +83,7 @@ body {
 /* Banner Styles */
 
 #banner {
-	background-color: Azure;
+	background-color: WhiteSmoke;
 	width: 100%;
 	border: 1px solid lightgray;
 	border-style: solid;
@@ -138,7 +138,7 @@ body {
 /* Footer styles */
 
 #footer {
-	background-color: Azure;
+	background-color: WhiteSmoke;
 	width: 100%;
 	border: 1px solid lightgray;
 	border-style: solid;
