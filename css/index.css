@@ -71,7 +71,7 @@ body {
 
 #navbar li a.active {
 	color: RoyalBlue;
-	border-bottom: 2px solid RoyalBlue;
+	border-bottom: 2px solid lightgray;
 }
 
 #navbar li a:hover {
