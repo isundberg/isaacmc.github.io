@@ -121,6 +121,7 @@ body {
 	clear: left;
 	font-size: small;
 	list-style: none;
+	padding: 0px 0px 0px 10px;
 }
 
 #contentListItem {
