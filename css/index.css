@@ -11,7 +11,7 @@ body {
 }
 
 #title {
-	margin: 10px 0px 10px 75px;
+	margin: 10px 0px 10px 350px;
 	text-transform: uppercase;
 	font-weight: 100;
 	letter-spacing: 6px;
@@ -45,7 +45,7 @@ body {
 
 #navbar {
 	list-style-type: none;
-	margin: 0px 0px;
+	margin: 0px 350px;
 	padding: 0;
 	overflow: hidden;
 }
