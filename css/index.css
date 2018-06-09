@@ -74,13 +74,6 @@ body {
 
 /* Sidebar Styles */
 
-#sidebar {
-	padding: 20px 0px 0px 0px;
-	font-size: small;
-	text-align: justify;
-    	text-justify: inter-word;
-}
-
 #sidebarItem {
 	border-left: 1px solid lightgray;
 	border-radius: 4px;
