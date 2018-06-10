@@ -21,16 +21,14 @@
 		{% include banner.html %}
 	</div>
 
-	<div id="main" class="col-lg-16">
 		
-		<div id="content" class="col-sm-8">
-		{% assign current = page.url | downcase | split: '/' %}
-		{% if current[1] == nil %} 
-			{% include home.html %}
-       		{% else %}
-			{{ content }}
-		{% endif %}
-        	</div>
+	<div id="content" class="col-sm-16">
+	{% assign current = page.url | downcase | split: '/' %}
+	{% if current[1] == nil %} 
+		{% include home.html %}
+       	{% else %}
+		{{ content }}
+	{% endif %}
        	</div>
 		
 
