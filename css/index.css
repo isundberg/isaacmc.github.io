@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.col-sm-8
+{
+	padding: 0px;	
+}
+
 
 html {
 	height: 100%;
