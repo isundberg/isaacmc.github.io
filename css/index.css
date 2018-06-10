@@ -104,7 +104,8 @@ body {
 
 #content {
 	float: left;
-	left: 25%
+	left: 25%;
+	margins: 20px 0px 0px 0px;
 }
 
 #contentBlock {
