@@ -24,6 +24,7 @@ body {
 #title {
 	padding: 10px 0px 10px 0px;
 	left: 25%;
+	width: 60%;
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -34,6 +35,7 @@ body {
 #header {
 	clear: left;
 	left: 23.75%;
+	width: 60%;
 }
 
 #isaac {
@@ -109,6 +111,7 @@ body {
 #content {
 	clear: left;
 	left: 25%;
+	width: 60%;
 	padding: 20px 0px 0px 0px;
 }
 
