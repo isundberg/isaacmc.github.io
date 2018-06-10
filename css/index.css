@@ -27,8 +27,6 @@ body {
 }
 
 #header {
-    	border-bottom: 1px solid lightgray;  
-    	left: 25%;
     	clear: left;
 	padding: 0px;
 }
@@ -53,6 +51,9 @@ body {
 /* Navbar Styles */
 
 #navbar {
+	float: left;
+	left: 25%;
+	padding: 10px 0px 0px 0px;
 	list-style-type: none;
 	overflow: hidden;
 }
