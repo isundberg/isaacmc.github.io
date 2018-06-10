@@ -28,8 +28,9 @@ body {
 
 #header {
     	border-bottom: 1px solid lightgray;  
-    	margin: 0px;
+    	left: 25%;
     	clear: left;
+	padding: 0px;
 }
 
 #isaac {
@@ -53,7 +54,6 @@ body {
 
 #navbar {
 	list-style-type: none;
-	left: 25%;
 	overflow: hidden;
 }
 
