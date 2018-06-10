@@ -17,7 +17,7 @@ body {
 }
 
 #title {
-	margin: 10px 0px 10px 0px;
+	padding: 10px 0px 10px 0px;
 	left: 25%
 	font-weight: 100;
 	text-transform: uppercase;
@@ -105,7 +105,7 @@ body {
 #content {
 	float: left;
 	left: 25%;
-	margins: 20px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
 }
 
 #contentBlock {
