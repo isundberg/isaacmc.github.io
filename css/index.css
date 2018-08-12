@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    	font-family: Palatino, Palatino, serif;
+    	font-family: sans-serif;
 	letter-spacing: .5px;
     	height: 100%;
 	background-color: #fafbfc;
@@ -28,7 +28,7 @@ body {
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	font-size: x-large;
+	font-size: 16px;
 	color: RoyalBlue;
 }
 
