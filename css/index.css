@@ -116,7 +116,7 @@ body {
 #contentBlock {
 	float: left;
 	clear: left;
-	padding: 0px 0px 10px 0px;
+	padding: 20px 0px 20px 0px;
 }
 
 #contentItem {
@@ -135,12 +135,6 @@ body {
 
 #contentListItem {
 	padding: 0px 0px 0px 25px;	
-}
-
-#contentSpace {
-	float: left;
-	clear: left;
-	padding: 20px 0px 20px 0px;
 }
 
 
