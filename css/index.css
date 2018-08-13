@@ -121,16 +121,15 @@ body {
 
 #contentItem {
 	float: left;
-	font-size: 20px;
+	font-size: 16px;
 	font-style: normal;
-	font-weight: 200;
-	line-height: 1.25;
+	font-weight: 100;
 }
 
 #contentList {
 	float: left;
 	clear: left;
-	font-size: small;
+	font-size: 14px;
 	list-style: none;
 }
 
@@ -141,7 +140,7 @@ body {
 #contentSpace {
 	float: left;
 	clear: left;
-	padding: 10px 0px 10px 0px;
+	padding: 20px 0px 20px 0px;
 }
 
 
