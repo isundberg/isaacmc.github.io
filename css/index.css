@@ -131,6 +131,10 @@ body {
 	padding: 0px;
 }
 
+#contentPar {
+	padding: 5px 0px 5px 0px;	
+}
+
 #contentList {
 	float: left;
 	clear: left;
