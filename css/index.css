@@ -120,12 +120,12 @@ body {
 #contentBlock {
 	float: left;
 	clear: left;
-	padding: 0px 0px 20px 0px;
+	padding: 0px 0px 25px 0px;
 }
 
 #contentItem {
 	float: left;
-	font-size: 16px;
+	font-size: 18 px;
 	font-style: normal;
 	font-weight: 100;
 	padding: 0px;
