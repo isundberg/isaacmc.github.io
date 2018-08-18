@@ -104,7 +104,10 @@ body {
 
 #banner-img {
 	clear: left;
-	padding: 5px 0px 0px 400px;
+	position: absolute;
+	left: 40%;
+	padding: 5px 0px 0px 0px;
+	text-color: gray;
 }
 
 
