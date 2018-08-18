@@ -1,7 +1,15 @@
 <div id="banner-img">
 	{% assign current = page.url | downcase | split: '/' %}
 	
-	{% if current[3] == "teaching" %} 
-		aoeu
+	{% if current[1] == "teaching" %} 
+		{% include teaching.html %}
+	{% if current[1] == "research" %} 
+		{% include research.html %}
+	{% if current[1] == "talks" %} 
+		{% include talks.html %}
+	{% if current[1] == "conferences" %} 
+		{% include conferences.html %}
+	{% if current[1] == "resources" %} 
+		{% include resources.html %}
 	{% endif %}
 </div>
