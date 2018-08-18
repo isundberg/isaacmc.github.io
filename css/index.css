@@ -103,7 +103,9 @@ body {
 }
 
 #banner-img {
-		
+	clear: left;
+	left: 40%;
+	width: 40%;
 }
 
 
