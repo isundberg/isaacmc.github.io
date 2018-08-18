@@ -3,5 +3,13 @@
 	
 	{% if current[2] == "teaching" %} 
 		{% include teaching.html %}
+	{% elseif current[2] == "research" %}
+		{% include research.html %}
+	{% elseif current[2] == "talks" %}
+		{% include talks.html %}
+	{% elseif current[2] == "conferences" %}
+		{% include conferences.html %}
+	{% elseif current[2] == "resources" %}
+		{% include resources.html %}
 	{% endif %}
 </div>
