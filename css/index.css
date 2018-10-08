@@ -42,13 +42,12 @@ body {
 }
 
 #isaac {
-	width: 25%;
-	margin: 210px 0px 0px 0px;
+	width: 15%;
+	margin: 10px 0px 0px 0px;
     	border: 1.5px solid lightgray;	
     	border-radius: 4px;
 	padding: 2px;
-	position: absolute;
-	left: 70%;
+	left: 20%;
 }
 
 #isaac:hover {
@@ -117,7 +116,6 @@ body {
 /* Custom list-type environment for content */
 
 #content {
-	clear: left;
 	left: 25%;
 	width: 45%;
 	margin: 10px 0px 0px 0px;
