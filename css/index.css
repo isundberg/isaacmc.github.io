@@ -139,8 +139,7 @@ body {
 	float: left;
 	clear: left;
 	padding: 5px 0px 5px 0px;
-	display: flex;
-    	justify-content: center;
+	text-align: justify;
 }
 
 #contentList {
