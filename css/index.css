@@ -46,7 +46,8 @@ body {
     	border: 1.5px solid lightgray;	
     	border-radius: 4px;
 	padding: 2px;
-	float: right;
+	position: absolute;
+	left: 110%;
 }
 
 #isaac:hover {
