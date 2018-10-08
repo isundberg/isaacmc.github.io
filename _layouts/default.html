@@ -31,7 +31,7 @@ gtag('config', 'UA-118399301-1');
 	</div>
 
 	<div id="main" class="col-med-16">
-		<div id="content" class="col-sm-8" style="position: fixed; width: 45%;">
+		<div id="content" class="col-sm-8">
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
 			{% include home.html %}
