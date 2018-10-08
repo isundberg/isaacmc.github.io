@@ -35,11 +35,6 @@ gtag('config', 'UA-118399301-1');
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
 			{% include home.html %}
-			<div class="col-sm-4" id="isaac">
-			<a href="{{ site.baseurl }}/files/isaac.jpg">
-			<img src="{{ site.baseurl }}/files/isaac.jpg" width="100%">
-			</a>
-			</div>
        		{% else %}
 			{{ content }}
 		{% endif %}
