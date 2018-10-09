@@ -42,12 +42,13 @@ body {
 }
 
 #isaac {
-	width: 15%;
-	margin: 10px 0px 0px 0px;
+	width: 25%;
+	margin: -160px 0px 0px 0px;
     	border: 1.5px solid lightgray;	
     	border-radius: 4px;
 	padding: 2px;
-	left: 20%;
+	left: 35%;
+	float: right;
 }
 
 #isaac:hover {
