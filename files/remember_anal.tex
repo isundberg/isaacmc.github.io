@@ -1,0 +1,1369 @@
+\documentclass[11pt]{amsart}
+\frenchspacing
+
+%------------------------------------------------------------
+% Packages
+%------------------------------------------------------------
+\usepackage{amsfonts}							%Special fonts
+\usepackage{amsmath}							%align* environment
+\usepackage{amssymb}							%Symbols
+\usepackage{amsthm}								%Proof Environment
+\usepackage{dsfont}									%Number Systems
+\usepackage[dvipsnames]{xcolor}				%Colors
+\usepackage[hidelinks]{hyperref} 			%Citations
+\usepackage{latexsym}								%Symbolse
+\usepackage{mathrsfs}								%Script font
+\usepackage{mathtools}								%shortintertext in align*, arrows
+\usepackage{scrextend}								%Addmargin environment
+\usepackage{soul}\setul{2.5pt}{.4pt}		% underline 2.5pt below contents
+\usepackage{tikz} 										%Tikz
+\usepackage{tikz-cd}									%Commutative Diagrams
+\usepackage[utf8]{inputenc}						%Umlauts
+\usepackage{enumitem}							%Customizes itemize enviro
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it} 
+\usepackage{url}
+\usepackage{bm}
+
+
+
+%-----------------------------------------------------------
+% Margins
+%-----------------------------------------------------------
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,head=.2in]{geometry}
+
+% Display Mathmode Padding
+\makeatletter
+\g@addto@macro \normalsize {
+	\setlength\abovedisplayskip{2pt plus 0pt minus 2pt}
+	\setlength\belowdisplayskip{2pt plus 0pt minus 2pt}}
+\makeatother
+
+
+
+%-----------------------------------------------------------
+% Fonts
+%----------------------------------------------------------- 
+%\usepackage{libertine}
+%\usepackage{mathpazo}
+%\usepackage{newtxtext}
+%\usepackage{kpfonts}
+%\linespread{1.2} 			% Changes line spacing
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Environments
+%------------------------------------------------------------
+\swapnumbers
+\newtheorem{theorem}{Theorem}[section] % numbered theorems, lemmas, etc
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{corollary*}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
+\newtheorem*{example*}{Example}
+\newtheorem*{examples*}{Examples}
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Environments
+%------------------------------------------------------------
+\renewenvironment{proof}{\underline{Proof}.}{\qed}
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Commands
+%------------------------------------------------------------
+
+%%%% - renewed fonts - %%%%
+\renewcommand\emptyset{\varnothing}
+\renewcommand\geq{\geqslant}
+\renewcommand\leq{\leqslant}
+\renewcommand\qedsymbol{\small $\square$}
+\renewcommand\hat{\widehat}
+\renewcommand\tilde{\widetilde}
+\renewcommand\:{\colon}
+\renewcommand\bar[1]{\overline{#1}}
+
+%%%% - math cal - %%%%
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calW}{\mathcal{W}}
+
+%%%% - math ds - %%%%
+\newcommand{\C}{\mathds{C}}
+\newcommand{\E}{\mathds{E}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\Z}{\mathds{Z}}
+
+%%%% - misc - %%%%
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+\newcommand{\purple}[1]{\textcolor{Fuchsia}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%%%% - specific - %%%%
+\setlist[itemize]{label=$\hspace{1pt} \tiny\textbullet[1pt]$}
+\let\oldtextbullet\textbullet
+\renewcommand{\textbullet}[1][0pt]{%
+  \mathrel{\raisebox{#1}{$\bullet$}}%
+}
+\newcommand{\dl}{\ d\lambda}
+\newcommand{\dmu}{\ d\mu}
+\newcommand{\dt}{\ dt}
+\newcommand{\dx}{\ dx}
+\newcommand{\dy}{\ dy}
+
+
+
+
+
+% footnotes %
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\foot}[1]{\setcounter{footnote}{1}\footnote{\ #1}}
+
+
+
+
+% Title
+\title{Things to Remember \\ Analysis}
+\author{I. Milan}
+
+% Header
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO]{\small\textsc{Analysis}}
+\fancyhead[CE]{\small\textsc{I. Milan}}
+\cfoot{\ \vskip.01in $_{\thepage}$}
+
+% Contact Information
+%\address{Bryn Mawr College,
+%Bryn Mawr, PA 19003}
+%\email{icraig@brynmawr.edu} 
+
+
+
+\begin{document}
+
+\begin{abstract}
+These are definitions, facts, theorems, or likewise that I feel are particularly important or difficult to remember. Organization is broken into sections of the exam.
+\end{abstract}
+
+\maketitle
+
+
+
+\section{Metric Spaces}
+
+\noindent \textbf{Topics}: completeness, compactness, connectedness, Baire category theorem, spaces of continuous functions, contraction mapping theorem, Weierstrass approximation theorem
+\vskip40pt
+
+
+
+\begin{definition*}
+	An element $x$ of a metric space $X$ is a \textbf{limit point} of a subset $A \subseteq X$ if any neighborhood of $x$ contains an element of $A \setminus x$.
+\end{definition*}
+
+\begin{definition*}
+	A metric space is \textbf{compact} if every open cover has a finite subcover. A metric space is \textbf{sequentially compact} if every sequence has a convergent subsequence. A metric space is \textbf{limit point compact} if every infinite set of points has a limit point.
+\end{definition*}
+
+\begin{proposition*}
+	A metric space is compact iff limit point compact iff sequential compact.
+\end{proposition*}
+
+\begin{definition*}
+	Let $(X, d)$ be a metric space. A map $T\: X \to X$ is a \textbf{contraction map} if there exists some $c \in [0,1)$ such that $d(x, y) \leq cd(Tx, Ty)$ for all $x, y \in X$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Contraction Mapping Thm)} Let $(X, d)$ be a nonempty, complete metric space. Then $T$ has a unique fixed point, obtained by considering the sequence $x_n = T(x_{n-1})$ with arbitrary $x_0 \in X$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Weierstrass Approximation)} Suppose $f$ is a continuous real-valued function. Then for any $\varepsilon > 0$, there is a polynomial $p(x)$ such that $|f(x) - p(x)| < \varepsilon$ for all $x \in [a,b]$.
+\end{theorem*}
+
+
+
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Analytic Functions}
+
+\noindent \textbf{Topics}: Analytic functions, Cauchy's theorem and integral formula; harmonic functions and the maximum principle; Laurent series; isolated singularities, residues, and applications to evaluation of real integrals; analytic continuation; the argument principle, Rouch\'e's theorem; conformal maps and the Riemann mapping theorem (know statement)
+\vskip40pt
+
+
+\begin{definition*}
+	A \textbf{region} is a nonempty, open, connected subset of the complex plane.
+\end{definition*}
+
+\begin{theorem*}
+	Given an open set $A \subseteq \C$ and a function $f\: A \to \C$, $f(z) = u(x,y) + iv(x,y)$, the \textbf{Cauchy-Riemann equations}
+		\[ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \hskip30pt \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} \]
+	are satisfied if and only if $f'(z_0)$ exists at $z_0 = (x_0, y_0)$ in $A$.
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{definition*}
+	Given a smooth curve $\gamma\: I \to \C$ with $\gamma = u + iv$, define
+		\[ \int_0^1 \gamma(t) \ dt = \int_0^1 u(t) \ dt + i \int_0^1 v(t) \ dt. \]
+	We call such a function $\gamma$ a \textbf{contour}. Moreover, if $A \subseteq \C$ is open with $\gamma(I) \subseteq A$ and $f\: A \to \C$ is continuous, the value
+		\[ \int_\gamma f(z) \ dz = \int_0^1 f(\gamma(t)) \gamma'(t) \ dt \]
+	is called the \textbf{contour integral} of a continuous function $f\: A \to \C$ along $\gamma$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Fundamental Theorem of Contour Integrals)} Suppose $\gamma\: I \to \C$ is a smooth curve and $F$ is analytic on some open $A \subseteq \C$ containing $\gamma(I)$. Assume $F'$ is continuous (unnecessary). Then 
+		\[ \int_\gamma F'(z) \ dz = F(\gamma(1)) - F(\gamma(0)), \]
+	and in particular, if $\gamma$ is closed, $\int_\gamma F' = 0$.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is continuous on an open set $A \subseteq \C$. The following are equivalent:
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] if $\gamma_1$ and $\gamma_2$ are smooth curves in $A$ with common endpoints, then $\int_{\gamma_1} f = \int_{\gamma_2} f$;
+		\item[\textnormal{(ii)}] there exists an analytic function $F\: A \to \C$ with $F' = f$;
+		\item[\textnormal{(iii)}] if $\Gamma$ is a closed curve in $A$, then $\int_\Gamma f = 0$.
+	\end{itemize}
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Cauchy's Theorem)} Let $A \subseteq \C$ be open, $f\: A \to \C$ analytic, and $\gamma$ a closed curve which is nullhomotopic in $A$. Then $\int_\gamma f = 0$.
+\end{theorem*}
+
+\begin{definition*}
+	Let $\gamma\: A \to \C$ be a curve in $\C$ with $z_0$ a point not in the image of $\gamma$. The value
+		\[ I(\gamma; z_0) = \frac1{2\pi i} \int_\gamma \frac{dz}{z - z_0} \]
+	is called the \textbf{winding number} of $\gamma$ around $z_0$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Cauchy's Integral Formula)} Let $f\: A \to \C$ be analytic. Then for any closed loop $\gamma$ which is nullhomotopic in $A$ and any $z_0 \in A$ not in the image of $\gamma$, we have
+		\[ f^{(k)}(z_0) I(\gamma; z_0) = \frac1{2\pi i} \int_\gamma \frac{f(z)}{(z - z_0)^{k+1}} dz \]
+	for all $k \in \N$. In particular, all derivatives of $f$ exist.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Cauchy's Inequalities)} Let $f$ be analytic on a region $A$, containing the disk bound by a circle $\gamma$ in $A$ of radius $R$ centered at $z_0$. If $f$ is bounded on $\gamma$ by some $M > 0$, then for all $k \in \N$
+		\[ f^{(k)}(z_0) \leq \frac{k!M}{R^k}. \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Liouville's Theorem)} A bounded, entire function is constant.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Fundamental Theorem of Algebra)} A polynomial of degree $n \geq 1$ has a root.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Morera's Theorem)} Let $f$ be continuous on a region $A$, and suppose $\int_\gamma f = 0$ for all closed curves $\gamma$ in $A$. Then $f$ is analytic on $A$ with analytic antiderivative. 
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{theorem*}
+	\textnormal{(Maximum Modulus Principle)} Suppose $A \subset \C$ is open, connected, and bounded. Let $u\: \bar{A} \to \R$ be analytic on $A$ and continuous on $\bar{A}$. Then $|f|$ has a finite maximum value on $\bar{A}$, attained at some point on $\partial A$. If this value is attained on the interior, the function is constant. 
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Schwartz Lemma)} Let $f\: D \to D$ be analytic on the open unit disk $D$ with $f(0) = 0$. Then $|f'(z)| \leq 1$ and $|f(z)| \leq |z|$ for all $z \in D$. If $|f'(0)| = 1$ or if there is a point $z_0 \neq 0$ for which $|f(z_0)| = |z_0|$, then there is a constant $c$ , $|c| = 1$ such that $f(z) = cz$ for all $z \in D$.
+\end{theorem*}
+
+\begin{definition*}
+	A twice differentiable function $u\: A \to \R$ on an open set $A$ is \textbf{harmonic} if its Laplacian vanishes, that is, $\partial^2 u/\partial x^2 + \partial^2 u/\partial y^2 = 0$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Maximum Principle)} Suppose $A \subset \C$ is open, connected, and bounded. Let $u\: \bar{A} \to \R$ be continuous and harmonic on $A$ and $M$ be the maximum of $u$ on $\partial A$. Then
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] $u(x, y) \leq M$ for all $(x, y) \in A$;
+		\item[\textnormal{(ii)}] if $u(x,y) = M$ for some $(x, y) \in A$, then $u$ is constant on $A$. 
+	\end{itemize}
+	A corresponding statement holds for the minimum, obtained by applying the above to $-u$.
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{theorem*}
+	\textnormal{(Analytic Convergence Theorem)} Let $(f_n)$ be a sequence of analytic functions on an open set $A \subseteq \C$. Then the following hold:
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] if $f_n \to f$ uniformly on closed disks in $A$, then $f$ is analytic. Moreover, $f_k' \to f'$ pointwise on $A$ and uniformly on closed disks in $A$;
+		\item[\textnormal{(ii)}] if $\sum_n f_n \to f$ uniformly on closed disks in $A$, then $f$ is analytic. Moreover, $f' = \sum_n f_n'$ pointwise on $A$ and uniformly on closed disks.
+	\end{itemize}
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Taylor's Theorem)} The \textbf{Taylor series} of a function $f$, analytic on a disk $B(z_0, r)$ around some $z_0 \in \C$, is given by
+		\[ f(z) = \sum_n \frac{f^{(n)}(z_0)}{n!} (z - z_0)^n. \]
+	This series converges pointwise to $f(z)$ on $B(z_0, r)$ and converges uniformly on closed disks in $B(z_0, r)$. Furthermore, the Taylor series diverges on $\C \setminus \bar{B(z_0, r)}$.
+\end{theorem*}
+
+\noindent \textbf{Examples}:
+\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+	\item[] $\displaystyle \frac1{1 - z} = \sum_{n=0}^\infty z^n$ for $|z| < 1$; \hskip105pt $\displaystyle e^z = \sum_{n=0}^\infty \frac{z^n}{n!}$ everywhere;
+	\item[] $\displaystyle \sin(z) = \sum_{n=1}^\infty (-1)^{n-1} \frac{z^{2n-1}}{{2n-1}!}$ everywhere; \hskip40pt $\displaystyle \cos(z) = \sum_{n=0}^\infty (-1)^n \frac{z^{2n}}{(2n!)}$ everywhere;
+\end{itemize}
+\clearpage
+
+\begin{theorem*}
+	\textnormal{(Laurent's Theorem)} Let $f$ be analytic on an annulus $A$ about $z_0 \in \C$. Then
+		\[ f(z) = \sum_{n=0}^\infty a_n(z - z_0)^n + \sum_{n=1}^\infty \frac{b_n}{(z - z_0)^n}, \]
+	where both series converge absolutely on $A$ and uniformly on radially dilated annuli contained in $A$. This series is called the \textbf{Laurent series} of $f$ about $z_0$.
+\end{theorem*}
+
+\begin{definition*}
+	If $f$ is analytic on some $\varepsilon$-neighborhood of $z_0$, then $z_0$ is an \textbf{isolated singularity}:
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[(i)] if all but finitely many $b_n$ are zero, then $z_0$ is a \textbf{pole}, with the lowest index of a nonzero $b_k$ referred to as the \textbf{order} of the pole; 
+		\item[(ii)] if all the $b_k$'s are nonzero, then $z_0$ is an \textbf{essential singularity};
+		\item[(iii)] if all the $b_k$'z are zero, then $z_0$ is a \textbf{removable singularity};
+	\end{itemize}
+	In general, a pole of order $1$ is a \textbf{simple pole} and $b_1 = \text{Res}(f; z_0)$ is the \textbf{residue} of $f$ at $z_0$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+	\item $z_0$ is a removable singularity iff $\lim_{z \to z_0} (z - z_0)f(z) = 0$;
+	\item $z_0$ is a simple pole iff $\lim_{z \to z_0} (z - z_0)f(z)$ exists and is nonzero, with value the residue;
+	\item $z_0$ is a pole of order $k \geq 0$ iff there is a function $\phi$ analytic near $z_0$ such that $f(z) = \phi(z)/(z - z_0)^k$;
+	\item if $z_0$ is a simple pole of $g(z)/h(z)$ with $g(z_0) = h(z_0) = 0$ and $h'(z_0) \neq 0$, then $b_1 = g(z_0)/h'(z_0)$.
+\end{itemize}
+
+\begin{theorem*}
+	\textnormal{(Residue Theorem)} Let $\gamma$ be a curve nullhomotopic in $A$, and let $f$ be analytic on the region $A \subseteq \C$ except for finitely many isolated singularities $\{z_1, \dots, z_n\}$, none lying on $\gamma$. Then
+		\[ \int_\gamma f(z) \ dz = 2\pi i \sum_{i=1}^n \text{Res}(f; z_i)I(\gamma; z_i). \]
+	In general, we consider circles $\gamma$ oriented counterclockwise, simplifying the calculation.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Jordan's Lemma)} Let $f$ be analytic on a semicircle $S_r$ of radius $r > 0$ centered at $0$ contained in the upper-half plane. If $f(z) = g(z)e^{aiz}$ for some $a > 0$, then
+		\[ \bigg| \int_{S_r} f(z) dz \bigg| \leq \frac{\pi}a M_r, \]
+	where $M_r$ is the max of $|g|$ on $S_r$.
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{definition*}
+	A map $f\: A \to B$ is \textbf{conformal} if for each $z_0 \in A$, $f$ rotates tangent vectors to curves at $z_0$ by a definite angle $\theta$ and stretches them by a definite factor $r$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Conformal Mapping Theorem)} Let $f\: A \to B$ be analytic, $f' \neq 0$. Then $f$ is conformal.
+\end{theorem*}
+
+\begin{theorem*}
+	If $f\: A \to B$ is conformal and bijective, then $f^{-1}$ is conformal.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Riemann Mapping Theorem)} Let $A$ be a connected, simply connected region, except $\C$. Then for any $z_0 \in A$, there exists a unique bijective, conformal map $f\: A \to D$ to the open unit disk such that $f(z_0) = 0$ and $f'(z_0) > 0$.
+\end{theorem*}
+
+\begin{definition*}
+	A \textbf{fractional linear transformation} is a conformal map $T$ of the form 
+		\[ T(z) = \frac{az + b}{cz + d}, \]
+	where $a, b, c, d$ are fixed complex numbers satisfying $ad - bc \neq 0$ (to avoid $T$ constant).
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Cross Ratio)} Given distinct triples $(w_1, w_2, w_3)$ and $(z_1, z_2, z_3)$ of complex numbers, there exists a unique fractional lineal transformation $T$ taking $z_i \mapsto w_i$, satisfying
+		\[ \frac{Tz - w_1}{Tz - w_2} \cdot \frac{w_3 - w_2}{w_3 - w_1} = \frac{z - z_1}{z - z_2} \cdot \frac{z_3 - z_2}{z_3 - z_1}. \]
+\end{theorem*}
+
+\clearpage
+
+\begin{theorem*}
+	\textnormal{(Analytic Continuation)} If $f$ and $g$ are analytic on $A$ and agree on a sequence $(z_n)$ converging to $z_0 \in A$, then $f \equiv g$ on $A$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Argument Principle)} Let $\gamma$ be a contour, and let $f$ be analytic inside and along $\gamma$, except at finitely many poles. Then 
+		\[ \int_\gamma \frac{f'(z)}{f(z)} \ dz = \sum 2\pi i(Z - P), \]
+	where $Z$ and $P$ denote the number of zeros and poles of $f$ inside $\gamma$, respectively.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Rouch\'e's Theorem)} Let $f$ and $g$ be analytic on a region $A$ with $\partial A$ a simple closed curve. If $|g| \leq |f|$ on $\partial A$, then $f$ and $f + g$ have the same number of roots inside $A$, with multiplicity.
+\end{theorem*}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+\section{Measure Theory}
+
+\noindent \textbf{Topics}: Riemann-Stieltjes Integral, measures, measurable functions and Lebesgue integral, Lebesgue measure, Fubini's theorem, Borel measures, absolute continuity, Lebesgue and Radon-Nikodym theorems, $L^p$ spaces, Riesze representation theorem, differentiation of measures
+\vskip30pt
+
+
+
+\subsection*{\underline{Riemann-Steiltjes Integral}}
+
+\begin{definition*}
+	Given a bounded function $g\: I \to \R$ and a partition $\calP = \{a = x_0 < x_1 < \dots < x_n = b\}$ of $I = [a, b]$, let $I_k = [x_k, x_{k+1}]$ and $m_k = \inf_{I_k} g$ and $M_k = \sup_{I_k} g$. If $f$ is a nondecreasing function on $I$, let $\Delta_k f = f(x_{k+1}) - f(x_k)$. The \textbf{lower sum} and \textbf{upper sum} of $g$ corresponding to $\calP$ with respect to $f$ are, respectively,
+		\[ s(g,f,\calP) = \sum_{k = 0}^{n-1} m_k \Delta_k f, \hskip30pt S(g, f, \calP) = \sum_{k=0}^{n-1} M_k \Delta_k f. \]
+	The \textbf{lower Riemann-Stieltjes} and \textbf{upper Riemann-Stieltjes} of $g$ w.r.t. $f$ are, respectively,
+		\[ L(g, f, I) = \sup_\calP s(g, f, \calP), \hskip30pt U(g, f, I) = \inf_\calP S(g, f, \calP). \] 
+	If $L(g, f, I) = U(g, f, I)$, we say that $g$ is \textbf{Riemann-Stieltjes integrable} w.r.t. $f$ over $I$ and write $g \in \calR(f, I)$; this common value is denoted $\int_a^b g \ df$. Setting $f(x) = x$ gives the Riemann integral. The class of Riemann-Stieltjes integrable functions on $I$ is denoted $\calR(I)$. 
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=15pt]\setlength\itemsep{0em}
+	\item if $g$ is bounded on $I$, $f$ nondecreasing on $I$, then $g \in \calR(f, I)$ if and only if given $\varepsilon > 0$ there exists a partition $\calP$ such that $S(g, f, \calP) - s(g, f, \calP) < \varepsilon$;
+	\item if $g$ is continuous and $f$ is $BV$, then $g \in \calR(f, I)$;
+	\item if $f$ BV on $I$, $\{g_n\}$ a sequence of bounded functions $g_n \rightrightarrows g$ on $I$, and $g_n, g \in \calR(f, I)$, then $\lim_{n\to\infty} \int_a^b g_n \ df = \int_a^b g \ df$.
+\end{itemize}
+\vskip30pt
+
+
+
+\subsection*{\underline{Algebras}}
+
+\begin{definition*}
+	A class $\calA$ of subsets of $X$ is an \textbf{algebra} if 
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] $\calA$ is nonempty;
+		\item[\textnormal{(ii)}] $E \in \calA$ implies $X \setminus E \in \calA$;
+		\item[\textnormal{(iii)}] $\{E_k\}_1^n \subseteq \calA$ implies $\bigcup_1^n E_k \in \calA$.
+	\end{itemize}
+\end{definition*}
+
+\begin{definition*}
+	An algebra $\calA$ of subsets of $X$ is a \textbf{$\boldsymbol{\sigma}$-algebra} if $\{E_k\}_1^\infty \subseteq \calA$ implies $\bigcup_1^\infty E_k \in \calA$. 
+\end{definition*}
+
+\begin{definition*}
+	Given a sequence $\{A_n\}$ of sets, the sets $\boldsymbol{\limsup A_n}$ and $\boldsymbol{\liminf A_n}$ are, respectively
+		\[ \limsup A_n = \bigcap_{m=1}^\infty \bigg( \bigcup_{n=m}^\infty A_n \bigg), \hskip30pt \liminf A_n = \bigcup_{m=1}^\infty \bigg( \bigcap_{n=m}^\infty A_n \bigg). \]
+	In words, $\limsup A_n$ is the set of elements belonging to countably many $A_n$'s, whereas $\liminf A_n$ are those belonging to all but finitely many.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=15pt]\setlength\itemsep{0em}
+	\item if $\calA$ is an algebra on $X$ and $E \subset X$, then $\calA_E = \{E \cap A : A \in \calA\}$ is an algebra;
+	\item common algebras: $\calA = \{\emptyset, X\}$, $\calA = \calP(X)$, $\calE = \{ \text{ finite unions of } (a, b] : a, b \in \R\}$;
+	\item $\{\emptyset, X\}$ and $\calP(x)$ are $\sigma$-algebras, whereas $\calE$ is not;
+	\item if $E_1, E_2$ belong to an algebra $\calA$, then $E_1 \cap E_2$ and $E_1 \setminus E_2 \in \calA$;
+	\item if $\{A_n\} \subseteq \calA$, a $\sigma$-algebra, then $\limsup A_n, \liminf A_n \in \calA$.
+\end{itemize}
+
+\begin{definition*}
+	If $\calC$ is a collection of subsets of $X$, the intersection $\calS(\calC)$ of all $\sigma$-algebras containing $\calC$ is a $\sigma$-algebra on $X$ called the \textbf{$\boldsymbol{\sigma}$-algebra generated by $\boldsymbol{\calC}$}. 
+\end{definition*}
+
+\begin{definition*}
+	Let $\calO$ be the set of all open subsets of $\R^n$. The $\sigma$-algebra $\calS(\calO)$ is called the \textbf{Borel $\boldsymbol{\sigma}$-algebra} on $\R^n$.
+\end{definition*}
+
+\begin{definition*}
+	Given a set $X$ and a $\sigma$-algebra $\calM$ on $X$, we say that $\mu$ is a \textbf{measure} provided
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] $\mu\: \calM \to [0, \infty]$ and $\mu(\emptyset) = 0$;
+		\item[\textnormal{(ii)}] if $\{E_k\}_1^\infty \subseteq \calM$ a sequence of disjoint sets, then 
+			\[ \mu\bigg( \bigcup_{k=1}^\infty E_k \bigg) = \sum_{k=1}^\infty \mu(E_k). \]
+	\end{itemize}
+	We say $(X, \calM, \mu)$ is a measure space; the sets in $\calM$ are measurable sets.
+\end{definition*}
+
+\begin{definition*}
+	A measure space is \textbf{complete} if any subset of a nullset is also measurable and null.
+\end{definition*}
+
+\begin{definition*}
+	A measure is \textbf{$\boldsymbol{\sigma}$-finite} if $X$ is the countable union of $\mu$-finite measurable sets.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=15pt]\setlength\itemsep{0em}
+	\item (monotone) if $E, F$ are measurable and $E \subseteq F$, then $\mu(E) \leq \mu(F)$; 
+	\item (subtractive) if in addition to the first bullet, $\mu(E) < \infty$, then $\mu(F \setminus E) = \mu(F) - \mu(E)$;
+	\item ($\sigma$-additive) if $\{E_k\}$ a sequence of measurable sets, then $\mu\big( \bigcup E_k \big) \leq \sum \mu(E_k)$;
+	\item (continuity from below) if $\{E_k\}$ sequence of nondecreasing measurable sets, $\mu\big( \bigcup E_k \big) = \lim_k \mu(E_k)$;
+	\item (continuity from above) if $\{E_k\}$ sequence of nonincreasing measurable sets and $\mu(E_k) < \infty$ for some $k$, then $\mu\big( \bigcap E_k \big) = \lim_k \mu(E_k)$;
+	\item (Borel-Cantelli) if $\{E_n\}$ are measurable with $\sum_k \mu(E_k) < \infty$, then $\mu(\limsup E_k) = 0$.
+\end{itemize}
+\vskip40pt 
+
+
+
+\subsection*{\underline{Lebesgue Measure}}
+
+\begin{definition*}
+	The \textbf{volume} of a parallelepiped, i.e. a compact set
+		\[ I^k = \{ (x_1, \dots, x_n) : a_k \leq x_k \leq b_x, 1 \leq k \leq n\} \subset \R^n \]
+	is given by $v(I^k) = \prod_{k=1}^n (b_k - a_k)$. 
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{outer measure} of a subset $A \subseteq \R^n$ is the quantity
+		\[ |A|_e = \inf\bigg\{ \sum_k v(I_k) : A \subseteq \bigcup_k I_k \bigg\}, \]
+	where the infimum is taken over all countable coverings of $A$ by closed intervals.
+\end{definition*}
+
+\begin{definition*}
+	A subset of $\R^n$ is a \textbf{$\boldsymbol{G_\delta}$ set} if it is the intersection of an at most countable family of open sets. The complement of a $G_\delta$ set is an \textbf{$\boldsymbol{F_\sigma}$ set}, i.e. an at most countable union of closed sets.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=15pt]\setlength\itemsep{0em}
+	\item (monotone) if $A \subseteq B$, then $|A|_e \leq |B|_e$;
+	\item outer measure agrees with volume on open/closed intervals, i.e. $|I^k|_e = v(I^k)$;
+	\item ($\sigma$-subadditive) any sequence $\{E_k\}$ of subsets of $\R^n$ satisfy $|\bigcup_k E_u|_e \leq \sum_k |E_k|_e$;
+	\item for any $E \subseteq \R^n$, we have $|E|_e = \inf\{ |\calO|_e : \calO \text{ open}, E \subseteq \calO\}$;
+	\item the outer measure of $E \subseteq \R^n$ is exactly approximated by a $G_\delta$ set $H$, i.e. $E \subseteq H$ and $|H|_e = |E|_e$.
+\end{itemize}
+
+\begin{definition*}
+	We say $E \subseteq \R^n$ is \textbf{Lebesgue measurable} if for any $\varepsilon > 0$, there exists an open set $\calO \supseteq E$ such that $|\calO \setminus E| < \varepsilon$. The class of all Lebesgue measurable sets is denoted by $\calL$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=15pt]\setlength\itemsep{0em}
+	\item $\calL$ is a $\sigma$-algebra;
+	\item $|\cdot|_e$ restricted to $\calL$ is a measure, called the \textbf{Lebesgue measure}.
+\end{itemize}
+
+
+
+\subsection*{\underline{Measurable Functions}}
+
+\begin{definition*}
+	Let $\calM$ be a $\sigma$-algebra on a set $X$. We say that an extended real-valued function $f$ on $X$ is \textbf{measurable} if for any real number $\lambda$, the set
+		\[ \{ f > \lambda \} := \{x \in X : f(x) < \lambda\} \]
+	is $\calM$-measurable in $X$; that is, the level sets of $f$ are measurable.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item the following statements are equivalent:
+	\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+		\item $f$ is measurable;
+		\item for any real $\lambda$, $\{f \geq \lambda\}$ is measurable;
+		\item for any real $\lambda$, $\{f < \lambda\}$ is measurable;
+		\item for any real $\lambda$, $\{f \leq \lambda\}$ is measurable;
+	\end{itemize}
+	\item $f$ is measurable iff $\{f = -\infty\}$ and $\{\lambda < f < \infty\}$ are measurable for each real $\lambda$;
+	\item $f$ is measurable iff $\{f = -\infty\}$ and $f^{-1}(\calO)$ are measurable for each open $\calO \subseteq \R$.
+\end{itemize}
+
+\begin{definition*}
+	Given a measure space $(X, \calM, \mu)$, we say that a property $P(x)$ is true \textbf{$\boldsymbol{\mu}$-almost everywhere}, or $\mu$-a.e., on a measurable subset $E$ of $X$ if $\mu(\{x \in E : \ P(x)\}) = 0$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item a function is finite $\mu$-a.e. on $E$ if $\mu(\{ x \in E : f(x) = \pm \infty\}) = 0$;
+	\item in a complete $\mu$-measure space, if $f$, $g$ are extended real-valued functions with $f$ measurable and $g = f$ $\mu$-a.e., then $g$ is also measurable with $\mu(\{ g > \lambda \}) = \mu(\{ f > \lambda \})$;
+	\item in general, we work with equivalence classes of functions which are equal $\mu$-a.e.;
+	\item if $f$ and $g$ are extended real-valued measurable, then $f + g$ and $\{f > g\}$ are measurable;
+	\item if $f$ and $g$ are measurable, finite $\mu$-a.e., then $fg$ is measurable, and if $g \neq 0$ $\mu$-a.e., also $f/g$ is measurable;
+	\item if $\{f_n\}$ is a sequence of extended real-valued measurable functions which pointwise converge to some $f$, then $f$ is measurable;
+\end{itemize}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ be a measure space, and $f$ be an extended real-valued function defined on $X$. Then there is a sequence $\{f_n\}$ of simple real-valued functions defined on $X$, i.e.
+		\[ f_n(x) = \sum_{i=1}^{k_n} c_{i,n} \chi_{E_{i,n}}(x), c_{i,n} \text{ real}, E_{i,n} \text{ disjoint}, \]
+	converging to $f$ pointwise. Furthermore,
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] if $f$ is measurable, so are the $f_n$'s;
+		\item[\textnormal{(ii)}] if $f$ is nonnegative, the sequence $\{f_n\}$ is nondecreasing with $f_n(x) \leq f(x)$ all $x, n$;
+		\item[\textnormal{(iii)}] if $f$ is bounded, then the $f_n$'s converge uniformly.
+	\end{itemize}
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{Integration}}
+
+\begin{definition*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $\phi$ be a nonnegative simple function
+		\[ \phi(x) = \sum_{k=1}^n a_k \chi_{A_k}(x), a_k \in \R \]
+	where the $A_k$'s form a measurable pairwise disjoint partition of $X$. The \textbf{integral} of $\phi$ over $X$ with respect to $\mu$ is defined as the quantity
+		\[ \int_X \phi \dmu = \sum_{k=1}^n a_k \mu(A_k). \]
+\end{definition*}
+
+\clearpage
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item the integral is well-defined with respect to the definition of $\phi$;
+	\item the integral is positively linear; 
+	\item the integral is monotone;
+	\item the set function $\nu(E) = \int_X \phi \chi_E \dmu = \int_E \phi \dmu$ is a measure on $(X, \calM, \mu)$.
+\end{itemize}
+
+\begin{definition*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $f$ be a nonnegative measurable function on $X$. Define the set 
+		\[ \calF_f = \{ \phi \: \phi \text{ simple, and } 0 \leq \phi \leq f\}. \]
+	The \textbf{integral} of $f$ over $X$ with respect to $\mu$ is the quantity
+		\[ \int_X f \dmu = \sup \bigg\{ \int_X \phi \dmu : \phi \in \calF_f \bigg\}. \]
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item if $f$ is simple, the above definitions of the integral agree;
+	\item if $f = g$ $\mu$-a.e. then the integrals are equal;
+	\item the integral is monotone with respect to functions and measures.
+\end{itemize}
+
+\begin{theorem*}
+	\textnormal{(Monotone Convergence Theorem)} Let $(X, \calM, \mu)$ be a measure space and $\{f_n\}$ a nondecreasing sequence of nonnegative finite $\mu$-a.e. measurable functions defined on $X$. Then $\lim_n f_n(x) = f(x)$ exists everywhere, $f(x)$ is nonnegative and measurable, and 
+		\[ \int_X f \dmu = \lim_{n\to\infty} \int_X f_n \dmu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $\{f_n\}$ be a sequence of nonnegative extended real-valued measurable functions defined on $X$. Then $f = \sum_n f_n$ is nonnegative, extended real-valued and measurable, and 
+		\[ \int_X f \dmu = \sum_n \int_X f_n \dmu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Let $(X, \calM, \dmu)$ be a measure space, and let $f$ be a nonnegative extended real-valued measurable function defined on $X$. Then the set function \[ \nu(E) = \int_E f\dmu, E \in \calM,\] is a measure on $(X, \calM)$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Fatou's Lemma)} Let $(X, \calM, \mu)$ be a measure space, and let $\{f_n\}$ be a sequence of nonnegative extended real-valued measurable functions defined on $X$. Then 
+		\[ \int_X \liminf f_n \dmu \leq \liminf \int_X f_n \dmu. \]
+\end{theorem*}
+
+\begin{definition*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $F$ be an extended real-valued measurable function defined on $X$; we can write $f = f^+ - f^-$ as the difference of two nonnegative functions. In particular, the integrals of $f^\pm$ exist, and if either is finite, we define the \textbf{integral} of $f$ over $X$ with respect to $\mu$ as the value
+		\[ \int_X f\dmu = \int_X f^+ \dmu - \int_X f^-\dmu. \]
+	The class of \textbf{integrable} functions $f$ 
+\end{definition*}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $f$ be an extended real-valued function defined on $X$ for which the integral over $X$ with respect to $\mu$ is defined. Then
+		\[ \bigg\vert \int_X f \dmu \bigg\vert \leq \int_X \vert f \vert \dmu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Chebychev's Inequality)} Let $(X, \calM, \mu)$ be a measure space, and let $f$ be an extended real-valued function defined on $X$. Then for any real $\lambda > 0$ we have
+		\[ \lambda \mu(\{|f| > \lambda\}) \leq \int_X |f| \dmu. \]
+	In particular, if $f \in L(\mu)$ is nonnegative with $\int_X f\dmu = 0$, then $f = 0$ $\mu$-a.e.
+\end{theorem*}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ be a measure space, and let $f, g \in L(\mu)$. Then the integral of $f + g$ over $X$ with respect to $\mu$ is defined and
+		\[ \int_X (f + g) \dmu = \int_X f \dmu + \int_X g \dmu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Fatou's Lemma)} Let $(X, \calM, \mu)$ be a measure space, and let $\{f_n\}$ be a sequence of extended real-valued measurable functions defined on $X$. If there is an integrable function $g$ such that $g \leq f_n$ for all $n$. Then $\liminf f_n$ and $f_n$ are in $L(\mu)$ with
+		\[ \int_X \liminf f_n \dmu \leq \liminf \int_X f_n \dmu. \]
+	Conversely, if there exists an integrable function $g$ such that $f_n \leq g$ for all $n$, then $\limsup f_n$ and $f_n$ are in $L(\mu)$ with
+		\[ \limsup \int_X f_n \dmu \leq \int_X \limsup f_n \dmu. \] 
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(LDCT)} Let $(X, \calM, \mu)$ be a measure space and suppose $\{f_n\}$ is a sequence of extended real-valued measurable functions defined on $X$ such that $\lim_n f_n = f$ exists $\mu$-a.e. and there is an integrable function $g$ such that $|f_n| \leq g$ $\mu$-a.e. Then $f$ is integrable and 
+		\[ \int_X f \dmu = \lim_{n\to\infty} \int_X f_n \dmu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Let $g$ be a bounded real-valued function defined on $I = [a,b]$ and suppose $g \in \calR(I)$. Then $g \in L(I)$ and \[ \int_a^b g(x) \dx = \int_I g \dx. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose that the nonnegative function $g$ is finite on $I = (a, b]$ and that 
+		\[ \int_{a^+}^b g(x) \dx = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^b g(x) \dx \]
+	 exists. Then $g \in L([a,b])$ and 
+	 	\[ \int_I g \dx = \int_{a^+}^b g(x) \dx. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $g$ is a real-valued bounded function defined on $I = [a,b]$. Then $g \in \calR(I)$ if and only if $g$ is continuous a.e. on $I$.
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{More about $L^1$}}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ be a measure space. Then $|| \cdot ||_1 = \int_X (\cdot) \dmu$ is a complete metric on $L(\mu)$.
+\end{theorem*}
+
+\begin{theorem*}
+	The space $C_0\R^n$ of continuous functions vanishing off a compact set is dense in $L(\R^n)$. 
+\end{theorem*}
+
+\begin{definition*}
+	Let $x = (x_1, \dots, x_n) \in \R^n$ and $r > 0$. Denote the open interval of side length $2r$ by \[ I(x, r) = \{(y_1, \dots, y_n) : |x_i - y_i| < r, i = 1,\dots,n\}. \]
+\end{definition*}
+
+\begin{definition*}
+	Suppose $f$ is an integrable function which vanishes off a compact set. For $x \in \R^n$, define the \textbf{Hardy-Littlewood maximal function} of $f$ as
+		\[ M(f) = \sup_{r > 0} \frac1{|I(x, r)|} \int_{I(x,r)} |f| \dy. \]
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Hardy-Littlewood)} Suppose $f$ is an integrable function vanishing off $I(0,2)$. Then for any $\lambda > 0$ we have
+		\[ \lambda|\{Mf > \lambda\}| \leq 3^n \int_{\R^n} |f| \dy. \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Lebesgue Differentiation Theorem)} Suppose $f$ is an integrable function which vanishes off $I(0,2)$. Then
+		\[ \lim_{r \to 0} \frac1{|I(x,r)|} \int_{I(x,r)} f(y) \dy = f(x) \ \text{ a.e. on } I(0,1). \]
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{Borel Measures}}
+\vskip20pt
+
+\begin{definition*}
+	A measure $\mu$ on $(\R^n, \calB_n)$ is called a \textbf{Borel measure}.
+\end{definition*}
+
+\begin{definition*}
+	A Borel measure $\mu$ is \textbf{regular} if for any $E \in \calB_n$, the value $\mu(E)$ can be computed by
+		\[ \mu(E) = \sup \{\mu(K) : K \subseteq E \text{ compact}\}, \]
+		\[ \mu(E) = \inf \{\mu(\calO) : \calO \supseteq E \text{ open}\}. \]
+	Roughly, $\mu$ is determined by compact/open sets in $\R^n$.
+\end{definition*}
+
+\begin{theorem*}
+	A Borel measure that is finite on bounded subsets of $\R^n$ is regular.
+\end{theorem*}
+
+\begin{definition*}
+	A \textbf{distribution function} induced by a measure $\mu$ is a function $F_y\: \R \to \R$ given by $F_y(x) = \mu((y, x])$, for any extended real $y$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item distribution functions with $y = \infty$ are nondecreasing;
+	\item distribution functions with $y = \infty$ are right-continuous.
+\end{itemize}
+
+\begin{theorem*}
+	Let $\calB\calB = \{ \mu : \mu \in \text{ is a Borel measure on the line, finite on bounded sets} \}$, and let $\calD = \{F : F \text{ is nondecreasing and right continuous} \}/\{f-g \equiv c \in \R\}$. Then there is an injective mapping $T$ from $\calB\calB$ to $\calD$ which satisfies the following: if $T\mu = F$ and $c$ is an arbitrary constant, we have
+		\[ F(x) = \left\{ \begin{array}{ll} c + \mu((0, x]) & \text{if } x > 0 \\ c & \text{if } x = 0 \\ c - \mu((x, 0]) & \text{if } x < 0 \end{array} \right. \]
+	or equivalently, $F(y) - F(x) = \mu((x, y])$. We denote $\mu = \mu_F$.
+\end{theorem*}
+
+
+
+\subsection*{\underline{Absolute Continuity}}
+\vskip20pt
+
+\begin{theorem*}
+	Let $I$ e an open subinterval of the line and suppose $f$ is a monotone real-valued function defined on $I$. Then $f'$ exists a.e. on $I$.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is a nondecreasing real-valued function defined on $I = (a,b)$ such that $f(b^-) - f(a^+) < \infty$. Then $f' \in L(I)$ and
+		\[ \int_I f' \dx \leq f(b^-) - f(a^+). \]
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is BV on a bounded interval $I = [a,b]$. Then $f' \in L(I)$ and
+		\[ \int_I |f'| \dx \leq V(f; a,b). \]
+\end{theorem*}
+
+\begin{definition*}
+	A function $f \in L([a,b])$ is \textbf{absolutely continuous} if given $\varepsilon > 0$, there is a $\delta > 0$ such that for any finite collection $\{[a_i, b_i]\}$ of nonoverlapping subintervals of $[a,b]$, we have 
+		\[ \sum_i |F(b_i) - F(a_i)| < \varepsilon, \text{ whenever} \sum_i (b_i - a_i) < \delta. \]
+\end{definition*}
+
+\begin{theorem*}
+	Let $I = [a,b]$ and suppose $f$ is AC on $I$. Then $f$ is BV on $I$, and consequently, $f'$ exists a.e. and it is integrable there.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is continuous, BV, real-valued on $I = [a,b]$. Then $f$ is AC on $I$ iff $f$ maps null sets into null sets.
+\end{theorem*}
+
+\begin{definition*}
+	An a.e. differentiable function $f$ on $I$ is \textbf{singular} if $f' = 0$ a.e. on $I$.
+\end{definition*}
+
+\begin{theorem*}
+	Suppose $f$ is an AC singular function defined on an interval $I$. Then $f$ is constant.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is a real-valued function defined on $I = [a,b]$. Then $f$ is AC on $I$ if and only if $f'$ exists a.e. in $(a, b)$, it is integrable there, and 
+		\[ f(x) - f(a) = \int_{[a,x]} f'(t) \dt, \hskip10pt a \leq x \leq b. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $f$ is BV on $I = [a,b]$. Then there exist an AC function $g$ and a singular function $h$ such that $f = g + h$. Up to constants, the decomposition is unique.
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{Signed Measures}}
+
+\begin{definition*}
+	Given a set $X$ and $\sigma$-algebra $\calM$ on $X$, we say that a set function $\nu$ on $\calM$ is a \textbf{signed measure} provided the following hold:
+	\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+		\item $\nu\: \calM \to [-\infty, \infty]$, with $\nu$ obtaining at most one of $\pm \infty$ and $\nu(\emptyset) = 0$;
+		\item if $\{E_k\} \subseteq \calM$ is a sequence of pairwise disjoint sets, then 
+			\[ \nu\bigg( \bigcup_1^\infty E_k \bigg) = \sum_1^\infty \nu(E_k). \]
+	\end{itemize}
+\end{definition*}
+
+\begin{definition*}
+	Let $\mu$ be a measure and $\nu$ a signed measure on $(X, \calM)$. Then $\nu$ is \textbf{absolutely continuous} with respect to a measure $\mu$, denoted $\nu \ll \mu$, if $\nu(A) = 0$ for any $A \in \calM$ with $\mu(A) = 0$.
+\end{definition*}
+
+\begin{theorem*}
+	Let $\mu_F$ be a Borel measure. Then $\mu_F$ is absolutely continuous with respect to the Lebesgue measure if and only if $F$ is AC on every bounded interval of $\R$.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $\mu$ is a measure and $\nu$ is a signed measure on $(X, \calM)$ so that every $\mu$-finite set is $\nu$-finite. Then $\nu \ll \mu$ if and only if given $\varepsilon < 0$ there is a $\delta > 0$ such that 
+		\[ |\nu(E)| < \varepsilon \hskip10pt \textnormal{ whenever } \hskip10pt \mu(E) < \delta. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose $(X, \calM, \mu)$ is a probability measure space and $\nu$ is a signed measure on $(X,\calM)$ such that 
+		\[ |\nu(E)| \leq \mu(E) \]
+	all $E \in \calM$. Then there exists a unique measurable function $f\: X \to [-1, 1]$ such that 
+		\[ \nu(E) = \int_E f \dmu \]
+	all $E \in \calM$. Uniqueness is up to equality $\mu$-a.e.
+\end{theorem*}
+
+\begin{theorem*}
+	Let $\nu$ be a signed measure on $(X, \calM)$ and suppose that its variation $|\nu|$ is a probability measure on $(X, \calM)$. Then there exist two disjoint, measurable sets $A$ and $B$ whose union is $X$ so that $\nu(E \cap A) \geq 0$ and $\nu(E \cap B) \leq 0$ for all $E \in \calM$.
+\end{theorem*}
+
+\begin{theorem*}
+	Suppose that $\lambda, \mu$ are $\sigma$-finite measures on $(X, \calM)$ with $\lambda(E) \leq \mu(E)$ for all $E \in \calM$. Then there exists a unique nonnegative measurable function $f\: X \to I$ such that 
+		\[ \lambda(E) = \int_E f \dmu \]
+	for all $E \in \calM$. Furthermore, if $g$ is a measurable extended real-valued function defined on $X$, then 
+		\[ \int_X g \dl = \int_X gf \dmu. \]
+\end{theorem*}
+
+\begin{definition*}
+	Two signed measures $\mu$ and $\nu$ on $(X, \calM)$ are \textbf{mutually singular}, denoted $\mu \perp \nu$, if there exists a disjoint partition $A, B$ of $X$ such that $|\mu|(A) = 0 = |\nu|(B)$.
+\end{definition*}
+
+\begin{proposition*}
+	Suppose $\mu_F$ is a finite Borel measure. Then $\mu_F$ is singular with respect to the Lebesgue measure if and only if $F$ is singular.
+\end{proposition*}
+
+\begin{theorem*}
+	Suppose $\mu$ is a $\sigma$-finite measure and $\nu$ is a signed measure on $(X, \calM)$. If $|\nu|$ is $\sigma$-finite, then there exist unique signed measures $\nu_a$ and $\nu_s$ which satisfy $\nu = \nu_a + \nu_s$ and  $\nu_a \ll \mu$ and $\nu_s \perp \mu$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Radon-Nikod\'ym)} Let $\mu$ be a $\sigma$-finite measure and $\nu$ a signed measure on $(X, \calM)$. If $|\nu|$ is $\sigma$-finite and $\nu \ll \mu$, then there exists an extended real-valued measurable function $h$ defined on $X$ such that if $E \in \calM$ and $|\nu|(E) < \infty$ 
+		\[ \nu(E) = \int_E h \dmu. \]
+	We call $h$ the Radon-Nikod\'ym derivative of $\nu$ with respect to $\mu$ and one writes	
+		\[ h = \frac{d\nu}{d\mu}. \]
+	Also $h$ is unique in the $\mu$-a.e. sense.
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{$L^p$ Spaces}}
+
+\begin{definition*}
+	Let $(X, \calM, \mu)$ be a measure space and $f$ an extended real-valued measurable function defined on $X$. Then for $1 \leq p < \infty$, $|f|^p$ is also measurable and the expression
+		\[ ||f||_p = \bigg( \int_X|f|^p \dmu \bigg)^{1/p} \]
+	for $0 < p < \infty$ is well-defined, and is called the \textbf{$\boldsymbol{p}$-norm} of $f$. The space of measurable functions with finite $p$-norm is denoted $L^p(X, \mu)$.
+\end{definition*}
+
+\begin{definition*}
+	Let $(X, \calM, \mu)$ be a measure space and $f$ an extended real-valued measurable function defined on $X$. Then the expression
+		\[ ||f||_\infty = \inf \{ \lambda > 0 : \mu(\{|f| > \lambda \}) = 0\} \]
+	is well-defined and is called the \textbf{$\boldsymbol{\infty}$-norm} of $f$. The space of measurable functions with finite $\infty$-norm is denoted $L^\infty(X,\mu)$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(H\"older's Inequality)} Suppose $1 \leq p < q \leq \infty$, with $p, q$ conjugate transpose, and let $f \in L^p(\mu)$ and $g \in L^q(\mu)$. Then $fg$ is integrable, and 
+		\[ \int_X |fg| \dmu \leq ||f||_p||g||_q.  \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Minkowsky's Inequality)} Suppose $f, g \in L^p(\mu)$, $1 \leq p < \infty$. Then 
+		\[ ||f + g||_p \leq ||f||_p + ||g||_p. \]
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Riesz-Fischer)} The $p$-norm induces a complete metric on $L^p(\mu)$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Riesz Representation)} Let $(X, \calM, \mu)$ be a measure space and $p,q$ conjugate transpose. Then if $\mu$ is $\sigma$-finite, to each continuous linear functional $L$ on $L^p$, there corresponds a unique $g \in L^q$ such that $||L|| = ||g||_q$ and 
+		\[ Lf = \int_X fg \dmu. \]
+\end{theorem*}
+
+\vskip20pt
+
+
+
+\subsection*{\underline{Fubini's Theorem}}
+
+\begin{definition*}
+	Given measure spaces $(X, \calM, \mu)$ and $(Y, \calN, \nu)$, a \textbf{measurable rectangle} in the $\sigma$-algebra $\calM \times \calN$ is any subset of $X \times Y$ of the form $A \times B$, for $A \in \calM$ and $B \in \calN$. Finite unions of pairwise disjoint measurable rectangles are called \textbf{elementary sets}.
+\end{definition*}
+
+\begin{definition*}
+	If $E \subseteq X \times Y$, we define a  \textbf{section} of $E$ as the set
+		\[ E_x = \{ y \in Y : (x,y) \in E\}, x \in X; \]
+		\[ E^y = \{ x \in X : (x,y) \in E\}, y \in Y. \]
+\end{definition*}
+
+\begin{definition*}
+	Let $f$ be a measurable function on $X \times Y$. The \textbf{$\boldsymbol{X}$-section} at $x \in X$ of $f$ is
+		\[ f_x(y) = f(x,y), x \in X; \]
+	similarly, the \textbf{$\boldsymbol{Y}$-section} at $y \in Y$ is 
+		\[ f^y(x) = f(x,y), y \in Y. \] 
+\end{definition*}
+
+\begin{proposition*}
+	Every section of a measurable set is measurable. Every $X$-section and $Y$-section of a measurable function is measurable.
+\end{proposition*}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ and $(Y, \calN, \nu)$ be $\sigma$-finite measure spaces, and suppose $E \in \calM \times \calN$. Then for each $x \in X$ and $y \in Y$, the functions $\nu(E_x)$ and $\mu(E^y)$ are measurable. Furthermore,
+		\[ \int_X \nu(E_x) \dmu = \int_Y \mu(E^y) \ d\nu. \]
+\end{theorem*}
+
+\begin{theorem*}
+	Let $(X, \calM, \mu)$ and $(Y, \calN, \nu$ be $\sigma$-finite measure spaces and $f$ be a nonnegative extended real-valued measurable function defined on $(X \times Y, \calM \times \calN)$. Then $\int_Y f_x(y) d\nu$ is a measurable function on $(X, \calM)$ and $\int_X f^y(x) \dmu$ is a measurable function on $(Y, \calN)$ and
+		\[ \int_{X \times Y} f \ d(\mu \times \nu) = \int_X \int_Y f_x(y) \ d\nu \dmu = \int_Y\int_X f^y \dmu d\nu. \]
+\end{theorem*}
+
+\begin{corollary*}
+	Under the assumptions of the previous theorem, if
+		\[ \int_X \int_Y |f|_x (y) \ d\nu d\mu < \infty, \]
+	then $f \in L(X \times Y, \mu \times \nu)$.
+\end{corollary*}
+
+\begin{theorem*}
+	\textnormal{(Fubini)} Under the assumptions of the previous theorem, if $f \in L(X \times Y, \mu \times \nu)$, then $f_x \in L(X, \mu)$ $\mu$-a.e. on $X$ and $f^y \in L(Y, \nu)$ $\nu$-a.e. on $Y$ and 
+		\[ \int_Y f_x(y) \ d\nu \in L(X, \mu), \int_X f^y(x) \dmu \in L(Y, \nu) \]
+	and the result of the previous theorem holds.
+\end{theorem*}
+\clearpage
+
+
+
+
+
+
+\section{Functional Analysis}
+
+\noindent \textbf{Topics}: Banach spaces, Hilbert spaces, linear transformations and functionals, Riesz representation theorem (duality), Hahn-Banach theorem, open mapping theorem, closed graph theorem, uniform boundedness theorem
+\vskip30pt
+
+
+
+\subsection*{\underline{Normed Linear Spaces}}
+
+\begin{definition*}
+	A \textbf{norm} on on a vector space $X$ is a nonnegative functional $|| \cdot ||\: X \to \R$ satisfying
+	\begin{itemize}[leftmargin=32.5pt]\setlength\itemsep{0em}
+		\item[(i)] (triangle inequality) $||x + y|| \leq ||x|| + ||y||$ all $x,y \in X$;
+		\item[(ii)] (absolute homogeneity) $||\lambda x|| = \lambda||x||$ all $x \in X$, $\lambda \in \R$;
+		\item[(iii)] (uniqueness) $||x|| = 0$ implies $x = 0$.
+	\end{itemize}
+	The pair $(X, ||\cdot||)$ is called a \textbf{normed linear space}. A nonnegative functional satisfying (i) and (ii) is called a \textbf{semi-norm}. 
+\end{definition*}
+
+\begin{definition*}
+	Let $(x_n)$ be a sequence in $X$. We say $(x_n)$ \textbf{converges} to some $x \in X$ if for every $\varepsilon > 0$ there is an index $N \in \N$ such that $||x_n - x|| < \varepsilon$ for all $n \geq N$. We say $(x_n)$ is \textbf{Cauchy} if for every $\varepsilon > 0$ there is an index $N \in \N$ such that $||x_n - x_m|| < \varepsilon$ for all $n, m \geq N$. 
+\end{definition*}
+
+\begin{definition*}
+	A normed linear space is equipped with a metric $d(x,y) = ||x - y||$. If the space is complete (i.e. Cauchy sequences converge) with respect to this metric, we say it is a \textbf{Banach space}.
+\end{definition*}
+
+\begin{definition*}
+	Let $(x_n)$ be a sequence in $X$ and $s \in X$. We say $\sum x_n$ is \textbf{convergent} if the sequence $(s_n)$ of partial sums $s_n = x_1 + \dots + x_n$ converges in $X$. We say $\sum x_n$ is \textbf{absolutely convergent} if the numerical sequence $\sum ||x_n||$ converges.
+\end{definition*}
+
+\begin{theorem*}
+	Let $X$ be a normed linear space. Then $X$ is a Banach space if and only if every absolutely convergent series converges.
+\end{theorem*}
+
+\begin{definition*}
+	A \textbf{linear functional} on a vector space $X$ is a functional $L\: X \to \R$ such that
+		\[ L(x + \lambda y) = L(x) + \lambda L(y) \]
+	for all $x, y \in X$ and $\lambda \in \R$.
+\end{definition*}
+
+\begin{definition*}
+	A linear functional $L$ on $X$ is \textbf{bounded} if there is a constant $c \in \R$ such that $|Lx| \leq c||x||$ for all $x \in X$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Hahn-Banach)} Suppose $X$ is a real linear space with a semi-norm. Let $X_0$ be a linear subspace of $X$ and $L_0$ a linear functional on $X_0$ such that $L_0x \leq ||x||$ for all $x \in X_0$. Then there is a linear functional $L$ on $X$ extending $L_0$ so that $Lx \leq ||x||$ for all $x \in X$.
+\end{theorem*}
+
+\begin{definition*}
+	A functional $L$ on a normed linear space $X$ is \textbf{continuous} if the image of any convergent sequence is convergent.
+\end{definition*}
+
+\begin{proposition*}
+	A linear functional on a normed linear space is bounded if and only if it is continuous.
+\end{proposition*}
+
+\begin{definition*}
+	The \textbf{dual space} to a normed linear space $X$ is the space $X^*$ of all bounded linear functionals on $X$.
+\end{definition*}
+
+\begin{proposition*}
+	Suppose $X$ is a normed space. Then $X^*$ is a Banach space with respect to the \textbf{functional norm},
+		\[ ||L|| = \sup_{x \neq 0} \frac{|Lx|}{||x||}. \]
+\end{proposition*}
+
+\begin{theorem*}
+	\textnormal{(Hahn-Banach)} Suppose $X$ is a normed linear space, and let $L_0$ be a bounded linear functional defined on a subspace $X_0$ of $X$. Then there exists a bounded linear functional $L$ defined on $X$ extending $L_0$ and satisfying $||L|| = ||L_0||$.
+\end{theorem*}
+
+\vskip20pt
+
+
+
+
+\subsection*{\underline{Basic Principles}}
+
+\begin{definition*}
+	Let $(X, d)$ be a metric space. A set $E \subseteq X$ is \textbf{nowhere dense} if its closure $\bar{E}$ has empty interior. A subset of $X$ is of \textbf{first category} if it is a countable union of nowhere dense sets; otherwise, it is of \textbf{second category}.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Baire Category)} A complete metric space is of second category in itself.
+\end{theorem*}
+
+\begin{definition*}
+	Let $X$ and $Y$ be normed linear spaces over the same field of scalars. An \textbf{operator} is a map $T\: X \to Y$. We say $T$ is a \textbf{linear operator} if $T(x_1 + \lambda x_2) = Tx_1 + \lambda Tx_2$ for all $x_1, x_2 \in X$.
+\end{definition*}
+
+\begin{definition*}
+	An operator $T\: X \to Y$ is \textbf{continuous} if for every $x_0 \in X$, given $\varepsilon > 0$, there exists a $\delta > 0$ such that $||Tx - Tx_0|| < \varepsilon$ whenever $||x - x_0|| < \delta$.
+\end{definition*}
+
+\begin{definition*}
+	An operator $T\: X \to Y$ is \textbf{bounded} if its \textbf{operator norm} is finite:
+		\[ ||T|| = \sup_{||x|| \neq 0} \frac{||Tx||}{||x||} < \infty. \]
+\end{definition*}
+
+\begin{proposition*}
+	Let $T\: X \to Y$ be a linear operator. Then the following are equivalent
+	\begin{itemize}[leftmargin=32.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] $T$ is continuous at a point $x \in X$;
+		\item[\textnormal{(ii)}] $T$ is uniformly continuous on $X$;
+		\item[\textnormal{(iii)}] $T$ is bounded.
+	\end{itemize}
+	The space of all bounded linear operators $X \to Y$ is denoted $\calB(X, Y)$.
+\end{proposition*}
+
+\begin{proposition*}
+	Let $X$, $Y$ be normed linear spaces over the same field. Then $\calB(X, Y)$ is a normed linear space under the operator norm. Moreover, $\calB(X, Y)$ is a Banach space if and only if $Y$ is a Banach space.
+\end{proposition*}
+
+\begin{proposition*}
+	Let $T \in \calB(X, Y)$. Then $T^{-1}$ exists and is continuous if and only if there exists a constant $c > 0$ such that $||Tx|| \geq c||x||$ for all $x \in X$.
+\end{proposition*}
+
+\begin{definition*}
+	A family $\calF \subseteq \calB(X,Y)$ is \textbf{norm bounded} if $\sup_{T \in \calF} ||T||$ is finite. Similarly, it is \textbf{pointwise bounded} if $\sup_{T \in \calF} ||Tx||$ is finite for each $x \in X$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Uniform Boundedness)} Let $X$ be a Banach space and $Y$ a normed linear space. Then a collection $\calF \subseteq \calB(X,Y)$ is norm bounded if and only if it is pointwise bounded.
+\end{theorem*}
+
+\begin{definition*}
+	We say $T \in \calB(X, Y)$ is \textbf{open} if the image of every open set $U \subseteq X$ is open in $Y$.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Open Mapping)} Let $X, Y$ be Banach spaces and $T \in \calB(X,Y)$. If $T$ is onto, $T$ is open.
+\end{theorem*}
+
+\begin{corollary*}
+	Let $X, Y$ be Banach spaces and $T \in \calB(X,Y)$. If $T$ is injective, $T$ has a well-defined and bounded inverse $T^{-1} \in \calB(Y,X)$.
+\end{corollary*}
+
+\begin{definition*}
+	Let $X$ and $Y$ be normed spaces, and let $A \subseteq X$. We say $T\: A \to Y$ is \textbf{closed} in $X$ if whenever a sequence $(x_n) \subseteq A$ converging to $x \in X$ and whose image sequence $(Tx_n) \subseteq Y$ converges to $y$, we have $x \in A$ and $Tx = y$.
+\end{definition*}
+
+\begin{definition*}
+	Let $X, Y$ be normed spaces, and define a norm on $X \times Y$ by $||(x,y)|| = ||x|| + ||y||$. Given a linear map $T\: A \subseteq X \to Y$, the \textbf{graph} of $T$ is the set
+		\[ G(T) = \{ (x, Tx) : x \in A\} \subseteq X \times Y. \]
+	Since $T$ is linear, $G(T)$ is a linear subspace of $X \times Y$.
+\end{definition*}
+
+\begin{proposition*}
+	When $T$ is closed, $G(T)$ is a closed subspace of $X \times Y$.
+\end{proposition*}
+
+\begin{proposition*}
+	If $A \subseteq X$ is a closed subspace and $T$ is continuous, then $T$ is closed in $X$.
+\end{proposition*}
+
+\begin{theorem*}
+	\textnormal{(Closed Graph)} Let $X, Y$ be Banach spaces and $T \: X \to Y$ a linear operator. If $T$ is closed in $X$, then $T$ is continuous in $X$.
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{Hilbert Spaces}}
+
+\begin{definition*}
+	A complex vector space $X$ is said to be an \textbf{inner product space} provided it has an \textbf{inner product}, i.e. a complex valued function $\langle \cdot, \cdot \rangle$ on $X \times X$ satisfying
+	\begin{itemize}[leftmargin=32.5pt]\setlength\itemsep{0em}
+		\item[(i)] (linearity) $\langle x_1 + \lambda x_2 ,y \rangle = \langle x_1, y \rangle + \lambda \langle x_2, y \rangle$ all $x_1, x_2 \in X$ and $\lambda \in \C$;
+		\item[(ii)] (conjugate) $\langle x, y \rangle = \bar{\langle y, x \rangle}$ all $x, y \in X$;
+		\item[(iii)] (absolute homogeneity) $\langle x,x \rangle \geq 0$ and $\langle x,x \rangle = 0$ iff $x = 0$.
+	\end{itemize}
+\end{definition*}
+
+\begin{definition*}
+	In an inner product space $X$, the \textbf{induced inner product norm} is defined as $||x|| = \sqrt{\langle x,x \rangle}$, under which $X$ is a normed linear space. If $X$ is complete with respect to this norm, it is called a \textbf{Hilbert space}.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item (i) and (ii) imply conjugate linearity: $\langle x, \lambda y \rangle = \bar\lambda \langle x, y \rangle$;
+	\item $\langle x, 0 \rangle = \langle 0, x \rangle = 0$ for all $x \in X$;
+	\item (Cauchy-Schwarz Inequality) $|\langle x, y \rangle|^2 \leq \langle x,x \rangle \langle y,y \rangle$;
+	\item the given norm is a norm (by Cauchy-Schwarz);
+	\item the inner product is continuous (by Cauchy Schwarz): $x_n \to x$, $y_n \to y$ implies $\langle x_n, y_n \rangle \to \langle x,y \rangle$;
+\end{itemize}
+
+\begin{definition*}
+	An onto linear mapping $T\: X \to Y$ between inner product spaces over the same field of scalars is an \textbf{isomorphism} if it preserves inner products: $\langle Tx, Ty \rangle = \langle x, y \rangle$ all $x, y \in X$.
+\end{definition*}
+
+\begin{proposition*}
+	Suppose $X$ is an inner product space. Then there exists a Hilbert space $Y$ and an isomorphism $T$ of $X$ onto a dense subspace of $Y$. The space $Y$ is unique up to isomorphism.
+\end{proposition*}
+
+\begin{proposition*}
+	A normed linear space $X$ is an inner product space if and only if the \textbf{parallelogram law} holds: for any $x, y \in X$
+			\[ ||x + y||^2 + ||x - y||^2 = 2(||x||^2 + ||y||^2). \]
+\end{proposition*}
+
+\begin{definition*}
+	Elements $x, y$ in an inner product space $X$ are said to be orthogonal, written $x \perp y$, if $\langle x,y \rangle = 0$. If $x \in X$ is orthogonal to each element of $A \subseteq X$, we write $x \perp A$.
+\end{definition*}
+
+\begin{proposition*}
+	\textnormal{(Pythagorean Thm)} If $(x_i)_1^n$ is a collection of pairwise orthogonal elements, then
+		\[ \left|\left| \sum_ 1^n x_i \right|\right| = \sum_1^n ||x_i||^2. \]
+\end{proposition*}
+
+\begin{definition*}
+	A subset $C$ of a normed linear space $X$ is \textbf{convex} if for every $x, y \in C$ the set $\{ \eta x + (1 - \eta)y : 0 \leq \eta \leq 1 \}$ is contained in $C$.
+\end{definition*}
+
+\begin{proposition*}
+	\textnormal{(Existence of Minimizing Element)} Let $X$ be an inner product space and $M \subseteq X$ nonempty, complete, and convex. Then for every $x \in X$ there exists a unique $y \in M$ such that 
+		\[ d(x, M) := \inf_{x' \in M} ||x' - x|| = ||x - y||. \]
+\end{proposition*}
+
+\begin{definition*}
+	The \textbf{orthogonal compliment} of a subset $A$ of an inner product space $X$ is the set 
+		\[ A^\perp = \{ x \in X : x \perp y \text{ for all } y \in A \}. \]
+\end{definition*}
+
+\begin{proposition*}
+	 The subspace $A^\perp$ is a closed subspace of $X$.
+\end{proposition*}
+
+\begin{theorem*}
+	Let $X$ be a Hlibert space and $M$ a complete subspace of $X$. Then $X = M + M^\perp$, where the representation $x = x_1 + x_2$ of any $x \in X$ (by $x_1 \in M$ and $x_2 \in M^\perp$) is unique.
+\end{theorem*}
+
+\begin{definition*}
+	Let $M$ be a complete subspace of a Hilbert space, and let $x = x_1 + x_2 \in X$ for $x_1 \in M$ and $x_2 \in M^\perp$. Then $x_1$ and $x_2$ are called the \textbf{projection of $\boldsymbol{x}$} onto $M$ and $M^\perp$, respectively. The map sending $x$ onto either of its projections is called the \textbf{projection operator}.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Riesz)} Let $X$ be a Hilbert space, and suppose $L$ is a bounded linear functional on $X$. Then there exists a unique $y \in X$ such that
+		\[ Lx = \langle x, y \rangle, \text{ all } x \in X. \] 
+	Moreover, $||L|| = ||y||$.
+\end{theorem*}
+
+\begin{proposition*}
+	If $X$ is a Hilbert space, then $X^*$ is also a Hilbert space.
+\end{proposition*}
+
+\begin{definition*}
+	A \textbf{orthonormal system} is a subset $\{x_1, \dots, x_n\}$ of a vector space such that $||x_i|| = 1$ for all $1 \leq i \leq n$ and $x_j \perp x_k$ for all $1 \leq j \neq k \leq n$.
+\end{definition*}
+
+\begin{proposition*}
+	If $M$ is a closed subspace of a normed space $X$ and $\{x_1, \dots, x_n\} \subseteq X$, then the span $\{M, x_1, \dots, x_n\}$ is a closed subspace of $X$.
+\end{proposition*}
+
+\begin{proposition*}
+	\textnormal{(Bessel's Inequality)} Suppose $\{x_\alpha\}_{\alpha \in A}$ is an ONS in a Hilbert space $X$. Then 
+		\[ \sum_{\alpha \in A} |\langle x, x_\alpha \rangle|^2 \leq ||x||^2, \text{ all } x \in X. \]
+	In particular, for each $x \in X$, all but an at most countable number of the \textbf{Fourier coefficients} $\langle x, x_\alpha \rangle$ of $x$ with respect to the ONS $\{x_\alpha\}$ vanish.
+\end{proposition*}
+
+\begin{definition*}
+	An ONS $\{x_\alpha\}_{\alpha \in A}$ in a Hilbert space $X$ is \textbf{maximal}, or complete, if no nonzero element can be added to it so that the resulting collection of elements is still an ONS in $X$.
+\end{definition*}
+
+\begin{theorem*}
+	Suppose $\{x_\alpha\}_{\alpha \in A}$ is an ONS in a Hilbert space $X$. Then the following are equivalent
+	\begin{itemize}[leftmargin=32.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(i)}] $\{x_\alpha\}$ is a maximal ONS in $X$;
+		\item[\textnormal{(ii)}] the collectein of all finite linear combinations of $\{x_\alpha\}$ is dense in $X$;
+		\item[\textnormal{(iii)}] \textnormal{(Plancherel's Equality)} Equality holds in Bassel's inequality;
+		\item[\textnormal{(iv)}] \textnormal{(Paseval's Identity)} For all $x, y \in X$, we have
+			\[ \langle x,y \rangle = \sum_{\alpha \in A} \langle x, x_\alpha \rangle \bar{\langle y, x_\alpha \rangle}. \]
+	\end{itemize}
+\end{theorem*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
