@@ -1,0 +1,1312 @@
+\documentclass[11pt]{amsart}
+\frenchspacing
+
+%------------------------------------------------------------
+% Packages
+%------------------------------------------------------------
+\usepackage{amsfonts}							%Special fonts
+\usepackage{amsmath}							%align* environment
+\usepackage{amssymb}							%Symbols
+\usepackage{amsthm}								%Proof Environment
+\usepackage{dsfont}									%Number Systems
+\usepackage[dvipsnames]{xcolor}				%Colors
+\usepackage[hidelinks]{hyperref} 			%Citations
+\usepackage{latexsym}								%Symbolse
+\usepackage{mathrsfs}								%Script font
+\usepackage{mathtools}								%shortintertext in align*, arrows
+\usepackage{scrextend}								%Addmargin environment
+\usepackage{soul}\setul{2.5pt}{.4pt}		% underline 2.5pt below contents
+\usepackage{tikz} 										%Tikz
+\usepackage{tikz-cd}									%Commutative Diagrams
+\usepackage[utf8]{inputenc}						%Umlauts
+\usepackage{enumitem}							%Customizes itemize enviro
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it} 
+\usepackage{url}
+\usepackage{bm}
+\usepackage{wasysym} 							%RHD
+
+
+
+
+%-----------------------------------------------------------
+% Margins
+%-----------------------------------------------------------
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,head=.2in]{geometry}
+
+% Display Mathmode Padding
+\makeatletter
+\g@addto@macro \normalsize {
+	\setlength\abovedisplayskip{2pt plus 0pt minus 2pt}
+	\setlength\belowdisplayskip{2pt plus 0pt minus 2pt}}
+\makeatother
+
+
+
+%-----------------------------------------------------------
+% Fonts
+%----------------------------------------------------------- 
+%\usepackage{libertine}
+%\usepackage{mathpazo}
+%\usepackage{newtxtext}
+%\usepackage{kpfonts}
+%\linespread{1.2} 			% Changes line spacing
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Environments
+%------------------------------------------------------------
+\swapnumbers
+\newtheorem{theorem}{Theorem}[section] % numbered theorems, lemmas, etc
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{corollary*}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
+\newtheorem*{example*}{Example}
+\newtheorem*{examples*}{Examples}
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Environments
+%------------------------------------------------------------
+\renewenvironment{proof}{\underline{Proof}.}{\qed}
+
+
+
+%------------------------------------------------------------
+% Isaac's Custom Commands
+%------------------------------------------------------------
+
+%%%% - renewed fonts - %%%%
+\renewcommand\emptyset{\varnothing}
+\renewcommand\geq{\geqslant}
+\renewcommand\leq{\leqslant}
+\renewcommand\qedsymbol{\small $\square$}
+\renewcommand\hat{\widehat}
+\renewcommand\tilde{\widetilde}
+\renewcommand\:{\colon}
+\renewcommand\bar[1]{\overline{#1}}
+
+%%%% - math cal - %%%%
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calW}{\mathcal{W}}
+
+%%%% - math ds - %%%%
+\newcommand{\C}{\mathds{C}}
+\newcommand{\E}{\mathds{E}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\Z}{\mathds{Z}}
+
+%%%% - misc - %%%%
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+\newcommand{\purple}[1]{\textcolor{Fuchsia}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%%%% - specific - %%%%
+\newcommand{\1}{\mathds{1}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\core}{\text{core}}
+\renewcommand{\d}[2]{[#1 \hspace{-.2em} : \hspace{-.2em} #2]}
+\newcommand{\End}{\text{End}}
+\newcommand{\Gal}[2]{\text{Gal}(#1 \hspace{-.2em} : \hspace{-.2em} #2)}
+\newcommand{\Grp}{\text{Grp}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\hTop}{\text{hTop}}
+\newcommand{\Inn}{\text{Inn}}
+\newcommand{\Mod}{\text{Mod}}
+\DeclareMathOperator*{\moplus}{\text{\raisebox{0.25ex}{\scalebox{0.8}{$\bigoplus$}}}}
+\DeclareMathOperator*{\Moplus}{\text{\raisebox{0.35ex}{\scalebox{0.6}{$\bigoplus$}}}}
+\DeclareMathOperator*{\motimes}{\text{\raisebox{0.25ex}{\scalebox{0.8}{$\bigotimes$}}}}
+\DeclareMathOperator*{\Motimes}{\text{\raisebox{0.35ex}{\scalebox{0.6}{$\bigotimes$}}}}
+\newcommand{\obj}{\text{obj}}
+\newcommand{\Rng}{\text{Rng}}
+\newcommand{\Set}{\text{Set}}
+\newcommand{\Sub}{\text{Sub}}
+\newcommand{\Syl}{\text{Syl}}
+\newcommand{\Sym}{\text{Sym}}
+\newcommand{\Top}{\text{Top}}
+\newcommand{\exc}[1]{\vspace{-2.5pt}\begin{itemize}[leftmargin=15pt]\item[$\RHD$] \textit{\textbf{Exercise}. #1}\end{itemize}}
+
+\setlist[itemize]{label=$\hspace{1pt} \tiny\textbullet[1pt]$}
+
+\let\oldtextbullet\textbullet
+\renewcommand{\textbullet}[1][0pt]{%
+  \mathrel{\raisebox{#1}{$\bullet$}}%
+}
+
+
+
+
+% footnotes %
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\foot}[1]{\setcounter{footnote}{1}\footnote{\ #1}}
+
+% Title
+\title{Graduate Algebra Notes}
+\author{\vspace{-10pt}IMC}
+
+% Header
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO]{\small\textsc{Algebra}}
+\fancyhead[CE]{\small\textsc{Algebra}}
+\cfoot{\ \vskip.01in $_{\thepage}$}
+
+% Contact Information
+%\address{Bryn Mawr College,
+%Bryn Mawr, PA 19003}
+%\email{icraig@brynmawr.edu} 
+
+
+
+\begin{document}
+
+\begin{abstract}
+	\vspace{-10pt}These are some of the notes I took during my graduate algebra courses. They basics for cover Category Theory, Groups, Rings, Fields, Modules, and Bilinear Forms. They emphasizing the definitions, big theorems, and exercises for each theory.
+\end{abstract}
+
+\maketitle
+\vspace{-15pt}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\vspace{-10pt}
+
+
+
+\section{Category Theory}
+
+\subsection*{\underline{Categories}}
+
+\begin{definition*}
+	A \textbf{category} $\calC$ consists of: 
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item a class $\obj(\calC)$ of \textbf{objects}; 
+		\item to each pair of objects $A, B$, a class $\hom(A, B)$ of \textbf{\textit{morphisms}}, denoted $f\: A \to B$;
+		\item to each triple of objects $A, B, C$, a function $$\circ\: \hom(B, C) \times \hom(A, B) \to \hom(A, C)$$ defined by $(g, f) \mapsto g \circ f$ called the \textbf{\textit{composite}} of $f$ and $g$;
+	\end{itemize}
+	all subject to the associativity and identity axioms:
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item for all morphisms $f\: A \to B$, $g\: B \to C$, $h\: C \to D$, we have $h \circ (g \circ f) = (h \circ g) \circ f$;
+		\item for all objects $B$ in $\obj(\calC)$ there is a morphism $\1_B\: B \to B$ such that for any $f\: A \to B$ and $g\: B \to C$ we have $\1_B \circ f = f$ and $g \circ \1_B = g$.
+	\end{itemize}
+\end{definition*}
+
+\begin{definition*}
+	A morphism $f\: A \to B$ is an \textbf{equivalence} if there is a morphism $g\: B \to A$ such that $g \circ f = \1_A$ and $f \circ g = \1_B$. The objects $A$ and $B$ are \textbf{equivalent}.
+\end{definition*}
+
+\begin{definition*}
+	An object $A$ in a category $\calC$ is \textbf{universally attracting} (resp. universally repelling) if for every object $B \in \obj(\calC)$ there is a unique morphism $B \to A$ (resp. $A \to B$).
+\end{definition*}
+
+\exc{State which type of morphisms are equivalences in each of the categories below.}
+\exc{Show universally attracting \textnormal{(}resp. repelling\textnormal{)} elements are unique up to equivalence.}
+\exc{Find the universally attracting and repelling objects in each of the categories below.}
+\vskip10pt
+
+\subsection*{Examples of Categories}
+\vspace{-5pt}\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item The category $\Set$ whose objects are sets and whose morphisms are functions.
+	\item The category $\Grp$, $\Rng$, or $\Mod_R$ whose objects are groups, rings, or $R$-modules and whose morphisms are group homomorphisms, ring homomorphisms, or $R$-linear maps.
+	\item The category $\Top$ of topological spaces with continuous functions.
+	\item The category $\hTop$ of topological spaces with continuous functions up to homotopy (note that the morphisms here are not functions, but equivalence classes of functions).
+\end{itemize}
+
+\clearpage %style
+
+\subsection*{\underline{Products and Coproducts}}
+
+\begin{definition*}
+	Let $\calC$ be a category with $\{A_i\}_{i \in I}$ a family of objects. A \textbf{product} for the family is an object $P$ together with a family of morphisms $\{\pi_i\: P \to A_i\}_{i\in I}$ such that whenever an object $Q$ has a family of morphisms $\{\varpi_i\: Q \to A_i\}_{i \in I}$, there is a unique morphism $\varphi\: Q \to P$ such that $\pi_i \circ \varphi = \pi_i$ for each $i \in I$.
+\end{definition*}
+
+\begin{center}
+\begin{tikzcd}
+	& P \arrow[dl, "\pi_1"']\arrow[dr, "\pi_2"]& \\
+	A_1 &  & A_2 \\
+	& Q \arrow[ul, "\varpi_1"]\arrow[ur, "\varpi_2"']\arrow[uu, dashed, "\varphi"]  & \\
+\end{tikzcd}
+\end{center}
+
+\subsection*{Examples of (Co)Products}
+\vspace{-5pt}\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item Let $\calC$ be the category whose objects are the bounded subsets of the $\R$ and whose morphisms are inclusions $A \hookrightarrow B$ for bounded subsets $A$ and $B$ of $\R$ with $A \subseteq B$. The intersection of countably many objects in $\calC$ forms a product in $\calC$; there are no coproducts in $\calC$.
+	\item Let $\calD$ be the category whose objects are positive integers and whose morphisms $p \to q$ exist iff $p$ divides $q$. The greatest common divisor of countably many objects in $\calD$ forms a product in $\calD$; the least common multiple of countably many objects in $\calD$ forms a coproduct.
+	\item Let $\mathcal{E}$ be the category whose objects are finite groups. It is easy to see that the product of finitely many objects in $\mathcal{E}$ exists in $\mathcal{E}$, however, the coproducts are not necessarily contained in $\mathcal{E}$. If we restrict $\mathcal{E}$ to finite abelian groups, the coproduct exists, and is equal to the product.
+\end{itemize}
+\vskip5pt
+
+\exc{Show the \textnormal{(}co\textnormal{)}products in the above examples are indeed \textnormal{(}co\textnormal{)}products. If \textnormal{(}co\textnormal{)}products do not exist in the given category, then provide a counterexample.}
+\exc{Write out the definition for \textbf{\textit{coproducts}} by switching all arrows in the definition for products. Draw a diagram similar to the one above.}
+\exc{Show that \textnormal{(}co\textnormal{)}products are unique up to equivalence.}
+\vskip20pt
+
+\subsection*{\underline{Functors}}
+
+\begin{definition*}
+	A \textbf{covariant functor} $T$ between categories $\calC$ and $\calD$ is a pair of functions assigning each object $A \in \obj(\calC)$ an object $T(A) \in \obj(\calD)$ and each morphism $f\: A \to B$ in $\calC$ a morphism $T(f) \: T(A) \to T(B)$ in $\calD$ such that
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item $T(\1_A) = \1_{T(A)}$ for all objects $A$ in $\calC$;
+		\item $T(g \circ f) = T(g) \circ T(f)$ for all morphisms $f, g$ in $\calC$ with $g \circ f$ defined.
+	\end{itemize}
+	By reversing all arrows, we obtain the definition for \textbf{contravariant functors}.
+\end{definition*}
+
+\begin{definition*}
+	A functor $T\: \calC \to \calD$ induces a function on the morphisms of $\calC$ and $\calD$, denoted \[ F_{XY}\: \Hom(X, Y) \to \Hom(F(X), F(Y)). \] If this map is injective, we say $F$ is \textbf{faithful}. If it is surjective, we say $F$ is \textbf{full}. A functor which is full and faithful is \textbf{fully faithful}.
+\end{definition*}
+
+\begin{definition*}
+	A \textbf{concrete category} is a category with a faithful functor to the Set category.
+\end{definition*}
+
+\begin{definition*}
+	Fix an object $A$ in a category $\calC$. Define $F_A\: \calC \to \Set$ by \[ F_A(C) = \hom(A, C), \hskip10pt F_A(f) \: \hom(A, B) \to \hom(A,C) \] where $F_A(g) = f \circ g$ for all $f\: B \to C$. This is called the \textbf{covariant hom functor}.
+\end{definition*}
+
+\clearpage %style
+
+\subsection*{\underline{Natural Transformations}}
+
+\begin{definition*}
+	Given covariant functors $F$ and $G$ between categories $\calC$ and $\calD$, a \textbf{natural transformation} $\alpha$ from $F$ to $G$ is a family of morphisms $\{\alpha_C\: F(C) \to G(C)\}_{C \in \obj(\calC)}$ in the category $\calD$ making
+	\begin{center}
+		\begin{tikzcd}[]
+			F(C) \arrow[r, "\alpha_C"] \arrow[d, "F(f)"'] & G(C) \arrow[d, "G(f)"] \\
+			F(D) \arrow[r, "\alpha_D"] & G(D)
+		\end{tikzcd}
+	\end{center}
+	commute for each $f \in \hom(C, D)$. If each $\alpha_C$ is an equivalence, we say $\alpha$ is a \textbf{natural equivalence}.
+\end{definition*}
+\vskip20pt
+
+\subsection*{\underline{Free Objects}}
+
+\begin{definition*}
+	In a concrete category $\calC$, an object $X \in \obj(\calC)$ is \textbf{free} if there is a subset $B \subset X$ such that any function from $B$ to an object $Y \in \obj(\calC)$ extends uniquely to a morphism $X \to Y$.
+	\begin{center}
+		\begin{tikzcd}[row sep = large]
+			B \arrow[r, hook]\arrow[dr] & X \arrow[d, dashed, "\exists !"] \\
+			 & Y 
+		\end{tikzcd}
+	\end{center}
+	The set $B$ is called a \textbf{basis} for $X$ in $\calC$. This extension property is called the \textbf{universal property} (succinctly, an object is free if it has a subset satisfying the universal property).
+\end{definition*}
+\vskip10pt %style
+
+\subsection*{Examples of Free Objects}
+\vspace{-5pt}\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item In the category of groups, the free objects are called free groups; we will construct them below.
+	\item Restricting to abelian groups, the free objects are (up to isomorphism) direct products of $\Z$'s.
+	\item The last example can be generalized to the category of $R$-modules, in which the free objects are (up to isomorphism) direct products of $R$'s.
+\end{itemize}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Groups}
+
+
+
+\subsection*{\underline{Normal Subgroups}}
+
+\subsection*{Conjugation}
+
+\begin{definition*}
+	Let $G$ be a group with $a, b, x \in G$. The \textbf{conjugate} of $a$ by $x$ is the element $^xa = xax^{-1}$. We say that $a$ and $b$ are \textbf{conjugate elements} if $^xa = b$ for some $x \in G$.
+\end{definition*}
+
+\begin{definition*}
+	The relation $a \sim b$ if $a$ is conjugate to $b$ forms an equivalence relation. We call the equivalence class containing $a$ the \textbf{conjugacy class} of $a$, denoted $\bar{a}$.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{automorphism group} of a group $G$, denoted $\Aut(G)$, is the set of all automorphisms of $G$. The set of all automorphisms which arise as conjugation by a fixed element form the \textbf{inner automorphism group} of $G$, denoted $\Inn(G)$.
+\end{definition*}
+
+\exc{Prove the map $\alpha_x(a) = \null^xa$ is an automorphism.}
+\exc{Prove $\Inn(G)$ is a normal subgroup of $\Aut(G)$.}
+\vskip20pt
+
+\subsection*{Characteristic Subgroups}
+
+\begin{definition*}
+	The \textbf{center} of a group $G$, denoted $Z(G)$, is the set of all elements which commute with every element of $G$, i.e. $Z(G) = \{ z \in G \ | \ zg = gz, \forall g \in G\}$.
+\end{definition*}
+
+\begin{definition*}
+	Given a subset $S$ of a group $G$, the \textbf{subgroup generated by $\boldsymbol{S}$} is the smallest subgroup containing $S$, equivalently, the intersection of all subgroups containing $S$. The \textbf{normal subgroup generated by $\boldsymbol{S}$} is the smallest normal subgroup containing $S$.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{commutator subgroup} of a group $G$, denoted $G'$ or $[G, G]$, is the subgroup generated by all \textbf{simple commutators} in the group, i.e. the elements $[a, b] = aba^{-1}b^{-1}$ such that $a, b \in G$. A product of simple commutators is simply called a \textbf{commutator}.
+\end{definition*}
+
+\begin{definition*}
+	A subgroup $H < G$ is \textbf{characteristic} if $\alpha(H) = H$ for every automorphism $\alpha$ of $G$.
+\end{definition*}
+
+\begin{definition*}
+	The quotient group $G/G'$ is called the \textbf{abelianization} of $G$.
+\end{definition*}
+
+\exc{Prove $[a,b]^{-1} = [b,a]$ and $\null^x[a, b] = [\null^xa, \null^x,b]$.}
+\exc{Prove if $f\: G \to H$ is a homomorphism, then $f([a,b]) = [f(a), f(b)]$.}
+\exc{Prove every characteristic subgroup is normal.}
+\exc{Prove $G'$ and $Z(G)$ are characteristic, and therefore normal.}
+\exc{Prove  $G/N$ is abelian if and only if $G' \subseteq N$.}
+\vskip20pt 
+
+\subsection*{Normalizer and Core}
+
+\begin{definition*}
+	The \textbf{normalizer} of a subgroup $H < G$ is a subgroup $N_G(H) = \{ g \in G \ | \ gHg^{-1} = H\}$.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{core} of a subgroup $H < G$ is the set $\bigcap_{x \in G} xHx^{-1}$.
+\end{definition*}
+
+\exc{Prove every subgroup $H$ is normal in $N_G(H)$.}
+\exc{Prove $H$ is normal if and only if $N_G(H) = G$.}
+\exc{Prove the core of $H$ is the largest normal subgroup in $G$ contained in $H$.}
+
+\clearpage
+
+
+
+\subsection*{\underline{Simple Groups}}
+
+\begin{definition*}
+	A group is \textbf{simple} if it has no proper, nontrivial normal subgroups.
+\end{definition*}
+
+\begin{theorem*}
+	\textnormal{(Abel's Theorem)} The alternating group $A_n$ is simple for all $n \neq 4$.
+\end{theorem*}
+\vskip20pt
+
+
+
+\subsection*{\underline{Group Actions}}
+
+\begin{definition*}
+	A \textbf{group action} of a group $G$ on a set $X$ is a function $G \times X \to X$ denoted $(g, x) \mapsto g \cdot x$ such that for all $x \in X$ and $g_1, g_2 \in G$ we have
+		\[ 1\cdot x = x, \hskip10pt \text{and} \hskip10pt (g_1g_2) \cdot x = g_1 \cdot (g_2 \cdot x). \]
+	We then say that $G$ \textbf{acts on} $X$.
+\end{definition*}
+
+\begin{definition*}
+	A \textbf{group action} of a group $G$ on a set $X$ is a homomorphism $\alpha\: G \to \Sym(X)$.
+\end{definition*}
+
+\begin{definition*}
+	A group action $\alpha\: G \to \Sym(X)$ is \textbf{faithful} if it is injective.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{orbit} of an element $x \in X$ is the subset $Gx = \{ g \cdot x \ | \ g \in G\} \subset X$.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{stabilizer} (\textbf{isotropy subgroup}) of $x \in X$ is a subgroup $G_x = \{ g \ | \ g \cdot x = x \} < G$.
+\end{definition*}
+
+\begin{definition*}
+	If $G_x = G$ then $Gx = \{x\}$, so $x$ is a \textbf{fixed point}; conversely if $G_x = \{1\}$ then $Gx$ is a \textbf{principal orbit}. The set of all fixed points is denoted $X^G$. If this set is trivial, the action is \textbf{fixed-point-free}. If all orbits are principal, the action is \textbf{free}.
+\end{definition*}
+
+\exc{Prove the above definitions of a group action are equivalent.}
+\exc{Prove the map $\cdot \: G \times G \to G$ given by $g \cdot x = \null^xg$ defines a group action of $G$ on itself.}
+\exc{Show orbits partition $X$ (i.e. $x \sim y$ iff $g \cdot x = y$ for some $g \in G$ is an equivalence).}
+\exc{Show the stabilizer of a group is generally not normal.}
+\exc{Prove stabilizers of elements in the same orbit are conjugate \textnormal{(}i.e. $G_{g \cdot x} = \null^gG_x$\textnormal{)}.}
+\exc{Prove free implies fixed-point-free, but the converse dose not generally hold.}
+
+\begin{theorem*}
+	\textnormal{(Orbit Stabilizer Theorem)} Given a group action of a group $G$ on a set  $X$, the cardinality of each orbit is the index of the corresponding stabilizer, i.e. $|Gx| = [G : G_x]$ for all $x \in X$.
+\end{theorem*}
+
+\exc{Prove this theorem \textnormal{(}hint: consider $g \mapsto g \cdot x$\textnormal{)}.}
+
+\begin{corollary*}
+	\textnormal{(Class Equation)} For any group action of a finite group $G$ on a finite set $X$, we have
+		\[ |X| = |X^G| + \sum [G:G_x], \]
+	where the sum is taken over a choice of elements representing each distinct, nontrivial orbit.
+\end{corollary*}
+
+\subsection*{Examples of Group Actions}
+
+The most important actions in Sylow Theory are of a group $G$ acting on some substructure of itself. In the following examples, let $G$ be a group and $H$ a subgroup.
+
+\begin{enumerate}[leftmargin=22.5pt]\setlength\itemsep{0em}
+	\item The \textit{action of $G$ on itself by translation} is defined by $g\cdot x = gx$. The action is faithful. The stabilizers are all trivial, so the orbits are all principle. Thus by definition, the action is free, and therefore fixed-point-free. The class equation says nothing illuminating.
+	\item The \textit{action of $G$ on itself by conjugation} is defined by $g \cdot x = gxg^{-1}$. The orbits are $Gx = \bar{x}$, and the stabilizers are $G_x = Z(x)$. The fixed points form the center $Z(G)$. By the OST \[ |\bar{x}| = |G : Z(x)| \implies |\bar{x}| \text{ divides } |G|. \] The class equation gives \[ |G| = |Z| + |G:Z_1| + |G:Z_2| + \dots \] where $Z_1, Z_2, \dots$ are the centralizers of each of the nontrivial conjugacy classes of $G$.
+	\item The \textit{action of $G$ on $\Sub(G)$ by conjugation} is defined by $g \cdot H = gHg^{-1}$. The orbits are $GH = \bar{H}$, and the stabilizers are $G_H = N_G(H)$. The fixed points are normal subgroups. By the Orbit Stabilizer Theorem 
+		\[ |\bar{H}| = |G : N_G(H)| \implies |\bar{H}| \text{ divides } |G|. \]
+	\item The \textit{action of $K < G$ on the cosets $G/H$ by translation} is defined by $k \cdot gH = (kg)H$. Exercise: determine necessary and sufficient conditions for $gH$ to be a fixed-point under this action. What does this imply when $K = G$?
+	If $K = G$, the kernel of this action is given by
+		\[ \{g \in G | g(xH) = xH \text{ for all } x \in G \} = \bigcap_{x \in G} xHx^{-1} =: \core(H). \]
+	The core is the largest normal subgroup of $G$ contained in $H$.
+\end{enumerate}
+
+\begin{theorem*}
+	Let $G$ be a group of order $n$, and let $H$ be a subgroup of index $\ell$. If $\ell$ is the smallest prime divisor of $n$, then $H \triangleleft G$. If $n$ does not divide $\ell!$, then $\{1\} \neq \core(H) \triangleleft G$.
+\end{theorem*}
+
+\vskip20pt
+
+
+
+\subsection*{\underline{Sylow Theory}}
+
+\begin{definition*}
+	A group $G$ of order $p^m$ for some prime $p$ and some integer $m \geq 1$ is called a \textbf{$\boldsymbol{p}$-group}. A $p$-group which is a subgroup of a finite group $G$ is called a \textbf{$\boldsymbol{p}$-subgroup}; in particular, if the subgroup has order the largest power of $p$ that divides $|G|$, it is a \textbf{Sylow $\boldsymbol{p}$-subgroup}. If $p$ is a prime divisor of $|G| < \infty$, we denote the set of Sylow $p$-subgroups of $G$ by $\Syl_p(G)$. In addition, we denote $n_p(G) = |\Syl_p(G)|$. 
+\end{definition*}
+
+
+\begin{theorem*}
+	\textnormal{(Sylow Theorems)} For a finite group $G$ and a prime $p$,
+	\begin{itemize}[leftmargin=24.5pt]\setlength\itemsep{0pt}
+		\item[\textnormal{(I)}] $G$ has at least one Sylow $p$-subgroup $P$ \textnormal{(}i.e. $n_p \geq 1$\textnormal{)};
+		\item[\textnormal{(II)}] any two Sylow $p$-subgroups are conjugate \textnormal{(}i.e. $\Syl_p(G) = \bar{P}$\textnormal{)};
+		\item[\textnormal{(III)}] $n_p$ divides $|G|$ and $n_p \equiv_p 1$ \textnormal{(}i.e. $n_p \mid \ell$ where $|G| = p^m\ell$ with $p \nmid \ell$\textnormal{)}.
+	\end{itemize}
+\end{theorem*}
+
+\exc{Show that $n_p = 1$ implies the Sylow $p$-subgroup is normal \textnormal{(}hint: not \textnormal{Sylow (II)}\textnormal{)}.}
+
+\begin{lemma*}
+	If a finite $p$-group $P$ acts on a finite set $X$, then $|X| \equiv_p |X^P|$.
+\end{lemma*} 
+
+\begin{corollary*}
+	\textnormal{(Burnside's Theorem)} Finite $p$-groups have nontrivial center.
+\end{corollary*}
+
+\begin{theorem*}
+	\textnormal{(Cauchy's Theorem)} If a prime $p$ divides the order of a group, then the group contains an element of that order.
+\end{theorem*}
+
+\exc{Prove Burnside's Theorem. Use this and the Correspondence Theorem to show \textnormal{(}by induction\textnormal{)} that any $p$-group of order $p^k$ contains subgroups of order $p^m$ for all $0 \leq m \leq k$.}
+
+\begin{definition*}
+	If $N$ and $Q$ are groups, a group $G$ satisfying 
+		\[ 1 \to N \hookrightarrow G \to Q \to 1 \]
+	is called an \textbf{\textit{extension}} of $Q$ by $N$.
+\end{definition*}
+
+\exc{Two extensions $G$ and $G'$ of $Q$ by $N$ are \textbf{\textit{equivalent}} if there is a homomorphism $f\: G \to G'$ such that the diagram below commutes. Show such an $f$ is an isomorphism.}
+\vskip-15pt
+\begin{center}
+\begin{tikzcd}[row sep=small, column sep = small]
+&&G \arrow[dd, dashed, "f"] \arrow[dr]&&\\
+1 \arrow[r] & N \arrow[ur, hook] \arrow[dr, hook] & & Q \arrow[r] &1 \\
+&&G' \arrow[ur]&&
+\end{tikzcd}
+\end{center}
+
+\exc{Relate simple groups with the extension question: when does an extension $G$ of $Q$ by $N$ exist? \textnormal{(}hint: consider a group which is not simple first\textnormal{)}.}
+
+\begin{theorem*}
+	The following six propositions hold:
+\end{theorem*}
+
+\begin{enumerate}[leftmargin=*]\setlength\itemsep{5pt}
+\item[(1)] A finite abelian group $G$ is simple if and only if it has prime order. \\
+\begin{proof}
+	Suppose first that $G$ has prime order. Then the only subgroups are the trivial group and $G$, so $G$ is simple. For the sufficiency, suppose $|G| = pn$ for some integer $n \geq 1$. By Cauchy's Theorem, there is an element of order $p$. The subgroup generated by this element is nontrivial, proper, and normal (from $G$ abelian). Therefore, $G$ is not simple.
+\end{proof}
+\item[(2)] If $G $ is nonabelian of prime-power order, then $G$ is not simple. \\
+\begin{proof}
+	By Burnside's Theorem, the center is nontrivial. The center is also proper (since $G$ is nonabelian) and normal. Thus, $G$ is not simple.
+\end{proof}
+\item[(3)] If $G$ is nonabelian and $|G| = pq$ for primes $p$ and $q$, then $G$ is not simple. \\
+\begin{proof}
+	Without loss of generality, assume that $p < q$. Then by Sylow Theorem (III) we have $n_q|p$, meaning either $n_q$ is $1$ or $p$. However, $n_q \equiv_q 1$, so only $n_q = 1$ is possible. 
+\end{proof}
+\item[(4)] If $G$ is nonabelian and $|G| = p^2q$ for primes $p$ and $q$, then $G$ is not simple. \\
+\begin{proof}
+	Suppose first that $q < p$. Then by Sylow (III) we have $n_p|q$ and $n_p \equiv_p 1$. The only possibility is $n_p = 1$, as desired.  Conversely, suppose that $p < q$. By Sylow (III) we have $n_q|p^2$. If $n_q = 1$, we are done. If $n_q = p$, then by Sylow (III) $q \equiv 1 (\mod p)$. So $q$ divides $p-1$, contradicting the assumption $p < q$. If $n_q = p^2$, then there are $p^2$-many subgroups of prime order $q$. Away from the identity, these subgroups are disjoint because the intersection of any pair of subgroups (itself a subgroup) has order which divides the order of either subgroup (which is prime). Furthermore, the nontrivial elements of these subgroups have order $q$ because $q$ is prime. Thus there are $p^2(q - 1)$ many elements of order $q$ in $G$, leaving only room for one Sylow $p$-subgroup, i.e. $n_p = 1$.
+\end{proof}
+\item[(5)] If $G$ is nonabelian and $|G| = pqr$ for primes $p$, $q$, and $r$, then $G$ is not simple. \\
+\begin{proof}
+	Without loss of generality, suppose $p < q < r$. We utilize the "counting elements" technique. Consider $n_r$, which is any of $1$, $p$, $q$, or $pq$. Since $n_r \equiv 1 (\mod r)$, either $n_r = 1$ or $n_r = pq$. If $n_r = 1$, we are done, so assume $n_r = pq$. As in (4.) above, there must be $pq(r-1)$ many elements of order $r$ in the group. Consider next $n_q$, which is any of $1$, $p$, $r$, or $pr$. Since $n_q \equiv 1 (\mod q)$, the case $n_q = p$ is omitted. If $n_q = 1$, we are done. So $n_q$ is either $pr$ or $r$. Assume first that $n_q = pr$. Then there are $pr(q-1)$ many elements of order $q$. In total, the group contains
+		\[ pq(r-1) + pr(q-1) = pqr + (pqr - pr- pq) = pqr + p(qr - r - q) \]
+	many elements of order $q$ or $r$, which exceeds the order of the group. So assume $n_q = r$. Then there are $r(q - 1)$ many elements of order $q$. Note that this is not sufficiently many to surpass the number of elements in the group, so consider $n_p$, which is any of $1$, $q$, $r$, or $qr$. If $n_p = 1$, we are done. In any of the remaining cases, $n_p \geq q$, so there are at least $q(p - 1)$ many elements of order $p$ in the group. In total, there are
+	\begin{align*}
+		pq(r - 1) + r(q - 1) + q(p - 1) &= pqr - pq + qr - r + pq - q \\
+		&= pqr + qr - r - q
+	\end{align*}
+	many elements of order $p$, $q$, or $r$, which again exceeds the order of the group. We conclude that one of $n_p$, $n_q$, or $n_r$ must have been $1$, implying that $G$ is not simple.
+\end{proof}
+\item[(6)] If $|G| = n$ has prime divisor $1 < p < n$ and $n \nmid n_p!$, then $G$ is not simple. \\
+\begin{proof}
+	Let $X = \Syl_p(G)$, and consider the kernel of the group action $\alpha\: G \to \Sym(X)$ given by conjugation of $X$ by $G$. If $\ker(\alpha)$ is trivial, then $G$ is isomorphic to a subgroup of $\Sym(X)$, contradicting the assumed orders. If $\ker(\alpha) = G$, then each $P \in X$ is normal ($P = gPg^{-1}$ for all $g \in G$), nontrivial, and proper ($p < n$). Otherwise, $\ker(\alpha)$ is a normal, nontrivial, proper subgroup of $G$. In either case, $G$ is not simple.
+\end{proof}
+\end{enumerate}
+\vskip5pt
+
+\exc{Prove the following 6 propositions on your own.}
+
+\exc{Classify all simple, finite, abelian groups (answer: cyclic of prime order).}
+\exc{Classify all simple, finite, nonabelian groups of order below 60.}
+\exc{Prove for a prime $p$, any group of order $p^2$ is abelian.}
+\exc{If $|G| = p^nq$, with $p > q$ primes, $G$ contains a unique normal subgroup of index $q$.}
+\exc{Prove every group of order $12$, $28$, $56$, and $200$ must contain a normal Sylow subgroup, and is consequently not simple.}
+
+\vskip20pt
+
+
+
+\subsection*{\underline{Free Groups}}
+
+\begin{definition*}
+	Let $F$ be a group and $X$ a subset of $F$. We say $F$ is a \textbf{free group on $\boldsymbol{X}$} if every function $\varphi\: X \to G$ to a group $G$ extends uniquely to a homomorphism $\Phi \: F \to G$.
+	\begin{center}
+		\begin{tikzcd}
+			F \arrow[dr, dashed, "\Phi"] & \\ X \arrow[u, hook'] \arrow[r, "\varphi"'] & G
+		\end{tikzcd}
+	\end{center}
+	A group $F$ is \textbf{free} if it is free on some subset $X$, called a \textbf{basis} for $F$.
+\end{definition*}
+
+\begin{theorem*}
+	Free groups exist.
+\end{theorem*}
+\begin{proof}
+	Let $X$ be a set. Define $X^{-1} = \{x^{-1} \ | \ x \in X\}$, where the exponent is (for now) only symbolic. The elements of $X \sqcup X^{-1}$ are \textbf{\textit{letters}}. A \textbf{\textit{word}} $\omega$ on $X$ is a finite string of letters
+		\[ \omega = x_1^{\varepsilon_1}x_2^{\varepsilon_2} \dots x_n^{\varepsilon_n}, \]
+	where $x_i \in X$ and $\varepsilon_i = \pm 1$. The value $n \geq 0$ is called the \textbf{\textit{length of the word}}. The \textbf{\textit{empty word}} is the word with length 0. Let $\Omega(X)$ be the set of all words on $X$. We \textbf{\textit{multiply}} words by juxtaposition, and \textbf{\textit{invert}} by running backwards with inverse letters (i.e. sign of the exponent changes). A \textbf{\textit{subword}} is a connected substring $x_i^{\varepsilon_i}x_{i+1}^{\varepsilon_{i+1}}\dots x_j^{\varepsilon_j}$, where $0 \leq i \leq j \leq n$. We say a word is \textbf{\textit{reduced}} if it has no subwords $xx^{-1}$ or $x^{-1}x$ for some $x \in X$. Define an \textbf{\textit{elementary operation}} on a word $\omega$ by inserting/deleting a subword of the form $xx^{-1}$ or $x^{-1}x$ in $\omega$. Two words are \textbf{\textit{related}} if they differ by finitely many elementary operations. This defines an equivalence relation $\sim$ on $\Omega(X)$. We define the \textbf{free group on $\boldsymbol{X}$} to be the set
+		\[ F(X) = \Omega(X)/\sim \] 
+	under the operation $[\omega][\eta] = [\omega\eta]$.
+\end{proof}
+
+\exc{Prove multiplication is well defined by showing \textnormal{(1)} every word $\omega$ is equivalent to a unique reduced word $\overline{\omega}$, and \textnormal{(2)} $\overline{\omega\eta} = \overline{\omega} \ \overline{\eta}$.}
+
+\begin{theorem*}
+	The group $F(X)$ defined above is free on $X$.
+\end{theorem*}
+
+\exc{Prove this theorem by showing \textnormal{(1)} $F(X)$ is indeed a group, and \textnormal{(2)} any function $X \to G$ extends \textnormal{(}linearly\textnormal{)} to a homomorphism $F(X) \to G$.}
+\exc{Show that $F(X)$ is free and nonabelian if $|X| \geq 2$.}
+
+\begin{theorem*}
+	Every group $G$ is isomorphic to the quotient of a free group.
+\end{theorem*}
+
+\exc{Prove this by considering a generating set $X$ for $G$ along with its inclusion into $G$.}
+
+\vskip20pt
+
+
+
+\subsection*{\underline{Group Presentations}}
+
+\begin{definition*}
+	Given a subset $S$ of a group $G$, the \textbf{subgroup generated by $\boldsymbol{S}$} is the smallest subgroup $(S)$ containing $S$. Similarly, the \textbf{normal subgroup generated by $\boldsymbol{S}$} is the smallest subgroup $\langle S \rangle$ containing $S$. If $S$ is finite, we say the subgroup is \textbf{finitely generated}.
+\end{definition*}
+
+\begin{definition*}
+	A group $G$  is \textbf{finitely presented} if there exists a finite set $X$ and a finitely generated, normally generated subgroup $N$ of $F(X)$ for which $G \cong F(X)/N$. The elements of $X$ are called \textbf{generators}, and the elements of $N$ are called \textbf{relations}. 
+\end{definition*}
+
+\begin{definition*}
+	Suppose $G$ is finitely presented with generators $x_1, \dots, x_p$ relations $r_1, \dots, r_q$. We write
+		\[ G = \langle x_1, \dots, x_p \ | \ r_1, \dots, r_q \rangle \]
+	 meaning $G \cong F( x_1, \dots, x_p ) / \langle r_1, \dots, r_q \rangle$, and call this a (finite) \textbf{presentation} of $G$.
+\end{definition*}
+
+Note that the presentation of a group is not unique. Moreover, it is impossible to construct an algorithm which determines whether or not a presentation determines the trivial group (one can further reason there is no classification of four manifolds)! However, this is theoretically possible, as the following Theorems indicate.
+
+\begin{theorem*}
+	\textnormal{(von Dyck's Theorem)} If $G = \langle x_1, x_2, \dots | r_1, r_2, \dots \rangle$ and $H$ is a group with generators $y_1, y_2, \dots$ such that $r_i(y_1, y_2, \dots) = 1 \in H$, there exists an epimorphism $G \twoheadrightarrow H$ with $f(x_i) = y_i$. 
+\end{theorem*}
+
+\begin{center}
+\begin{tikzcd}
+	B \arrow[r, hook] \arrow[dr] & F \arrow[r] \arrow[d, dashed] & F/R \arrow[dl, dashed, "f"] \\
+	 & H & 
+\end{tikzcd}
+\end{center}
+
+\exc{Prove this theorem using the Universal Property of Free Groups and the Characteristic Property of Quotient Groups.}
+
+\begin{theorem*}
+	\textnormal{(Tietze's Theorem)} If $G$ has two different finite presentations $\langle x_1, \dots, x_p \ | r_1, \dots, r_q \rangle$ and $\langle y_1, \dots, y_m \ | \ s_1, \dots, s_n \rangle$, then one can pass from one to the other by \textbf{elementary Tietze operations}: add/remove generator; add/remove relation which are consequence of remaining ones.
+\end{theorem*}
+
+\exc{Show that  $G = \langle x, y \ | x^4 = 1, x^2 = y^2, yxy^{-1} = x^{-1} \rangle$ is isomorphic to $Q_8$ (Hint: Use van Dyck's Theorem, and prove the group has order $8$ by arguing each element can be written $a^nb^m$ for restricted values of $m, n$).}
+
+\vskip20pt
+
+
+
+
+\subsection*{\underline{Miscellany}}
+
+\begin{lemma*}
+	\textnormal{(Product Recognition)} If $H, K \triangleleft G$ with $H \cap K = \{1\}$ and $HK = G$, then $G \cong H \times K$.
+\end{lemma*}
+
+\begin{proposition*}
+	If $S, T < G$, then $ST < G$ if and only if $ST = TS$ setwise. Moreover, if $S$ and $T$ are normal, then $ST$ is normal, as well.
+\end{proposition*}
+
+\begin{proposition*}
+	If $S, T < G$ and $ST < G$, then $\displaystyle |ST| = |S||T|/|S \cap T|$.
+\end{proposition*}
+
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+\section{Rings}
+
+\subsection*{\underline{Basics}}
+
+\begin{definition*}
+	A \textbf{ring} is a set $R$ with two operations $+$ and $\cdot$ satisfying
+	\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+		\item[\textnormal{(a)}] $(R, +)$ is an abelian group;
+		\item[\textnormal{(b)}] $(R, \cdot)$ is a semi-group (i.e. a set with an associative binary operation);
+		\item[\textnormal{(c)}] $\cdot$ distributes over $+$ on both sides (e.g. $a \cdot (b + c) = a \cdot b + a \cdot c$).
+	\end{itemize}
+	We often simplify the notation $a \cdot b = ab$. If the operation $\cdot$ is commutative, we say $R$ is a \textbf{commutative ring}. When one exists, we call the identity in $(R, \cdot)$ a \textbf{unity}. Elements with inverses in $(R, \cdot)$ are called \textbf{units}.	A commutative ring with unity is a \textbf{field} if every nonzero element is a unit.
+\end{definition*}
+
+\begin{definition*}
+	A subset $S$ of a ring $R$ is a \textbf{subring} if itself forms a ring under the inherited operations. A subring $I$ is an \textbf{ideal} (written $I \triangleleft R$) if $ab \in I$ for all $a \in R$, $b \in I$. Each element $a \in R$ generates an ideal $\langle a \rangle = \{ ra, ar \in R \ | \ r \in R\}$ called the \textbf{principal ideal generated by $\boldsymbol{a}$}.
+\end{definition*}
+
+\begin{definition*}
+	A \textbf{ring homomorphism} is a map between rings $f\: R \to S$ for which $f(rs) = f(r)f(s)$ and $f(r + s) = f(r) + f(s)$ for all $r, s \in R$.
+\end{definition*}
+
+\exc{Prove the kernel of a ring homomorphism is an ideal.}
+\exc{Prove analogous isomorphism theorems and the Correspondence Theorem for rings.}
+\exc{Prove that a ring is a field if and only if it has no nontrivial, proper ideals \textnormal{(}hint: Correspondence Theorem\textnormal{)}.}
+
+\begin{definition*}
+		If $I, J < R$, the sets $I + J$ and $I J$ are defined by
+		\begin{align*}
+			I + J &= \{ a + b \ | \ a \in I, b \in J \} \\
+			IJ &= \{a_1b_1 + \dots + a_nb_n \ | \ a_i \in A, b_i \in B, n \in \N \}.
+		\end{align*}
+\end{definition*}
+
+\exc{Prove that if $I, J \triangleleft R$, then the sets $I \cap J$, $I + J$, and $I J$ are also ideals in $R$. Moreover,
+\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+	\item[\textnormal{(a)}] $I + J$ is the smallest ideal containing both $I$ and $J$;
+	\item[\textnormal{(b)}]  $IJ \subset I \cap J$, and if $R = I + J$ is commutative with identity, $IJ = I \cap J$.
+\end{itemize}}
+
+\begin{definition*}
+	An element $r \in R$ is \textbf{nilpotent} if $r^n = 0$ for some $n \in \N$.
+\end{definition*}
+
+\exc{Let $\calN$ be the set of nilpotent elements in a ring $R$.
+\begin{itemize}[leftmargin=22.5pt]\setlength\itemsep{0em}
+	\item[\textnormal{(a)}] Prove that if $R$ is commutative, $\calN$ is an ideal in $R$ contained in any prime ideal of $R$ \textnormal{(}hint: use binomial theorem to show closure under addition\textnormal{)};
+	\item[\textnormal{(b)}] show that $\calN$ need be not be an ideal if $R$ is not commutative \textnormal{(}hint: use matrices\textnormal{)};
+	\item[\textnormal{(c)}] show that if $R$ is commutative with unity, then any sum $u + x$ of a unit $u$ with a nilpotent $x$ is a unit \textnormal{(}hint: first show that $1 - x$ is a unit by factoring $1 -x^n$ for suitable $n$\textnormal{)}.
+\end{itemize}}
+
+\begin{definition*}
+	An ideal $I \triangleleft R$ is \textbf{maximal} if there are no ideals properly contained between $I$ and $R$ (i.e. whenever $J$ is an ideal of $R$ satisfying $I \subseteq J \subseteq R$, either $I = J$ or $J = R$). An ideal is \textbf{prime} if $ab \in I$ implies either $a \in I$ or $b \in I$.
+\end{definition*}
+
+\begin{definition*}
+	Given an ideal $I \triangleleft R$, the \textbf{quotient ring} of $R$ by $I$ is the set $R/I = \{a + I | a \in R\}$ under the operations
+		\[ (a + I) + (b + I) = (a + b) + I \hskip20pt (a + I)(b + I) = (ab) + I. \]
+	These operations are well defined because $I$ is an ideal.
+\end{definition*}
+
+\vskip20pt
+
+
+
+
+
+\subsection*{\underline{Fields, EDs, PIDs, and UFDs}}
+
+\begin{definition*}
+	A \textbf{zero divisor} of $a \in R$ is a nonzero element $b \in R$ such that $ab = 0$. A ring with no zero divisors is called a (integral) \textbf{domain}.
+\end{definition*}
+
+\exc{Prove that $R$ is a domain if and only if $\{0\}$ is a prime ideal.}
+\exc{Prove a proper ideal $I \triangleleft R$ is prime if and only if $R/I$ is a domain, and is maximal if and only if $R/I$ is a field.}
+\exc{Prove every finite integral domain $R$ is a field \textnormal{(}hint: for any $r \neq 0$ consider $x \mapsto xr$\textnormal{)}.}
+
+\begin{definition*}
+	A \textbf{Euclidean function} on a ring $R$ is a function $f\: R \setminus 0 \to \N_{>0}$ such that for any pair of nonzero $a, b \in R$, there exist unique $q, r \in R$ such that $a = qb + r$ and either $r = 0$ or $f(r) < f(q)$. A ring $R$ is a \textbf{Euclidean domain} (ED) if it has a Euclidean function.
+\end{definition*}
+
+\begin{definition*}
+	A \textbf{principal ideal domain} (PID) is a a ring in which all ideals are principal.
+\end{definition*}
+
+\exc{Prove that every field is an ED. Show the converse need not hold.}
+\exc{Prove that every ED is an PID. Show the converse need not hold.}
+
+\begin{definition*}
+	A nonzero element $p$ in a domain $R$ is \textbf{irreducible} if $ab = p$ implies $a$ or $b$ is a unit. Moreover, $p$ is \textbf{prime} if $ab | p$ implies $a|p$ or $b|p$.
+\end{definition*}
+
+\exc{Define what it means for one element to divide another, i.e. $a|b$ for $a, b \in R$. Provide equivalent definitions of divides, irreducible, and prime using ideals.}
+\exc{Prove in a domain, prime elements are irreducible. Show the converse need not hold.}
+\exc{Prove that a nonzero ideal is prime iff maximal in a PID.}
+
+\begin{definition*}
+	A \textbf{unique factorization domain} is a ring $R$ for which every nonzero, nonunit element $r \in R$ there exist unique (up to associates) irreducibles $p_1, \dots, p_n$ such that $r = p_1 \cdots p_n$.
+\end{definition*}
+
+\exc{Prove every PID is a UFD. Show the converse need not hold.}
+\exc{Show $3 \in \Z[\sqrt{-5}]$ is irreducible but not prime. Show that $\Z[\sqrt{-5}]$ is nat a UFD.}
+\exc{Show that $\Z[i]$ is a UFD, and explain why $2 \cdot 5 = 10 = (3 - i)(3 + i)$ does not contradict this.}
+\exc{Show that if $F$ is a field, $F[x]$ is an ED.}
+\exc{Let $F$ be a field. Show that irreducible and prime are the same for polynomials in $F[x]$. Prove that for $f \in F[x]$, the quotient $F[x]/\langle f \rangle$ is a field if and only if $f$ is irreducible.}
+\exc{Let $R$ be a commutative ring with unity and $f$ a nonzero polynomial in $R[x]$ of degree $n$. Show $c \in R$ is a root of $f$ if and only if $(x - c) | f$. Moreover, if $R$ is a domain, $f$ has at most $n$ roots in $R$.}
+
+\begin{theorem*}
+	If $R$ is a UFD, then $R[x]$ is a UFD.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Cubic Criterion)} If $R$ is a domain and $f$ is a primitive polynomial in $R[x]$ of degree no more than $3$, then $f$ is irreducible over $R$ if and only if it has a root in $F(R)$.
+\end{theorem*}
+
+\exc{Show $x^2 + 1$ is irreducible in $\Z_3[x]$. Then construct a field of order 9. Write down its multiplication table.}
+\exc{Show that $x^3 + 6x + 12$ is irreducible in $\Z[x]$.}
+
+\begin{theorem*}
+	\textnormal{(Eisenstein's Criterion)} Let $f = a_0 + a_1x + \dots + a_nx^n \in \Z[x]$ be primitive. If there is a prime $p$ for which $p | a_0, \dots, a_{n-1}$ but $p \nmid a_n$ and $p^2 \nmid a_0$, then $f$ is irreducible.
+\end{theorem*}
+
+\exc{Prove that $x^3 + 6x + 12$ and $x^4 + x^3 + x^2 + x + 1$ are irreducible in $\Z[x]$.}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+\section{Fields}
+
+\begin{definition*}
+	 Let $L$ be a field with $K \subseteq L$ a subfield. We call $L$ a \textbf{field extension} of $K$, written $L/K$. For $u \in L \setminus K$, the field extension $K(u)/K$ is called a \textbf{simple extension} of $K$.
+\end{definition*}
+
+\begin{definition*}
+	Given a field extension $L/K$, we can consider $L$ as a $K$-vector space; the dimension of this vector space is called the \textbf{degree} of the field extension and is denoted $\d LK$. According to the cardinality of this number, we say the extension of $L$ over $K$ is (in)finite.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item the degree of an extension $L/K$ is $1$ if and only if $L = K$;
+	\item given fields $K \subset L \subset M$, we have $\d MK = \d ML \d LK$.
+\end{itemize}
+
+\begin{definition*}
+	Let $L/K$ be a field extension. An element in $L \setminus K$ is \textbf{algebraic} over $K$ if it is a zero of some nonzero polynomial in $K[x]$; otherwise, it is \textbf{transcendental}. A simple extension $K(u)$ is an \textbf{algebraic extension} if $u$ is algebraic over $K$; otherwise it is a \textbf{transcendental extension}.
+\end{definition*}
+
+\begin{definition*}
+	A field $F$ is \textbf{algebraically closed} if 
+\end{definition*}
+
+\begin{theorem*}
+	Let $L/K$ be a field extension and $u \in L$. Then:
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item if $u$ is transcendental over $K$, then $K[u] \cong K[x]$ and $K(u) \cong K(x)$;
+		\item if $u$ is algebraic over $K$, then there exists a unique, monic, irreducible polynomial $m_u \in K[x]$ such that each $f \in K[x]$ with $f(u) = 0$ is a multiple of $m_u$ and $K[u] \cong K(u)$.
+	\end{itemize}
+\end{theorem*}
+
+\begin{corollary*}
+	Transcendental extensions are infinite; finite extensions are algebraic.
+\end{corollary*}
+
+\begin{definition*}
+	Let $M$ and $L$ be fields containing a field $K$. Then $LM = L(M) = M(L)$ is a field extension over $K$ and $L$ and $M$.
+\end{definition*}
+
+\begin{theorem*}
+	Consider extensions $ML/K$, $M/K$, and $L/K$ having degrees $n$, $m$, and $\ell$. 
+	\begin{center}
+		\begin{tikzcd}[row sep = 10pt, column sep = 2.5pt]
+			& ML \arrow[dr, dash, "s"]\arrow[dl, dash, "r"']\arrow[dd, dash, "n"]& \\
+			L \arrow[dr, dash, "\ell"'] & & M \arrow[dl, dash, "m"] \\
+			& K &
+		\end{tikzcd}
+	\end{center}
+	Then $n \leq m \ell$, or equivalently $s \leq \ell$, or equivalently $r \leq m$.
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{definition*}
+	For a field extension $M/K$, the \textbf{Galois group} of $N$ over $K$ is the group  $\Gal MK$ of automorphisms that leave every element of $K$ fixed. The \textbf{fixer} of an intermediate field $L$ is the set $L' \subseteq G$ of automorphisms in $\Gal MK$ which fix $L$ pointwise. Conversely, the \textbf{fixed field} of the subgroup $H < G$ is the subset $H' \subset M$ of elements fixed by each element in $H$. 
+\end{definition*}
+
+\begin{center}
+	\begin{tikzcd}[row sep = 1pt]
+		M \arrow[r] & \{1\} \\
+		\cup & \cap \\
+		L \arrow[r] & L' \\
+		\cup & \cap \\
+		K \arrow[r] & G
+	\end{tikzcd}
+	\hskip50pt
+	\begin{tikzcd}[row sep = 1pt]
+		M & \{1\} \arrow[l] \\
+		\cup & \cap \\
+		H' & H \arrow[l] \\
+		\cup & \cap \\
+		K & G \arrow[l, dashed] \arrow[luu, dashed] \arrow[lu, dashed]
+	\end{tikzcd} \vskip10pt
+	Figure 1. The extreme cases of the correspondence, which are for the most part as desired.
+\end{center}
+
+\begin{definition*}
+	The \textbf{closure} of an intermediate object is its double prime. An intermediate object is \textbf{closed} if it is equivalent to its closure. We say $M$ is \textbf{normal} over $K$ if $\Gal MK' = K$.
+\end{definition*}
+\clearpage
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item let $L$ and $M$ be intermediate fields of $N/K$ with $\d ML = n$, then $\d{L'}{M'} \leq n$;
+	\item let $H \subset J$ be subgroups of $G = \Gal NK$ with $\d HJ = n$, then $\d{J'}{H'} \leq n$;
+	\item if $L$ is closed, then also $M$ is closed; moreover, $\d{L'}{M'} = n$;
+	\item if $H$ is closed, then also $J$ is closed; moreover, $\d{H'}{J'} = n$;
+	\item all finite subgroups of $G$ are closed;
+	\item if $M$ is normal over $K$, then $M$ is normal over any intermediate field $L$ with $\d LK$ finite.
+\end{itemize}
+
+\begin{theorem*}
+	\textnormal{(Fundamental Theorem of Galois Theory)} Let $M$ be a normal, finite-dimensional extension of $K$, and let $G = \Gal MK$. There is a one-to-one correspondence between the subgroups of $G$ and the intermediate fields of $M$ and $K$, implemented by the priming operation. Moreover, the relative degrees are preserved, and in particular, $\d MK = |G|$.
+\end{theorem*}
+
+\begin{theorem*}
+	Given a finite group $G$ of automorphisms of a field $M$, the field extension of $M$ over the fixed field of $G$ is normal, finite-dimensional, and has Galois group $G$.
+\end{theorem*}
+\vskip40pt
+
+\begin{definition*}
+	For fields $K \subset M \subset L$, we say that $L$ is \textbf{stable} relative to $K$ and $M$ if every automorphism of $M / K$ sends $L$ into (and consequently onto) itself.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item stable intermediate fields correspond to normal subgroups;
+	\item the closure of a normal subgroup is normal; the closure of a stable intermediate field is stable;
+	\item if $M$ is normal over $K$ and $L$ is stable relative to $K$ and $M$, then $L$ is normal over $K$;
+	\item if $M$ is normal over $K$ and $f \in K[x]$ is irreducible with root $u \in M$, then $f$ factors over $M$ into distinct linear factors;
+	\item if $L$ is normal and algebraic over $K$, then $L$ is stable (relative to any extension $M \supset L$);
+	\item if $L$ is a stable intermediate field of $M/K$, then $G/L'$ is isomorphic to the group of all automorphisms of $L/K$ that are extendible to $M$, where $G = \Gal MK$.
+\end{itemize}
+
+\begin{theorem*}
+	\textnormal{(Fundamental Theorem of Galois Theory, cont'd)} In the correspondence, a field $L$ is normal over $K$ if and only if the corresponding subgroup is normal in $G = \Gal MK$, and in this case, $G/H$ is the Galois group of $L/K$.
+\end{theorem*}
+\vskip40pt
+
+
+
+\begin{theorem*}
+	Let $f$ be irreducible in $K[x]$. Then there exists a field containing $K$ and a root of $f$. This field is unique up to isomorphism of $K$.
+\end{theorem*}
+
+\begin{definition*}
+	Let $f \in K[x]$. We say that $M$ is a \textbf{splitting field} of $f$ over $K$ if $f$ factors completely in $M$ and $M = K(u_1, \dots, u_n)$, where $u$'s are the roots of $f$. We say $M$ is a splitting field over $K$ if there exists a polynomial $f$ for which $M$ is a splitting field of $f$ over $K$.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{formal derivative} of a polynomial $f = \sum a_ix^i$ is a polynomial $f' = \sum ia_ix^{i-1}$. 
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item each $f \in K[x]$ has a splitting field, which is unique up to isomorphism of the base field;
+	\item if $f \in K[x]$ and $a \in K$, then $(x-a)^2$ divides $f$ if and only if $x-a$ divides $f$ and $f'$;
+\end{itemize}
+
+\begin{definition*}
+	An irreducible polynomial $f$ in $K[x]$ is \textbf{separable} if, in some splitting field over $K$, it factors into distinct linear factors. An element $u$ that is algebraic over $K$ is said to be \textbf{separable} over $K$ if its irreducible polynomial is separable over $K$. A field $L$ that is algebraic over $K$ is \textbf{separable} over $K$ if every element is separable over $K$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item if $f$ is irreducible in $K[x]$, the following are equivalent:
+	\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+		\item in every splitting field if $f$ over $K$, $f$ factors into distinct linear factors;
+		\item $f$ is separable;
+		\item $f' \neq 0$;
+	\end{itemize}
+	\item if $M$ is a finite extension of $K$, the following are equivalent:
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item $M$ is normal over $K$;
+		\item $M$ is separable over $K$ and $M$ is a splitting field over $K$;
+		\item $M$ is a splitting field over $K$ of a polynomial whose irreducible factors are separable;
+	\end{itemize}
+	\item if $L$ is a finite extension of $K$, the following are equivalent:
+	\begin{itemize}[leftmargin=12.5pt]\setlength\itemsep{0em}
+		\item $L$ is a splitting field over $K$;
+		\item whenever an irreducible polynomial over $K$ has a root in $L$ it factors completely in $L$;
+	\end{itemize}
+\end{itemize}
+
+\begin{definition*}
+	Let $K \subset L \subset M$ with $L/K$ finite. We say $M$ is the \textbf{split closure} of $L$ if it is the smallest splitting field over $K$ containing $L$. If $L$ is separable, we say $M$ is the \textbf{normal closure}.
+\end{definition*}
+
+\begin{theorem*}
+	Every finite extension has a split closure, which is unique up to isomorphism fixing $L$. If $L$ is separable, $M$ is normal over $K$.
+\end{theorem*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item for characteristic 0, normal is the same as splitting field;
+	\item for characteristic $p$, normal is splitting field plus separability.
+\end{itemize}
+
+
+
+\clearpage
+
+
+
+
+
+
+
+
+
+\section{Modules}
+
+\subsection*{\underline{Basics}}
+
+\begin{definition*}
+	An $R$-module $M$ is a vector space whose scalars have been replaced by a ring $R$.
+\end{definition*}
+
+\exc{A module is \textbf{\textit{simple}} if its only submodules are $M$ and $\{0\}$. Classify the simple $\Z$-submodules.}
+
+\begin{definition*}
+	An \textbf{$\boldsymbol{R}$-linear map} or \textbf{$\boldsymbol{R}$-module homomorphism} is a function $f\: M \to N$ satisfying $f(rm + n) = rf(m) + f(n)$ for every $m, n \in M$ and $r \in R$. The set of all $R$-linear maps from $M$ to $N$ is denoted $\Hom_R MN$; in the case $M = N$, we write $\End_R M$ for endomorphism.
+\end{definition*}
+
+\begin{definition*}
+	The \textbf{quotient $\boldsymbol{R}$-module} of an $R$-module $M$ by a submodule $N$ is the module of cosets of $N$ in $M$ under the operations
+		\[ (a + N) + (b + N) = (a + b) + N \text{ and } r(a + N) = ra + N, \]
+	for all $a, b \in M$ and $r \in R$.
+\end{definition*}
+
+\exc{Show that the kernel of an $R$-linear map $f\: M \to N$ is an $R$-submodule of $M$, and if this submodule is trivial, then $f$ is injective.}
+\exc{Find a positive integer $k$ such that $\Hom_\Z(\Z_m, \Z_n) \cong \Z_k$.}
+\exc{Show the analogous isomorphism theorems hold for quotients of $R$ modules.}
+
+\begin{definition*}
+	The \textbf{direct sum} of $R$-modules $M$ and $N$ is the module $M \oplus N = \{(m, n) | m \in M, n \in N\}$ with pointwise operations. We often write $M^n = M \oplus \dots \oplus M$ for $n$-many copies of $M$.
+\end{definition*}
+
+\begin{definition*}
+	An element $m$ of an $R$-module $M$ is \textbf{torsion} if there exists a nonzero $r \in R$ such that $rm = 0$. An $R$-module $M$ is a \textbf{torsion module} if each of its elements are torsion.
+\end{definition*}
+
+\begin{definition*}
+	An $R$-module $M$ is \textbf{free} if there exists a subset $B$ of $M$, called a \textbf{basis}, such that every element in $M$ can be written uniquely as a finite linear combination of elements in $B$.
+\end{definition*}
+
+\begin{definition*}
+	For a subset $S$ of an $R$-module $M$, the \textbf{submodule $\boldsymbol{\langle S \rangle}$ generated by $\boldsymbol{S}$} is the smallest submodule of $M$ containing $S$ (equivalently, the intersection of all submodules containing $S$), or constructively
+		\[ \langle S \rangle = \Big\{ \sum r_is_i \ \Big| \ r_i \in R, s_i \in S \Big\}. \]
+	If $S = \{s\}$, then $M = \langle s \rangle$ is a \textbf{cyclic $\boldsymbol{R}$-module}. If $S$ is a finite set, then $M$ is \textbf{finitely generated}.
+\end{definition*}
+
+\exc{Prove an $R$-module $M$ is free on $B \subset M$ if and only if $M$ is isomorphic to $R^{|B|}$.}
+\exc{Prove an $R$-module $M$ is free on $B \subset M$ if and only if any function from $B$ to an $R$-module $N$ extends uniquely to an $R$-linear map $M \to N$.}
+\exc{Prove an $R$-module $M$ is cyclic if and only if $M \cong R/J$ for some $J \triangleleft R$.}
+\exc{Find an example and a counterexample of a free module and a torsion module.}
+\exc{Prove Schur's Lemma: Let $M$ and $N$ be simple $R$-modules and $f\: M \to N$ be a nonzero $R$-linear map. Then $f$ is an isomorphism. Moreover, if $M = N$ and $R$ is commutative, then $f$ is multiplication by a scalar (i.e. there is some $r \in R$ such that $f(x) = rx$ for all $x \in M$.}
+
+\begin{definition*}
+	An $R$-module $P$ is \textbf{projective} if for every surjective module homomorphism $f\: M \to N$ and every module homomorphism $g\: P \to N$, there exists a module homomorphism $h\: P \to M$ such that $fh = g$. Similarly, an $R$-module $Q$ is \textbf{injective} if for every injective module homomorphism $f\: X \to Y$ and every module homomorphism $g\: X \to Q$ there is a module homomorphism $h\: Y \to Q$ such that $hf = g$. That is, the following commutative diagrams commute, respectively.
+	\begin{center}
+		\begin{tikzcd}
+		 	& M \arrow[d, "f"] \\
+		 	P \arrow[r, "g"']\arrow[ur, dashed, "h"] & N
+		\end{tikzcd}
+		\hskip30pt
+		\begin{tikzcd}
+			 X \arrow[r, "f"] \arrow[d, "g"'] & Y \arrow[dl, dashed, "h"] \\
+			 Q & 
+		\end{tikzcd}
+	\end{center}
+\end{definition*}
+
+\exc{Show that $P$ is a projective $R$-module if and only if every short exact sequence of the form $0 \to M \to N \to P \to 0$ splits.}
+\exc{Show that $Q$ is an injective $R$-module if and only if every short exact sequence of the form $0 \to Q \to M \to N \to 0$ splits.}
+
+\vskip20pt
+
+\subsection*{\underline{Modules over a PID}}
+
+\begin{theorem*}
+	\textnormal{(Invariant Structure Theorem)} If $R$ is a PID and $M$ is a finitely-generated $R$-module, then there is a unique nonnegative integer $r$ and a unique sequence $J_i < R$ of nested, nonzero proper ideals such that
+		\[ M \cong R/J_1 \oplus \dots \oplus R/J_k \oplus R^r. \]
+	The integer $r$ is called the \textbf{rank} of $M$, and the ideals are called the \textbf{invariant factors} of $M$.
+\end{theorem*}
+
+\begin{theorem*}
+	\textnormal{(Primary Structure Theorem)} If $R$ is a PID and $M$ is a finitely-generated $R$-module, then there exist finitely many prime elements $p_i \in F[t]$ and nonzero integers $n_i$ such that
+		\[ M \cong R/ \langle p_1^{n_1} \rangle \oplus \dots \oplus R/ \langle p_k^{n_k} \rangle. \]
+	The prime elements $p^n$ are called the \textbf{elementary divisors} of $M$.
+\end{theorem*}
+
+\exc{Prove the rank of a torsion module is $0$.}
+\exc{Prove all finitely generated abelian groups can be characterized by setting $R = \Z$.}
+\vskip20pt
+
+\subsection*{\underline{The Vector Transformation Module}}
+\begin{definition*}
+	Let $V$ be an $F$-vector space, and let $T\: V \to V$ an endomorphism. We define $\boldsymbol{V_T}$ to be the $F[t]$-module whose additive structure is inherited from $V$, and whose ring is $F[t]$, where scalar multiplication is given by $f(t) \cdot v = f(T)v$. 
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item if $V$ is finite dimensional, then $V_T$ is torsion -- since $\End(V) \cong M_n(F)$ is $n^2$ dimensional, there are $a_i \in F$ such that $\sum_{i=1}^{n^2} a_iT^i = 0$;
+	\item by the Invariant Structure Theorem, $V_T \cong F[t]/ \langle f_1 \rangle \oplus \dots \oplus F[t]/ \langle f_k \rangle$;
+	\item in this module, we reconstruct $T$ as multiplication by the scalar $g(t) = t$, acting in each summand (i.e. $Tv = t \cdot v$); to understand $T$, we can understand this multiplication;
+	\item for $f = \sum_{i=0}^{n+1} a_it^i$, the module $F[t]/ \langle f \rangle$ has basis $B = \{ \bar 1, \bar t, \bar t^2, \dots, \bar t^n\}$, so multiplication by $\bar t$ can be represented by the \textbf{companion matrix}
+		\[ C_f = \begin{pmatrix} 
+			0 & 0 & \cdots & 0 & -a_0 \\
+			1 & 0 &\cdots & 0 & -a_1 \\
+			0 & 1 & \cdots & 0 & -a_2 \\
+			\vdots & \vdots & \ddots & \vdots & \vdots  \\
+			0 & 0 & \cdots & 1 & -a_n \\
+		\end{pmatrix}. \]
+	\item carrying the basis $B$ to $V_T$ by the isomorphism given above, it follows that there is a basis $C$ for $V$ such that $T_C = C_{f_1} \oplus \cdots \oplus C_{f_k}$, where $\oplus$ denotes the block sum of matrices.
+\end{itemize}
+
+\begin{definition*}
+	A matrix is said to be in \textbf{rational canonical form} if it can be written as $C_{f_1} \oplus \dots \oplus C_{f_k}$ for monic polynomials $f_1, \dots, f_k$ with $f_1 | \dots | f_k$.
+\end{definition*}
+
+\begin{corollary*}
+	Every $T \in \End_F(V)$ has a coordinate matrix in rational canonical form, uniquely determined by $T$ and $F$, which we denote by $R_T$ \textnormal{(}or $R_{T/F}$ to denote over which field\textnormal{)}.
+\end{corollary*}
+
+\begin{corollary*}
+	If $F$ is a field, any $A \in M_n(F)$ is similar over $F$ to a unique matrix $R_A$ \textnormal{(}i.e. there is an invertible $P \in M_n(F)$ such that $PAP^{-1} = R_A$\textnormal{)}. It follows that two matrices are similar if and only if they have the same Rational Canonical Form.
+\end{corollary*}
+
+\begin{definition*}
+	Note that $\{ f \in F[t] : f(T) = 0 \}$ is an ideal of $F[t]$, which is a PID. The unique, monic generator $m_T(t)$ is called the \textbf{minimal polynomial} of $T$.
+\end{definition*}
+
+\noindent \textbf{Properties}:
+\begin{itemize}[leftmargin=*]\setlength\itemsep{0em}
+	\item $m_T(T) = 0$ (just a nice reminder);
+	\item the minimal polynomial is the larges (last) invariant factor of $T$;
+	\item the characteristic polynomial $c_T$ is equal to the product of the invariant factors of $T$;
+	\item (Cayley-Hamilton) $m_T$ divides $c_T$ and the roots of $c_T$ are roots of $m_T$;
+\end{itemize}
+
+\begin{corollary*}
+	If $F \subseteq E$ are fields, then two matrices $A, B \in M_n(F)$ are similar over $F$ if and only if they are similar over $E$.
+\end{corollary*}
+
+\clearpage %style
+
+\exc{Prove properties 1-4 of characteristic/minimal polynomials.}
+\exc{Use 1-4 to compute the characteristic and minimal polynomials of the endomorphism $T$ on $\R^3$ given by the matrix with $1$'s in each corner and $0$'s elsewhere. Then find the invariant factors of $T$.}
+\exc{Find all possible RCFs for matrices over $\Q$ and $\mathds C$ with characteristic polynomial $(t^4 - 1)(t^2 + 1)$.}
+\exc{Prove the preceding corollary.}
+
+
+\begin{definition*}
+	Suppose the characteristic polynomial of an endomorphism $T$ factors into linear terms: $c_T = (t - \lambda_1)^{n_1}\dots(t - \lambda_k)^{n_k}$. Each $\lambda_i$ is an \textbf{eigenvalue} of $T$. 
+\end{definition*}
+
+\begin{definition*}
+	The multiplication of $(t - \lambda)^n$ by $t$ can be written as an $n \times n$ matrix $J_{\lambda, n}$ called a \textbf{Jordan block}. Noting that 
+		\[ (t - \lambda)(t - \lambda)^n = (t - \lambda)^{n+1} \implies t(t - \lambda)^n = \lambda(t - \lambda)^n + (t - \lambda)^{n+1}, \]
+	each Jordan block can be written as
+		\[ \begin{pmatrix} \lambda & 0 & 0 & \cdots & 0 \\ 1 & \lambda & 0 & \cdots & 0 \\ 0 & 1 & \lambda & \cdots & 0 \\ \vdots & \vdots & \ddots & \ddots & 0 \\ 0 & 0 & 0 & \cdots & \lambda \end{pmatrix} \]
+	Any matrix which is a block sum of Jordan blocks is in \textbf{Jordan canonical form}. Therefore, by the Structure Theorem (Primary Form):
+\end{definition*}
+
+\begin{corollary*}
+	Every $T \in \End_F(V)$ whose characteristic polynomial factors into linear terms is similar over $F$ to a matrix $J_T$ in Jordan canonical form \textnormal{(}unique up to permutation of blocks\textnormal{)}. The total number of appearances of each eigenvalue $\lambda$ is its multiplicity in $c_T$, and the size of the largest associated Jordan block is the multiplicity of $\lambda$ as a root of $m_T$.
+\end{corollary*}
+
+\exc{Find all Jordan canonical forms for rational and complex matrices $T$ with characteristic polynomial $c_T = (t^4 - 1)(t^2 + 1)$.}
+\exc{Show that any square matrix over any subfield of $\mathds C$ is similar to its transpose.}
+\exc{Let $F$ be any field. Show that $A \in M_n(F)$ is diagonalizable \textnormal{(}i.e. similar to a diagonal matrix\textnormal{)} if and only if $m_A$ is a product of linear factors.}
+
+\vskip60pt
+
+
+
+\subsection*{\underline{Tensor Products}}
+
+\begin{definition*}
+	Let $M_1, \dots, M_k, N$ be $R$-modules. A map $F\: M_1 \times \dots \times M_n \to N$ is \textbf{multilinear} if 
+		\[ F(m_1, \dots, m_j + rm_j', \dots m_k) = F(m_1, \dots, m_j, \dots, m_n) + rf(m_1, \dots, m_j', \dots, m_k) \]
+	for all scalars $r \in R$ and all $1 \leq j \leq k$. Denote the space of all multilinear maps $M_1 \times \dots \times M_k \to N$ by $L(M_1, \dots, M_k; N)$.
+\end{definition*}
+
+\begin{definition*}
+	For any set $S$ and ring $R$, a \textbf{formal linear combination} of elements of $S$ is a function $f\: S \to R$ with $f(s) = 0$ for all but finitely many $s \in S$. The \textbf{free module generated by $\boldsymbol{S}$}, denoted $\calF(S)$, is the set of all formal linear combinations of elements of $S$. One can think of elements of $f \in \calF(S)$ as finite formal sums $\sum_i a_ix_i$ where $x_i \in S$ and $a_i = f(x_i) \in R$.
+\end{definition*}
+
+\begin{definition*}
+	Let $M_1, \dots, M_k$ be $R$-modules. We define the \textbf{tensor product} $M_1 \motimes \dots \motimes M_k$ to be the $R$-module
+		\[ M_1 \motimes \dots \motimes M_k = \calF(M_1 \times \dots \times M_k)/\calR, \]
+	where $\calR$ is the submodule of $M_1 \times \dots \times M_k$ containing all elements of the form
+		\[ (m_1, \dots, rm_i, \dots, m_k) - r(m_1, \dots, m_i, \dots m_k) \]
+		\[ (m_1, \dots, m_i + m_i', \dots, m_k) - (m_1, \dots, m_i, \dots, m_k) - (m_1, \dots, m_i', \dots, m_j) \]
+	with $m_i, m_i' \in M_i$, $i \in \{1, \dots, k\}$, and $r \in R$. 
+\end{definition*}
+
+\begin{proposition*}
+	\textnormal{(Characteristic Property of Tensor Products)} Let $M_1, \dots, M_k$ be $R$-modules and $G$ an abelian group. If $f\: M_1 \times \dots \times M_k \to G$ is any multilinear, then there is a unique homomorphism map $F\: M_1 \motimes \dots \motimes M_k \to G$ making the following diagram commute:
+	\begin{center}
+		\begin{tikzcd}[row sep=40pt]
+			M_1 \times \dots \times M_k \arrow[r, "f"]\arrow[d, "\Pi"'] & G \\
+			M_1 \motimes \dots \motimes M_k \arrow[ur, dashed, "F"']& 
+		\end{tikzcd}
+	\end{center}
+\end{proposition*}
+
+\exc{Prove that $M \motimes R \cong M$ for any $R$-module $M$.}
+\exc{Let $K$ be the field of fractions of a ring $R$, and let $M$ be an $R$-module. Prove that $M \motimes K$ is trivial if $M$ is torsion, and nontrivial otherwise.}
+\exc{Compute $\Z \motimes \Z$, $\Z \motimes Z_n$, and $\Z_m \motimes \Z_n$.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
