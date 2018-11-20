@@ -8,7 +8,7 @@ Here are my pictures from the MSRI Summer School on H-Principles!
 
 <div>
 {% for image in site.static_files %}
-    {% if image.path contains 'japan/japan' %}
+    {% if image.path contains 'japan' %}
         <div class="mySlides">
         <a href="{{ site.baseurl }}{{ image.path }}">
             <img class="mySlides" src="{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%"/>
