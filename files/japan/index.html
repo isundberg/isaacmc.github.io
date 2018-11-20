@@ -5,8 +5,13 @@ title:
 
 Here are my pictures from the MSRI Summer School on H-Principles!
 
+<div class="slides">
 {% for image in site.static_files %}
     {% if image.path contains 'japan/japan' %}
         <img class="mySlides" src="{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%"/>
     {% endif %}
 {% endfor %}
+    
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
