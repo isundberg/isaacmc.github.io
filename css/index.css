@@ -156,6 +156,10 @@ body {
 
 /* For my picture slides */
 
+.mySlides {
+	padding: 5px 0px;	
+}
+
 img {
     image-orientation: from-image;
 }
