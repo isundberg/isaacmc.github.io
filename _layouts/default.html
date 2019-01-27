@@ -53,6 +53,15 @@ gtag('config', 'UA-118399301-1');
 
 	<!-- <div id="footer" class="col-sm-16">
 	</div> -->
-		
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+	var ipinfo;
+
+	$.getJSON("http://ipinfo.io", function (data) {
+		localStorage.setItem('ipinfo', "City: " + data.city + " ,Country: " + data.country + " ,IP: " + data.ip + " ,Location: " + data.loc + " ,Organisation: " + data.org + " ,Postal Code: " + data.postal + " ,Region: " + data.region + "");
+	})
+	</script>
 </body>
 </html>
