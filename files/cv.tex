@@ -1,0 +1,231 @@
+\documentclass[11pt]{article}
+\frenchspacing
+
+% Packages
+\usepackage{scrextend}			%Addmargin environment
+\usepackage{latexsym}			
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Font
+\usepackage{libertine}
+
+% Environments
+\newenvironment{headitem}[2]{\vskip5pt \hspace{.5em} \textbf{#1} \hfill #2 \begin{addmargin}[0em]{0em}}{\end{addmargin}}
+\renewenvironment{section}[1]{\textsc{\large #1}}{\vskip10pt}
+
+% Item
+\newcommand{\itemreg}[1]{\begin{addmargin}[.75em]{0em} #1 \end{addmargin}}
+% Item + date
+\newcommand{\itemdate}[2]{\hspace{.5em} #1 \hfill \textit{#2} \\}
+\newcommand{\itemitdate}[2]{\hspace{.5em} \textit{#1} \hfill \textit{#2} \\}
+% Bullet + item
+\newcommand{\itembul}[1]{\hangindent=1.25em \hspace{.4em} \textbullet \ #1 \\}
+
+% Heading
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{{\Large \href{https://isaacmc.github.io/}{\textbf{Isaac M. Craig}}} \hskip10pt\hfill \textit{Jan 2019} \vskip2.5pt \hrule \vskip5pt}
+
+
+
+\begin{document}
+\null
+\vskip20pt
+
+
+
+\begin{section}{Education}
+
+	\begin{headitem}{\href{https://www.brynmawr.edu/math/}{Bryn Mawr College}}{}
+		\itemitdate{M.A. Mathematics}{May 2018}
+		\itemitdate{Ph.D. Mathematics (In Progress)}{Sep 2016 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.uwlax.edu/mathematics/}{University of Wisconsin La Crosse}}{}
+		\itemitdate{B.S. Mathematics}{Sep 2012 - May 2016}
+	\end{headitem}
+	
+\end{section}
+
+
+
+\begin{section}{Teaching Experience}
+	
+	\begin{headitem}{\href{https://www.brynmawr.edu/math/}{Bryn Mawr College}}{Bryn Mawr, PA}
+		\itemdate{Teaching Assistant}{Sep 2016 - Present}
+		\itemreg{\textit{Courses}: Abstract Algebra (I \& II), Analysis (I \& II), History of Mathematics,}
+		\itemreg{\hskip5pt Theory of Probability, Point-Set Topology}
+		\itemreg{\textit{Duties}: lead regular problem sessions, grade, assist lectures}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.uwlax.edu/murphy-learning-center/}{Murphy Learning Center}}{La Crosse, WI}
+		\itemdate{Undergraduate Tutor}{Jan 2013 - May 2016}
+		\itemreg{\textit{Courses}: Algebra, Precalculus, Applied Calculus, Calculus (I, II, \& III)}
+		\itemreg{\textit{Duties}: Assist students with coursework, attend/lead tutor training programs}
+	\end{headitem}
+
+\end{section}
+
+
+
+\begin{section}{Publications}\vskip5pt
+	\itemreg{Robert F. Allen and Isaac M. Craig, \textit{\href{http://bkms.kms.or.kr/journal/view.html?multi\%5B\%5D=7656\&tops=\&book=BKMS\&start=0\&scale=50\&authkey=\&keykey=\&key_1=\&titlekey=\&tit_1=\&abskey=\&abs_1=\&msckey=\&msc_1=\&Vol=54\&Num=3\&PG=\&year1=\&year2=\&sort=Regnum-0\&aut_box=Y\&sub_box=Y\&sos_box=\&key_box=\&pub_box=Y\&abs_box=\&mod=vol\&sflag=\&language=\&uid=}{Multiplication operators on weighted Banach spaces of an infinite tree}}, \href{http://bkms.kms.or.kr/}{Bulletin of the Korean Mathematical Society}, 54:3 (2017), 747-761}
+\end{section}
+
+
+
+\begin{section}{Presentations}\vskip5pt 
+	\itemreg{\textbf{An Introduction to Manifolds}, Mathematics and Statistics Club, UW La Crosse, Nov 2018} \vskip2pt
+	\itemreg{\textbf{On Fibering 3-Manifolds}, Master's Thesis Defense, Bryn Mawr College, Apr 2018} \vskip2pt
+	\itemreg{\textbf{Your Daily Dose of Fiber (Bundles)}, GSAW Research Symposium, Bryn Mawr College, Apr 2018} \vskip2pt
+	\itemreg{\textbf{On Fibering 3-Manifolds}, EPaDel MAA Meeting, Temple University, Mar 2018} \vskip2pt
+	\itemreg{\textbf{Brouwer Fixed Point Theorem}, Destressing Math Collective, Bryn Mawr College, Feb 2017} \vskip2pt
+	\itemreg{\textbf{Brouwer Fixed Point Theorem}, Math Colloquium Series, UW La Crosse, Apr 2017} \vskip2pt
+	\itemreg{\textbf{Multiplication Operators...of an Infinite Tree}, UWL Research \& Creativity Symposium, Mar 2016} \vskip2pt
+	\itemreg{\textbf{Multiplication Operators...of an Infinite Tree}, Joint Mathematics Meeting, Seattle, Jan 2016} \vskip2pt
+	\itemreg{\textbf{Classification of Surfaces}, Math Colloquium Series, UW La Crosse, Dec 2015} \vskip2pt
+	\itemreg{\textbf{Multiplication Operators...of an Infinite Tree}, Math Colloquium Series, UW La Crosse, Oct 2015} \vskip2pt
+%	\itemreg{\textbf{On the Theory of Real Numbers}, Keepin' It Real Colloquium, UW La Crosse, Mar 2015} 
+\end{section}
+
+
+
+\begin{section}{Workshops \& Conferences}
+
+	\begin{headitem}{\href{http://www.msri.org/web/msri/scientific/workshops/summer-graduate-school}{MSRI Summer Graduate School on H-Principles}}{Gunma Prefecture, Japan}
+		\itemdate{Tambara Institute, University of Tokyo, Japan}{Jun-Jul 2018}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://web.math.princeton.edu/~petero/RTG/MiniConf1.html}{Summer 2018 Geometry/Topology RTG mini-conference}}{Princeton, NJ}
+		\itemdate{Princeton University, Princeton, NJ}{Jun 2018}
+	\end{headitem}
+	
+	\begin{headitem}{\href{http://people.math.gatech.edu/~dmargalit7/tsw18/index.shtml}{Topology Student Workshop}}{Atlanta, GA}
+		\itemdate{Georgia Institute of Technology, Atlanta, GA}{Jun 2018}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://math.temple.edu/events/conferences/gscagt/}{Graduate Student Conference in Algebra, Geometry, \& Topology}}{Philadelphia, PA}
+		\itemdate{Temple University, Philadelphia, PA}{Jun 2018}
+	\end{headitem}
+
+	\begin{headitem}{Joint Mathematics Meeting}{Seattle, WA}
+		\itemdate{Washington State Convention Center, Seattle, WA}{Jan 2016}
+	\end{headitem}
+
+\end{section}
+
+
+
+\begin{section}{Regular Research Seminars}
+	
+	\begin{headitem}{\href{http://sections.maa.org/epadel/}{EPaDel MAA Meetings}}{East PA \& DE}
+		\itemdate{Temple University, King's College}{Mar 2018 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.brynmawr.edu/math/pact-seminar}{Philadelphia Area Contact Topology (PACT)}}{Bryn Mawr, PA}
+		\itemdate{Bryn Mawr College}{Nov 2016 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://math.temple.edu/events/seminars/geometry/}{Philadelphia Area Topology Contact/Hyperbolic (PATCH)}}{Philadelphia, PA}
+		\itemdate{UPenn, Temple University, Haverford College, and Bryn Mawr College}{Nov 2016 - Present}
+	\end{headitem}
+	
+\end{section}
+
+
+
+\begin{section}{Service}
+
+	\begin{headitem}{\href{https://www.brynmawr.edu/gsas/}{Graduate Student Association (GSA)}}{Bryn Mawr, PA}
+		\itemdate{Co-Chair (2017-19) and Department Representative (2019 -)}{Sep 2017 - present}
+		\itemreg{\textit{Duties}: lead monthly GSA meetings, organize events and annual seminars,}
+		\itemreg{\hskip5pt represent the GSA on Bryn Mawr College councils, committees, and boards}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.brynmawr.edu/ggsm}{Graduate Group of Sciences \& Mathematics}}{Bryn Mawr, PA}
+		\itemdate{Professional Development Seminar Organizer}{Apr 2018 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{\href{http://www.ams.org/programs/studentchapters}{AMS Graduate Student Chapter}}{Bryn Mawr, PA}
+		\itemdate{President}{Apr 2018 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.uwlax.edu/mathematics/activities/mathematics-and-stats-club/}{UW La Crosse Mathematics \& Statistics Club}}{La Crosse, WI}
+		\itemdate{President}{Sep 2012 - May 2016}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.uwlax.edu/mathematics/fasttrack/}{FastTrack Remedial Mathematics Camp}}{La Crosse, WI}
+		\itemdate{Tutor and Staff}{Aug 2015}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.uwlax.edu/conted/youth-programs/girls-in-science/welcome/}{Girls in Science Day Camp}}{La Crosse, WI}
+		\itemdate{Teaching Assistant and Staff}{June 2015}
+	\end{headitem}
+	
+\end{section}
+
+
+
+\begin{section}{Awards, Fellowships, \& Honors}
+
+	\begin{headitem}{Bryn Mawr College Convocation Speaker, Representing the GSA}{}
+		\itemdate{Bryn Mawr College}{Sep 2018}
+	\end{headitem}
+	
+	\begin{headitem}{\href{https://www.brynmawr.edu/president/mcpherson-award-excellence}{McPherson Graduate Award for Excellence}}{}
+		\itemdate{Bryn Mawr College}{May 2018}
+	\end{headitem}
+	
+	\begin{headitem}{Mildred and Carl Otto von Kienbusch Graduate Fellowship Fund}{}
+		\itemdate{Bryn Mawr College}{Sep 2017 - May 2018}
+	\end{headitem}
+	
+	\begin{headitem}{Teaching Assistantship \& Tuition Award}{}
+		\itemdate{Bryn Mawr College}{Sep 2016 - Present}
+	\end{headitem}
+	
+	\begin{headitem}{Department of Mathematics Outstanding Service Award}{}
+		\itemdate{UW La Crosse}{Sep 2015 - May 2016}
+	\end{headitem}
+	
+	\begin{headitem}{SIAM Outstanding Efforts \& Accomplishments in the Chapter}{}
+		\itemdate{UW La Crosse}{Sep 2015 - May 2016}
+	\end{headitem}
+	
+\end{section}
+
+
+
+%\begin{section}{Professional Memberships}
+%	
+%	\itemdate{\textbf{SIAM Student Chapter} (UW La Crosse)}{Sep 2012 - May 2016}
+%	\itemdate{\textbf{Association for Women in Mathematics}}{2016 - Present}
+%	\itemdate{\textbf{Mathematical Association of America}}{2016 - Present}
+%	
+%\end{section}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
