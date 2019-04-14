@@ -184,3 +184,7 @@ a:hover {
     color: gray;
 }
 
+li {
+	padding: 1px 0px 0px 0px;	
+}
+
