@@ -40,6 +40,10 @@ body {
 	width: 60%;
 }
 
+#content {
+	margin: 35px 0px 0px 0px;	
+}
+
 #isaac {
 	width: 25%;
     	border: 1.5px solid lightgray;	
