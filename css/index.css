@@ -22,9 +22,7 @@ body {
 }
 
 #title {
-	padding: 10px 0px 10px 0px;
-	left: 25%;
-	width: 60%;
+	margin: 0px 0px 0px 400px;
 	font-weight: 200;
 	letter-spacing: 5px;
 	font-size: 35px;
@@ -44,7 +42,6 @@ body {
 
 #isaac {
 	width: 25%;
-	margin: 50px 100px 0px 0px;
     	border: 1.5px solid lightgray;	
     	border-radius: 4px;
 	padding: 2px;
@@ -63,7 +60,7 @@ body {
 
 #navbar {
 	margin: 10px 0px 0px 0px;
-	padding: 0px 0px 0px 380px;
+	padding: 0px 0px 0px 385px;
 	list-style-type: none;
 	overflow: hidden;
 }
@@ -186,13 +183,9 @@ img {
 /* Universal styles */
 
 a {
-	color: gray;
+	color: RoyalBlue;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
-}
-
-.active {
-	color: red;	
 }
 
 a:hover {
