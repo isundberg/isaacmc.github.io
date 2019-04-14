@@ -27,13 +27,6 @@ gtag('config', 'UA-118399301-1');
 	</div>
 
 	<div id="main">
-		{% if current[1] == nil %}
-			<div id="isaac">
-			<a href="{{ site.baseurl }}/files/isaac.jpg">
-				<img src="{{ site.baseurl }}/files/isaac.jpg" width="100%">
-			</a>
-			</div>
-		{% endif %}
 		<div id="content">
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
