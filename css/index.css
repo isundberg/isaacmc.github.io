@@ -22,7 +22,6 @@ body {
 }
 
 #title {
-    	margin: 0px 20% 0px 24%;
 	font-weight: 200;
 	letter-spacing: 5px;
 	font-size: 35px;
@@ -34,7 +33,6 @@ body {
 }
 
 #header {
-    	margin: 0px 20% 0px 24%;
 	clear: left;
 }
 
@@ -63,7 +61,6 @@ body {
 /* Navbar Styles */
 
 #navbar {
-    	margin: 0px 20% 0px 24%;
 	list-style-type: none;
 	overflow: hidden;
 }
