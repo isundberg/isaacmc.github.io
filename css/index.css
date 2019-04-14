@@ -63,6 +63,7 @@ body {
 #navbar {
 	list-style-type: none;
 	overflow: hidden;
+	margin: 0px 0px 0px -1.9px;
 }
 
 #navbar li {
