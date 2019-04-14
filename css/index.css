@@ -113,12 +113,6 @@ body {
 
 /* Custom list-type environment for content */
 
-#content {
-	left: 25%;
-	width: 45%;
-	margin: 35px 0px 0px 0px;
-}
-
 #contentBlock {
 	float: left;
 	clear: left;
