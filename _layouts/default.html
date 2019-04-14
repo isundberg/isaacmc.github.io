@@ -32,10 +32,8 @@ gtag('config', 'UA-118399301-1');
 			{% assign current = page.url | downcase | split: '/' %}
 			{% if current[1] == nil %} 
 				{% include home.html %}
-			{% else if current[1] = "research" %}
-				{{ include research.html }}
-			{% else if current[1] = "resources" %}
-				{{ include resources.html }}
+			{% else %}
+				{{ include {{ current[1] | join: '' }}.html }}
 			{% endif %}
 		</div>
 	</div>
