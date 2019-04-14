@@ -3,12 +3,6 @@
 	
 <head>
 	<title>Isaac M. Craig</title>
-	<!-- link to main stylesheet -->
-	<script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-    	<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="{{ site.baseurl }}/css/index.css" rel="stylesheet" type="text/css">
 	<link rel="icon" href="{{ site.baseurl }}/tortoise.png">
 </head>
@@ -28,19 +22,19 @@ gtag('config', 'UA-118399301-1');
 	</div>
 		
 	{% include header.html %}
-	<div id="banner" class="col-sm-8">
+	<div id="banner">
 		{% include banner.html %}
 	</div>
 
-	<div id="main" class="col-med-16">
+	<div id="main">
 		{% if current[1] == nil %}
-			<div class="col-sm-4" id="isaac">
+			<div id="isaac">
 			<a href="{{ site.baseurl }}/files/isaac.jpg">
 				<img src="{{ site.baseurl }}/files/isaac.jpg" width="100%">
 			</a>
 			</div>
 		{% endif %}
-		<div id="content" class="col-sm-8">
+		<div id="content">
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
 			{% include home.html %}
