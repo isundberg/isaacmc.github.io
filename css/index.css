@@ -22,19 +22,19 @@ body {
 }
 
 #title {
-	margin: 0px 0px 0px 400px;
+    	margin: 0px 20% 0px 24%;
 	font-weight: 200;
 	letter-spacing: 5px;
 	font-size: 35px;
 	color: RoyalBlue;
 }
 
-#main {
-	margin: 0px 0px 0px 0px;    
-	padding: 0px 400px 0px 400px;
+#main {  
+    	margin: 0px 20% 0px 24%;
 }
 
 #header {
+    	margin: 0px 20% 0px 24%;
 	clear: left;
 }
 
@@ -63,8 +63,7 @@ body {
 /* Navbar Styles */
 
 #navbar {
-	margin: 10px 0px 0px 0px;
-	padding: 0px 0px 0px 385px;
+    	margin: 0px 20% 0px 24%;
 	list-style-type: none;
 	overflow: hidden;
 }
