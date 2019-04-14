@@ -17,6 +17,9 @@ gtag('config', 'UA-118399301-1');
 </script>
 
 <body>
+	<div id="banner">
+		{% include banner.html %}
+	</div>
 
 	<div id="main">
 		<div id="title">
@@ -24,9 +27,6 @@ gtag('config', 'UA-118399301-1');
 		</div>
 
 		{% include header.html %}
-		<div id="banner">
-			{% include banner.html %}
-		</div>
 		
 		<div id="content">
 			{% assign current = page.url | downcase | split: '/' %}
