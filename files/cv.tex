@@ -28,17 +28,17 @@
 \renewenvironment{section}[1]{\textsc{\large #1}}{\vskip10pt}
 
 % Item
-\newcommand{\itemreg}[1]{\begin{addmargin}[0em]{9em} #1 \end{addmargin}}
+\newcommand{\itemreg}[1]{\begin{addmargin}[0em]{8em} #1 \end{addmargin}}
 \newcommand{\itemregind}[1]{\begin{addmargin}[1.75em]{9em} #1 \end{addmargin}}
 % Item + date
 \newcommand{\itemregdate}[2]{\begin{addmargin}[0em]{8em}#1\end{addmargin}\vspace{-1.5em}\hfill\textit{#2}\\ \vspace{.25em}}
-\newcommand{\iteminddate}[2]{\begin{addmargin}[1.75em]{8em}#1\end{addmargin}\vspace{-1.5em}\hfill\textit{#2}\\ \vspace{.25em}}
-\newcommand{\iteminddateext}[2]{\begin{addmargin}[1.75em]{8em}#1\end{addmargin}\vspace{-2.5em}\hfill\textit{#2}\\ \vspace{.25em}}
+\newcommand{\iteminddate}[2]{\begin{addmargin}[1.75em]{8em}#1\end{addmargin}\vspace{-1.15em}\hfill\textit{#2}\\}
+\newcommand{\iteminddateext}[2]{\begin{addmargin}[1.75em]{8em}#1\end{addmargin}\vspace{-2.6em}\hfill\textit{#2}\\ \vspace{1.5em}}
 % Heading
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\lhead{{\Large \href{https://isaacmc.github.io/}{\textbf{Isaac M. Sundberg}}} \hskip10pt\hfill \textit{Apr 2019} \vskip2.5pt \hrule \vskip5pt}
+\lhead{{\Large \href{https://imsundberg.github.io/}{\textbf{Isaac M. Sundberg}}} \hskip10pt\hfill \textit{May 2019} \vskip2.5pt \hrule \vskip5pt}
 
 
 
@@ -54,7 +54,7 @@
 	\columnbreak
 	
 	\itemreg{\textbf{Bryn Mawr College}}
-		\iteminddate{Ph.D. in Mathematics (\textit{Advisor}: Paul Melvin)}{(In Progress)}
+		\iteminddate{Ph.D. in Mathematics (advised by Paul Melvin)}{(In Progress)}
 		\iteminddate{M.A. in Mathematics}{May 2018}
 	\vspace{.35em}
 	\itemreg{\textbf{University of Wisconsin La Crosse}}
@@ -70,13 +70,13 @@
 	\columnbreak
 	
 	\itemreg{\textbf{Bryn Mawr College}}
-		\iteminddate{\textit{Instructor on Record}: Calculus I}{Spring 2020}
-		\iteminddate{\textit{Teaching Assistant}: Abstract Algebra I \& II, History of Math, Theory of Probability, Topology}{Sep 2016 - Present}
+%		\iteminddate{Instructor on Record: Calculus I}{Spring 2020}
+		\iteminddateext{Teaching Assistant: Abstract Algebra I \& II, History of Math, Theory of Probability, Topology}{Sep 2016 - Present}
 		\vspace{.35em}
 	\itemreg{\textbf{Murphy Learning Center}}
-		\iteminddateext{\textit{Math tutor}: College Algebra, Pre-calculus and Trigonometry, Calculus I, II, \& III, Linear Algebra, Differential Equations}{Jan 2013 - Mar 2016}
+		\iteminddateext{Math tutor: College Algebra, Pre-calculus and Trigonometry, Calculus I, II, \& III, Linear Algebra, Differential Equations}{Jan 2013 - Mar 2016}
 \end{multicols}
-\vspace{-.5em}
+\vspace{.5em}
 
 
 
@@ -85,7 +85,7 @@
 	
 	\columnbreak
 	
-	\itemreg{Low-dimensional topology: Kirby calculus, knot traces, conc-\\ordance, Khovanov homology, Lee homology}
+	\itemreg{Low-dimensional topology: Khovanov homology, Kirby calculus, knot concordance, knot traces, smooth $4$-manifolds}
 \end{multicols}
 \vspace{-.5em}
 
@@ -96,7 +96,7 @@
 	
 	\columnbreak
 	
-	\itemreg{Robert F. Allen and Isaac M. Craig, \textit{\href{http://bkms.kms.or.kr/journal/view.html?multi\%5B\%5D=7656\&tops=\&book=BKMS\&start=0\&scale=50\&authkey=\&keykey=\&key_1=\&titlekey=\&tit_1=\&abskey=\&abs_1=\&msckey=\&msc_1=\&Vol=54\&Num=3\&PG=\&year1=\&year2=\&sort=Regnum-0\&aut_box=Y\&sub_box=Y\&sos_box=\&key_box=\&pub_box=Y\&abs_box=\&mod=vol\&sflag=\&language=\&uid=}{Multiplication operators on weighted Banach spaces of a tree}}, \href{http://bkms.kms.or.kr/}{Bulletin of the Korean Math-\\ematical Society}, 54:3 (2017), 747-761}
+	\itemreg{Robert F. Allen and Isaac M. Craig, \textit{\href{https://imsundberg.github.io/files/mult_op.pdf}{Multiplication operators on weighted Banach spaces of a tree}}, \href{http://bkms.kms.or.kr/}{Bulletin of the Korean Math-\\ematical Society}, 54:3 (2017), 747-761}
 \end{multicols}
 \vspace{-.5em}
 
@@ -108,42 +108,36 @@
 	\columnbreak
 	
 	\itemreg{The Ins and Outs of Eversions}
-		\iteminddate{\textit{Research symposium talk}, Bryn Mawr College}{Apr 2019}
+		\iteminddate{Research symposium talk, Bryn Mawr College}{Apr 2019}
 		\vspace{.35em}
 	\itemreg{Knot Traces and Sliceness}
-		\iteminddate{\textit{Contributed conference talk}, UI Urbana-Champaign}{Mar 2019}
-		\iteminddate{\textit{Contributed conference talk}, King's College}{Mar 2019}
+		\iteminddate{Contributed conference talk, UI Urbana-Champaign}{Mar 2019}
+		\iteminddate{Contributed conference talk, King's College}{Mar 2019}
 		\vspace{.35em}
 	\itemreg{An Introduction to Manifolds}
-		\iteminddate{\textit{Invited speaker}, UW La Crosse}{Nov 2018}
+		\iteminddate{Invited speaker, UW La Crosse}{Nov 2018}
 		\vspace{.35em}
 	\itemreg{On Fibering 3-manifolds}
-		\iteminddate{\textit{Master's defense}, Bryn Mawr College}{Apr 2018}
-		\iteminddate{\textit{Contributed conference talk}, Temple University}{Mar 2018}
+		\iteminddate{Master's defense, Bryn Mawr College}{Apr 2018}
+		\iteminddate{Contributed conference talk, Temple University}{Mar 2018}
 		\vspace{.35em}
 	\itemreg{Your Daily Dose of Fiber (Bundles)}
-		\iteminddate{\textit{Research symposium talk}, Bryn Mawr College}{Apr 2018}
+		\iteminddate{Research symposium talk, Bryn Mawr College}{Apr 2018}
 		\vspace{.35em}
 	\itemreg{Brouwer Fixed Point Theorem}
-		\iteminddate{\textit{Invited seminar speaker}, Bryn Mawr}{Feb 2017}
-		\iteminddate{\textit{Colloquium talk}, UW La Crosse}{Apr 2016}
+		\iteminddate{Invited seminar speaker, Bryn Mawr}{Feb 2017}
+		\iteminddate{Colloquium talk, UW La Crosse}{Apr 2016}
 		\vspace{.35em}
 	\itemreg{Multiplication Operators on Weighted Banach Spaces of a Tree}
-		\iteminddate{\textit{Symposium poster}, UW La Crosse}{Mar 2016}
-		\iteminddate{\textit{Conference talk}, JMM Seattle}{Jan 2016}
-		\iteminddate{\textit{Colloquium talk}, UW La Crosse}{Oct 2015}
+		\iteminddate{Symposium poster, UW La Crosse}{Mar 2016}
+		\iteminddate{Conference talk, JMM Seattle}{Jan 2016}
+		\iteminddate{Colloquium talk, UW La Crosse}{Oct 2015}
 		\vspace{.35em}
 	\itemreg{On the Classification of Surfaces}
-		\iteminddate{\textit{Colloquium talk}, UW La Crosse}{Dec 2015}
-\end{multicols}
-\clearpage
-\begin{multicols}{2}
-	\null
-	
-	\columnbreak
-	
-	\itemreg{On the Theory of Real Numbers}
-		\iteminddate{\textit{Seminar talk}, UW La Crosse}{Apr 2015}
+		\iteminddate{Colloquium talk, UW La Crosse}{Dec 2015}
+%		\vspace{.35em}                   
+%	\itemreg{On the Theory of Real Numbers}
+%		\iteminddate{Seminar talk, UW La Crosse}{Apr 2015}
 \end{multicols}
 \vspace{-.5em}
 
@@ -154,32 +148,34 @@
 	
 	\columnbreak
 	
-	\itemregdate{\textbf{\href{https://faculty.math.illinois.edu/~hquan4/GSTGC2019/index.html}{Graduate Student Topology and Geometry Conference (GSTGC)}}$\null^*$}{Mar 2019}
-		\itemregind{\textit{Contributing speaker}, University of Illinois Urbana-Champaign}
+	\itemreg{\textbf{\href{https://faculty.math.illinois.edu/~hquan4/GSTGC2019/index.html}{Graduate Student Topology and Geometry Conference (GSTGC)}}$\null^*$}
+		\iteminddate{Contributing speaker, UI Urbana-Champaign}{Mar 2019}
 		\vspace{.35em}
 	
-	\itemregdate{\textbf{\href{http://www.msri.org/web/msri/scientific/workshops/summer-graduate-school}{MSRI Summer Graduate School on H-Principles}}$\null^*$}{Jun-Jul 2018}
-		\itemregind{\textit{Participant}, Tambara Institute, University of Tokyo}
+	\itemreg{\textbf{\href{http://www.msri.org/web/msri/scientific/workshops/summer-graduate-school}{MSRI Summer Graduate School on H-Principles}}$\null^*$}
+		\iteminddate{Participant, Tambara Institute, University of Tokyo}{Jun-Jul 2018}
 		\vspace{.35em}
 		
-	\itemregdate{\textbf{\href{https://web.math.princeton.edu/~petero/RTG/MiniConf1.html}{Summer 2018 Geometry/Topology RTG mini-conference}}}{Jun 2018}
-		\itemregind{\textit{Participant}, Princeton University}
+	\itemreg{\textbf{\href{https://web.math.princeton.edu/~petero/RTG/MiniConf1.html}{Summer 2018 Geometry/Topology RTG mini-conference}}}
+		\iteminddate{Participant, Princeton University}{Jun 2018}
 		\vspace{.35em}
 		
-	\itemregdate{\textbf{\href{http://people.math.gatech.edu/~dmargalit7/tsw18/index.shtml}{Topology Student Workshop}}$\null^*$}{Jun 2018}
-		\itemregind{\textit{Participant}, Georgia Institute of Technology}
+	\itemreg{\textbf{\href{http://people.math.gatech.edu/~dmargalit7/tsw18/index.shtml}{Topology Student Workshop}}$\null^*$}
+		\iteminddate{Participant, Georgia Institute of Technology}{Jun 2018}
 		\vspace{.35em}
 		
-	\itemregdate{\textbf{\href{https://math.temple.edu/events/conferences/gscagt/}{Graduate Student Conference in Algebra, Geometry, \& Topology}}}{Jun 2018 - Present}
-			\itemregind{\textit{Participant} (18, 19), Temple University}
+	\itemreg{\textbf{\href{https://math.temple.edu/events/conferences/gscagt/}{Graduate Student Conference in Algebra, Geometry, \& Topology}}}
+			\iteminddate{Participant, Temple University}{Jun 2019}
+			\iteminddate{Participant, Temple University}{Jun 2019}
 			\vspace{.35em}
 			
-	\itemregdate{\textbf{\href{http://sections.maa.org/epadel/}{EPaDel MAA Meetings}}}{Mar 2018 - Present}
-			\itemregind{\textit{Contributing speaker}, King's College (19), Temple University (18)}
+	\itemreg{\textbf{\href{http://sections.maa.org/epadel/}{EPaDel MAA Meetings}}}
+			\iteminddate{Contributing speaker, King's College}{Jun 2019}
+			\iteminddate{Contributing speaker, Temple University}{Jun 2018}
 			\vspace{.35em}
 			
-	\itemregdate{\textbf{Joint Mathematics Meeting}}{Jan 2016}
-			\itemregind{\textit{Contributing undergraduate speaker}, Seattle, WA}
+	\itemreg{\textbf{Joint Mathematics Meeting}}
+			\iteminddate{Contributing undergraduate speaker, Seattle, WA}{Jan 2016}
 			\vspace{.5em}
 			
 			\hspace{-0em}$\null^*${\footnotesize{Received partial or full external funding by program.}}
@@ -194,9 +190,10 @@
 	\columnbreak
 	
 	\itemregdate{\textbf{Philadelphia Area Contact Topology (PACT)}}{Sep 2016 - Present}
-		\itemregind{\textit{Participant}, Bryn Mawr College}
+		\itemregind{Participant, Bryn Mawr College}
+	\vspace{.35em}
 	\itemregdate{\textbf{Philadelphia Area Topology Contact/Hyperbolic}}{Sep 2016 - Present}
-		\itemregind{\textit{Participant}, Bryn Mawr College, Haverford College, Temple University, University of Pennsylvania}
+		\itemregind{Participant, Bryn Mawr College, Haverford College, Temple University, University of Pennsylvania}
 	
 \end{multicols}
 \vspace{-.5em}
@@ -209,29 +206,29 @@
 	\columnbreak
 	
 	\itemreg{\textbf{\href{https://www.brynmawr.edu/gsas/}{Graduate Student Association (GSA)}}}
-		\iteminddate{\textit{Co-chair}, GSA Executive Board}{Sep 2017 - May 2019}
-		\iteminddate{\textit{GSA Representative}, Bryn Mawr College Graduate Council}{Sep 2017 - May 2019}
-		\iteminddate{\textit{Department representative}, GSA Executive Board}{Sep 2019 - May 2020}
+		\iteminddate{Co-chair, GSA Executive Board}{Sep 2017 - May 2019}
+		\iteminddate{GSA Representative, Graduate Council of Bryn Mawr College}{Sep 2017 - May 2019}
+		\iteminddate{Department representative, GSA Executive Board}{Sep 2019 - May 2020}
 		\vspace{.35em}
 		
-	\itemreg{\textbf{\href{https://www.brynmawr.edu/ggsm}{Graduate Group of Sciences \& Mathematics}}}
-		\iteminddate{\textit{Organizer}, GGSM Professional Development Seminar}{Apr 2018 - May 2019}
+	\itemreg{\textbf{\href{https://www.brynmawr.edu/ggsm}{Graduate Group of Sciences \& Mathematics (GGSM)}}}
+		\iteminddate{Organizer, GGSM Professional Development Seminar}{Apr 2018 - May 2019}
 		\vspace{.35em}
 		
 	\itemreg{\textbf{\href{http://www.ams.org/programs/studentchapters}{AMS Graduate Student Chapter}}}
-		\iteminddate{\textit{President}, Bryn Mawr College}{Sep 2018 - Present}
+		\iteminddate{President, Bryn Mawr College}{Sep 2018 - Present}
 		\vspace{.35em}
 		
 	\itemreg{\textbf{\href{https://www.uwlax.edu/mathematics/activities/mathematics-and-stats-club/}{UW La Crosse Mathematics \& Statistics Club}}}
-		\iteminddate{\textit{President}, UW La Crosse}{Sep 2015 - May 2016}
+		\iteminddate{President, UW La Crosse}{Sep 2015 - May 2016}
 		\vspace{.35em}
 	
 	\itemreg{\textbf{\href{https://www.uwlax.edu/mathematics/fasttrack/}{FastTrack Remedial Mathematics Camp}}}
-		\iteminddate{\textit{Tutor and staff}, UW La Crosse}{Aug 2015}
+		\iteminddate{Tutor and staff, UW La Crosse}{Aug 2015}
 		\vspace{.35em}
 	
 	\itemreg{\textbf{\href{https://www.uwlax.edu/conted/youth-programs/girls-in-science/welcome/}{Girls in Science Day Camp}}}
-		\iteminddate{\textit{Teaching Assistant and Staff}, UW La Crosse}{Jun 2015}
+		\iteminddate{Teaching Assistant and Staff, UW La Crosse}{Jun 2015}
 \end{multicols}
 
 
@@ -243,13 +240,15 @@
 	
 	\columnbreak
 	
+	\itemregdate{\href{https://www.brynmawr.edu/president/presidential-initiatives/community-belonging/community-building-honor-roll}{Bryn Mawr Community Building Honor Roll}}{May 2019}
+		\vspace{.35em}
 	\itemregdate{Convocation Speaker Representing the GSA, Bryn Mawr College}{Sep 2018}
 		\vspace{.35em}
 	\itemregdate{\href{https://www.brynmawr.edu/president/mcpherson-award-excellence}{McPherson Graduate Award for Excellence}, Bryn Mawr College}{May 2018}
 		\vspace{.35em}
-	\itemregdate{Dept of Mathematics Outstanding Service Award, UW La Crosse}{Sep 2015 - May 2016}
+	\itemregdate{Dept of Mathematics Outstanding Service Award, UW La Crosse}{May 2016}
 		\vspace{.35em}
-	\itemregdate{SIAM Outstanding Efforts \& Accomplishments in the Chapter, \\ UW La Crosse}{Sep 2015 - May 2016}
+	\itemregdate{SIAM Outstanding Efforts \& Accomplishments in the Chapter, \\ UW La Crosse}{May 2016}
 \end{multicols}
 \vspace{-.5em}
 
