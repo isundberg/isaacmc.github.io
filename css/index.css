@@ -178,6 +178,12 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
+a.no {
+	color: gray;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+
 a:hover {
     color: gray;
 }
