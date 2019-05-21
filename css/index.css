@@ -156,17 +156,16 @@ img {
 
 #footer {
 	margin: 0px 0px 0px 0px;
-    	padding: 10px 25px;
-	
+	padding: 10px 20% 10px 24%;
 	background-color: WhiteSmoke;
 	border: 1px solid lightgray;
 	border-style: solid;
 	border-width: .25px 0px 0px 0px;
 	font-size: 10px;
 	position: fixed;
-  	left: 0;
-  	bottom: 0;
-  	width: 100%;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 
