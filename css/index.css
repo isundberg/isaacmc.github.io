@@ -155,7 +155,9 @@ img {
 /* Footer styles */
 
 #footer {
-	margin: 0px 0px -90px 0px;
+	margin: 0px 0px 0px 0px;
+    	padding: 10px 25px;
+	
 	background-color: WhiteSmoke;
 	border: 1px solid lightgray;
 	border-style: solid;
