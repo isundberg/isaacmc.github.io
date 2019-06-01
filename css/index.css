@@ -126,7 +126,7 @@ body {
 }
 
 #contentPar {
-	padding: 15px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 #contentList {
@@ -160,7 +160,7 @@ img {
 	border: 1px solid lightgray;
 	border-style: solid;
 	border-width: .25px 0px 0px 0px;
-	font-size: 12px;
+	font-size: 13px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
