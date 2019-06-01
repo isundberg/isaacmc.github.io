@@ -181,7 +181,7 @@ a:hover {
 }
 
 a.no {
-	color: DarkGray;
+	color: gray;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 }
