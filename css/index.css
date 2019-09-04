@@ -27,7 +27,7 @@ body {
 
 #home-button {
     	clear: left;
-    	position: fixed;
+    	position: absolute;
     	margin: -30% 0px 0px 4%;	
 }
 
