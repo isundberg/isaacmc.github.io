@@ -21,10 +21,8 @@ body {
 }
 
 #title {
-	font-weight: 200;
-	letter-spacing: 5px;
-	font-size: 35px;
-	color: RoyalBlue;
+    	font-size: 25px;
+    	color: RoyalBlue;
 }
 
 #main {  
