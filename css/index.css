@@ -28,9 +28,7 @@ body {
 #home-button {
     	clear: left;
     	position: fixed;
-    	margin: -30% 0px 0px 4%;
-    	color: royalblue;
-	
+    	margin: -30% 0px 0px 4%;	
 }
 
 #main {  
@@ -49,21 +47,6 @@ body {
 	margin: 35px 0px 0px 0px;	
 	font-size: 16px;
 }
-
-#isaac {
-	width: 25%;
-    	border: 1.5px solid lightgray;	
-    	border-radius: 4px;
-	padding: 2px;
-	float: right;
-    	margin: 0px 25px;
-}
-
-/* #isaac:hover {
-    	border: 1.5px solid RoyalBlue;	
-    	border-radius: 4px;
-	padding: 2px;	
-} */
 
 
 
