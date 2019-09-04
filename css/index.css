@@ -32,7 +32,11 @@ body {
 }
 
 #header {
-	clear: left;
+	width: 100%;
+    	clear: left;
+    	position: absolute;
+    	margin: -40px 0px 0px 0px;
+    	background: rgba(255, 255, 255, 0.55);
 }
 
 #content {
