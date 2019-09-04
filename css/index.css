@@ -93,18 +93,11 @@ body {
 /* Banner Styles */
 
 #banner {
-    background-color: WhiteSmoke;
-    border: 1px solid lightgray;
-    border-style: solid;
-    border-width: .25px 0px .25px 0px;
-    width: 100%;
-    margin: -200px 0px 10px 0px;
-    height: 300px;
+    	padding: 110px 0px 0px 0px;
 }
 
 #banner-img {
 	width: 100%;
-    	padding: 110px 0px 0px 0px;
 }
 
 
