@@ -25,11 +25,18 @@ body {
     	color: RoyalBlue;
 }
 
-#home-button {
+#home-button-div {
     	clear: left;
     	position: absolute;
     	margin: -30% 0px 0px 4%;
+}
+
+#home-button {
 	color: black;
+}
+
+#home-button:hover {
+	color: RoyalBlue;
 }
 
 #main {  
