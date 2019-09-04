@@ -62,7 +62,6 @@ body {
 #navbar {
 	list-style-type: none;
 	overflow: hidden;
-	margin: 0px 0px 0px -15px;
 }
 
 #navbar li {
@@ -73,7 +72,7 @@ body {
 	color: black;
 	display: block;
 	text-align: center;
-	padding: 14px 16px;
+    	padding: 7px 10px;
 	text-decoration: none;
 	font-size: 16px;
 }
