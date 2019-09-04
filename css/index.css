@@ -28,7 +28,8 @@ body {
 #home-button {
     	clear: left;
     	position: absolute;
-    	margin: -30% 0px 0px 4%;	
+    	margin: -30% 0px 0px 4%;
+	color: black;
 }
 
 #main {  
