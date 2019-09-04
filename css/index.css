@@ -25,6 +25,14 @@ body {
     	color: RoyalBlue;
 }
 
+#home-button {
+    	clear: left;
+    	position: fixed;
+    	margin: -30% 0px 0px 4%;
+    	color: royalblue;
+	
+}
+
 #main {  
     	margin: 40px 10% 0px 14%;
 }
