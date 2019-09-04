@@ -103,11 +103,8 @@ body {
 }
 
 #banner-img {
-	clear: left;
-	position: absolute;
-	left: 27%;
-	padding: 10px 0px 0px 0px;
-	color: gray;
+	width: 100%;
+    	padding: 110px 0px 0px 0px;
 }
 
 
