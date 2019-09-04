@@ -28,7 +28,7 @@ body {
 }
 
 #main {  
-    	margin: 0px 20% 0px 24%;
+    	margin: 0px 10% 0px 14%;
 }
 
 #header {
@@ -117,7 +117,7 @@ body {
 }
 
 #contentPar {
-	padding: 0px 0px 0px 10px;
+	padding: 0px 0px 10px 0px;
 }
 
 #contentList {
