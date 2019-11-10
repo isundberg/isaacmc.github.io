@@ -124,6 +124,7 @@ body {
 
 #contentList {
 	list-style: none;
+	list-style-position: inside;
 }
 
 #contentListItem {
