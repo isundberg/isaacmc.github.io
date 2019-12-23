@@ -8,19 +8,21 @@
 </head>
 
 <body>
-	
-	<div id="banner">
-		{% include banner.html %}
+	<div id="background">
 	</div>
 	
-	<div id="home-button-div">
-		<a id="home-button" href="{{ site.baseurl }}/">Isaac Sundberg</a>
-	</div>
-	
-	{% include header.html %}
-
 	<div id="main">
 		
+		<div id="banner">
+			{% include banner.html %}
+		</div>
+
+		<div id="home-button-div">
+			<a id="home-button" href="{{ site.baseurl }}/">Isaac Sundberg</a>
+		</div>
+
+		{% include header.html %}
+
 		<div id="content">
 			{% assign current = page.url | downcase | split: '/' %}
 			{% if current[1] == nil %} 
@@ -29,7 +31,7 @@
 				{{ content }}
 			{% endif %}
 		</div>
-
+		
 	</div>
 	
 	<div id="footer">
