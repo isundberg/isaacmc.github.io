@@ -16,8 +16,6 @@ html {
 body {
     	font-family: "Roboto Condensed", Trebuchet MS;
 	letter-spacing: .5px;
-    	height: 100%;
-	margin: 4% 20%;
 }
 
 #title {
@@ -40,7 +38,7 @@ body {
 }
 
 #main {
-	
+	margin: 4% 20%;
 }
 
 #header {
