@@ -40,7 +40,7 @@ body {
 }
 
 #main {
-	margin: 40px 10px;
+	
 }
 
 #header {
@@ -51,14 +51,9 @@ body {
     	background: rgba(255, 255, 255, 0.55);
 }
 
-#coordinates {
-   	clear: left;
-    	float: right;
-    	margin: -29px 10px 0px 0px;
-}
-
 #content {	
 	font-size: 16px;
+	margin: 40px 10px;
 }
 
 
