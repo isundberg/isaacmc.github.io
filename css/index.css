@@ -78,7 +78,7 @@ body {
 }
 
 #navbar li a {
-	color: black;
+	color: gray;
 	display: block;
 	text-align: center;
     	padding: 7px 10px;
@@ -87,7 +87,7 @@ body {
 }
 
 #navbar li a.active {
-	color: gray;
+	color: goldenrod;
 	border-bottom: 2px solid gray;
 }
 
