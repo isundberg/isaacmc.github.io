@@ -29,7 +29,7 @@ body {
 
 #title {
     	font-size: 25px;
-    	color: cornflowerblue;
+    	color: gray;
 }
 
 #home-button-div {
@@ -43,7 +43,7 @@ body {
 }
 
 #home-button:hover {
-	color: cornflowerblue;
+	color: goldenrod;
 }
 
 #main {
@@ -87,12 +87,12 @@ body {
 }
 
 #navbar li a.active {
-	color: cornflowerblue;
+	color: gray;
 	border-bottom: 2px solid gray;
 }
 
 #navbar li a:hover {
-	color: cornflowerblue;
+	color: goldenrod;
 	border-bottom: 2px solid lightgray;
 }
 
@@ -170,13 +170,13 @@ img {
 /* Universal styles */
 
 a {
-	color: cornflowerblue;
+	color: gray;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 }
 
 a:hover {
-    color: gray;
+    color: goldenrod;
 }
 
 a.no {
@@ -186,7 +186,7 @@ a.no {
 }
 
 a.no:hover {
-    color: cornflowerblue;
+    color: goldenrod;
 }
 
 li {
