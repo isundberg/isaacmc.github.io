@@ -24,7 +24,7 @@ body {
 	height: 20%;
     	margin: 100px 0px 0px 0px;
     	padding: 39px 0px;
-    	background-color: darkgoldenrod;
+    	background-color: rgb(252,176,0);
 }
 
 #title {
@@ -43,7 +43,7 @@ body {
 }
 
 #home-button:hover {
-	color: goldenrod;
+	color: rgb(252,176,0);
 }
 
 #main {
@@ -87,12 +87,12 @@ body {
 }
 
 #navbar li a.active {
-	color: goldenrod;
-	border-bottom: 2px solid goldenrod;
+	color: black;
+	border-bottom: 2px solid black;
 }
 
 #navbar li a:hover {
-	color: goldenrod;
+	color: gray;
 	border-bottom: 2px solid gray;
 }
 
