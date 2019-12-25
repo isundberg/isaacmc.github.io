@@ -16,6 +16,7 @@ html {
 body {
     	font-family: "Roboto Condensed", Trebuchet MS;
 	letter-spacing: .5px;
+	background-color: lightgray;
 }
 
 #background {
@@ -23,7 +24,7 @@ body {
     height: 20%;
     margin: 100px 0px 0px 0px;
 	padding: 20px;
-    background-color: lightgray;
+    background-color: rgb(227, 233, 75);
 }
 
 #title {
