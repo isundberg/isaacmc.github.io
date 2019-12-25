@@ -88,12 +88,12 @@ body {
 
 #navbar li a.active {
 	color: goldenrod;
-	border-bottom: 2px solid gray;
+	border-bottom: 2px solid goldenrod;
 }
 
 #navbar li a:hover {
 	color: goldenrod;
-	border-bottom: 2px solid lightgray;
+	border-bottom: 2px solid gray;
 }
 
 
