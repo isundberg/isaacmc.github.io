@@ -1,0 +1,9 @@
+<div id="header">
+<ul id="navbar">
+	{% assign current = page.url | downcase | split: '/' %}
+	
+        <li><a href="/teaching/S20_M101/" {% if current[1] == nil %}class="active"{% endif %}>Home</a></li>
+        <li><a href="/teaching/S20_M10/Schedule/index.html" {% if current[1] == 'research' %}class="active"{% endif %}>Schedule</a></li>
+   
+	
+</div>
