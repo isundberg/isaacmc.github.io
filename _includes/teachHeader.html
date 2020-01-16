@@ -2,8 +2,8 @@
 <ul id="navbar">
 	{% assign current = page.url | downcase | split: '/' %}
 	
-        <li><a href="/teaching/S20_M101/" {% if current[2] == nil %}class="active"{% endif %}>Home</a></li>
-        <li><a href="/teaching/S20_M101/Schedule/index.html" {% if current[2] == 'Schedule' %}class="active"{% endif %}>Schedule</a></li>
-        <li><a href="/teaching/S20_M101/Desmos/index.html" {% if current[2] == 'Desmos' %}class="active"{% endif %}>Desmos</a></li>
+        <li><a href="/teaching/S20_M101/" {% if current[4] == nil %}class="active"{% endif %}>Home</a></li>
+        <li><a href="/teaching/S20_M101/Schedule/index.html" {% if current[4] == 'Schedule' %}class="active"{% endif %}>Schedule</a></li>
+        <li><a href="/teaching/S20_M101/Desmos/index.html" {% if current[4] == 'Desmos' %}class="active"{% endif %}>Desmos</a></li>
 	
 </div>
