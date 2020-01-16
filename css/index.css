@@ -24,7 +24,7 @@ body {
 	height: 20%;
     	margin: 100px 0px 0px 0px;
     	padding: 39px 0px;
-    	background-color: rgb(252,176,0);
+    	background-color: gray;
 }
 
 #title {
@@ -92,8 +92,8 @@ body {
 }
 
 #navbar li a:hover {
-	color: gray;
-	border-bottom: 2px solid gray;
+	color: rgb(252,176,0);
+	border-bottom: 2px solid rgb(252,176,0);
 }
 
 
