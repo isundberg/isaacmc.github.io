@@ -3,7 +3,8 @@
 	{% assign current = page.url | downcase | split: '/' %}
 	
         <li><a href="/teaching/S20_M101/" {% if current[3] == nil %}class="active"{% endif %}>Home</a></li>
-        <li><a href="/teaching/S20_M101/Schedule/index.html" {% if current[3] == 'schedule' %}class="active"{% endif %}>Schedule</a></li>
+        <li><a href="/teaching/S20_M101/Resources/index.html" {% if current[3] == 'resources' %}class="active"{% endif %}>Resources</a></li>
+	<li><a href="/teaching/S20_M101/Schedule/index.html" {% if current[3] == 'schedule' %}class="active"{% endif %}>Schedule</a></li>
         <li><a href="/teaching/S20_M101/Desmos/index.html" {% if current[3] == 'desmos' %}class="active"{% endif %}>Desmos</a></li>
 	<li><a href="/teaching/S20_M101/Feedback/index.html" {% if current[3] == 'feedback' %}class="active"{% endif %}>Feedback</a></li>
 	
