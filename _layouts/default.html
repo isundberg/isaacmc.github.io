@@ -21,7 +21,7 @@
 	
 		{% include navbar.html %}
 		
-		<div id="home">
+		<div id="content">
 			{% assign current = page.url | downcase | split: '/' %}
 			{% if current[1] == nil %} 
 				{% include home.html %}
