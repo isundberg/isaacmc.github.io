@@ -17,22 +17,20 @@
 	<div class="col-sm-2">
 	</div>
 	<div class="col-sm-8">
-	<div class="container-fluid">
-		<h2><a href="{{ site.baseurl }}/">Isaac Sundberg</a></h2>
-    </div>
+		<div class="container-fluid">
+			<h2><a href="{{ site.baseurl }}/">Isaac Sundberg</a></h2>
+    	</div>
 	
-	{% include navbar.html %}
+		{% include navbar.html %}
 	
-	{% assign current = page.url | downcase | split: '/' %}
-	{% if current[1] == nil %} 
-		{% include home.html %}
-	{% else %}
-		{{ content }}
-	{% endif %}
+		{% assign current = page.url | downcase | split: '/' %}
+		{% if current[1] == nil %} 
+			{% include home.html %}
+		{% else %}
+			{{ content }}
+		{% endif %}
 	
-	<div id="footer">
 		{% include footer.html %}
-	</div>
 	</div>
 
 </body>
