@@ -13,28 +13,16 @@
 </head>
 
 <body>
-	<div id="background">
-
-		<div id="home-button-div">
-			<a id="home-button" href="{{ site.baseurl }}/">Isaac Sundberg</a>
-		</div>
-
-		{% include navbar.html %}
-		
-	</div>
 	
-	<div id="main">
-
-		<div id="content">
-			{% assign current = page.url | downcase | split: '/' %}
-			{% if current[1] == nil %} 
-				{% include home.html %}
-			{% else %}
-				{{ content }}
-			{% endif %}
-		</div>
-		
-	</div>
+	{% include navbar.html %}
+	
+	
+	{% assign current = page.url | downcase | split: '/' %}
+	{% if current[1] == nil %} 
+		{% include home.html %}
+	{% else %}
+		{{ content }}
+	{% endif %}
 	
 	<div id="footer">
 		{% include footer.html %}
