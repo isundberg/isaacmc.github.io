@@ -1,16 +1,16 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+	<div class="navbar-header">
+      <a href="{{ site.baseurl }}/">Isaac Sundberg</a>
     </div>
-    <ul class="nav navbar-nav">
-    	<li><a href="{{ site.baseurl }}/" {% if current[1] == nil %}class="active"{% endif %}>Home</a></li>
-    	<li><a href="/research/index.html" {% if current[1] == 'research' %}class="active"{% endif %}>Research</a></li>
-        <li><a href="/involvement/index.html" {% if current[1] == 'involvement' %}class="active"{% endif %}>Involvement</a></li>
-        <!-- <li><a href="/talks/index.html" {% if current[1] == 'talks' %}class="active"{% endif %}>Talks</a></li> -->
-		<!-- <li><a href="/conferences/index.html" {% if current[1] == 'conferences' %}class="active"{% endif %}>Conferences</a></li> -->
-        <li><a href="/teaching/index.html" {% if current[1] == 'teaching' %}class="active"{% endif %}>Teaching</a></li>
-        <!-- <li><a href="/resources/index.html" {% if current[1] == 'resources' %}class="active"{% endif %}>Resources</a></li> -->
-    </ul>
-  </div>
+	<div class="container-fluid" style="float: right;">
+    	<ul class="nav navbar-nav">
+    		<li><a href="{{ site.baseurl }}/" {% if current[1] == nil %}class="active"{% endif %}>Home</a></li>
+    		<li><a href="/research/index.html" {% if current[1] == 'research' %}class="active"{% endif %}>Research</a></li>
+        	<li><a href="/involvement/index.html" {% if current[1] == 'involvement' %}class="active"{% endif %}>Involvement</a></li>
+        	<!-- <li><a href="/talks/index.html" {% if current[1] == 'talks' %}class="active"{% endif %}>Talks</a></li> -->
+			<!-- <li><a href="/conferences/index.html" {% if current[1] == 'conferences' %}class="active"{% endif %}>Conferences</a></li> -->
+        	<li><a href="/teaching/index.html" {% if current[1] == 'teaching' %}class="active"{% endif %}>Teaching</a></li>
+      	  <!-- <li><a href="/resources/index.html" {% if current[1] == 'resources' %}class="active"{% endif %}>Resources</a></li> -->
+    	</ul>
+  	</div>
 </nav>
