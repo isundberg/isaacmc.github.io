@@ -22,13 +22,15 @@
     	</div>
 	
 		{% include navbar.html %}
-	
-		{% assign current = page.url | downcase | split: '/' %}
-		{% if current[1] == nil %} 
-			{% include home.html %}
-		{% else %}
-			{{ content }}
-		{% endif %}
+		
+		<div id="home">
+			{% assign current = page.url | downcase | split: '/' %}
+			{% if current[1] == nil %} 
+				{% include home.html %}
+			{% else %}
+				{{ content }}
+			{% endif %}
+		</div>
 		
 	</div>
 	
