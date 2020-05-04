@@ -16,3 +16,7 @@ padding: 5px;
 #pad {
 padding: 5px;
 }
+
+#myNavbar li a.active {
+	color: blue;
+}
