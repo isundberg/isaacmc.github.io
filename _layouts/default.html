@@ -14,8 +14,11 @@
 
 <body>
 	
-	{% include navbar.html %}
+	<div class="container-fluid">
+		<h2><a href="{{ site.baseurl }}/">Isaac Sundberg</a></h2>
+    </div>
 	
+	{% include navbar.html %}
 	
 	{% assign current = page.url | downcase | split: '/' %}
 	{% if current[1] == nil %} 
