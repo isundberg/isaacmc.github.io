@@ -17,8 +17,9 @@
 	padding: 5px;
 }
 
-.float-right {
+#img {
 	float: right;
+	width: 200px;
 }
 
 #dspace {
