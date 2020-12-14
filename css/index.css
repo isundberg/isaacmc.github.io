@@ -24,8 +24,14 @@
 	margin: 0px 10px;
 	border-radius: 5px;
   	border: 1px solid gray;
+	float: right;
 }
 
 #dspace {
 	padding: 20px 0px 0px 0px;
+}
+
+#jumbo {
+	background-image: url('https://imsundberg.github.io/files/IMG_7783.jpeg');
+	background-size: cover;
 }
