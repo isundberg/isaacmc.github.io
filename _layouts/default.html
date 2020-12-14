@@ -17,15 +17,21 @@
 		<h2><a href="{{ site.baseurl }}/">Isaac Sundberg</a></h2>
     	</div>
 	
-	{% include navbar.html %}
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		
+		{% include navbar.html %}
 
-	<div id="content" class="container">
-		{% assign current = page.url | downcase | split: '/' %}
-		{% if current[1] == nil %} 
-			{% include home.html %}
-		{% else %}
-			{{ content }}
-		{% endif %}
+		<div id="content" class="container">
+			{% assign current = page.url | downcase | split: '/' %}
+			{% if current[1] == nil %} 
+				{% include home.html %}
+			{% else %}
+				{{ content }}
+			{% endif %}
+		</div>
+		
 	</div>
 		
 	
