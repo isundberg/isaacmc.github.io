@@ -31,6 +31,10 @@
 	padding: 20px 0px 0px 0px;
 }
 
+.navbar {
+	border-radius: 0px;	
+}
+
 .jumbotron {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
