@@ -26,6 +26,14 @@
   	border: 1px solid gray;
 }
 
+#img_research {
+	width: 100%;
+	padding: 0px;
+	margin: 0px 10px;
+	border-radius: 5px;
+  	border: 1px solid gray;
+}
+
 #dspace {
 	padding: 20px 0px 0px 0px;
 }
