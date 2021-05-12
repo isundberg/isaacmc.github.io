@@ -27,11 +27,9 @@
 }
 
 #img_research {
-	width: 100%;
+	width: 150%;
 	padding: 0px;
 	margin: 0px 10px;
-	border-radius: 5px;
-  	border: 1px solid gray;
 }
 
 #dspace {
