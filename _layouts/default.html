@@ -21,7 +21,7 @@
 
 	{% include navbar.html %}
 
-	<div id="content" class="container">
+	<div id="content" class="col-med-16">
 		{% assign current = page.url | downcase | split: '/' %}
 		{% if current[1] == nil %} 
 			{% include home.html %}
